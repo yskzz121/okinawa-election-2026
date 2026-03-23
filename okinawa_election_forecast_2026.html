@@ -5,58 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>沖縄県知事選2026 選挙展望レポート｜U&I株倶楽部</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@300;400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 :root{
-  --bg:#0d1117;
-  --bg2:#161b22;
-  --bg3:#21262d;
-  --border:#30363d;
-  --text:#e6edf3;
-  --text-sub:#8b949e;
-  --green:#2ea043;
-  --green-light:#3fb950;
-  --red:#f85149;
-  --blue:#58a6ff;
-  --orange:#d29922;
-  --purple:#bc8cff;
+  --bg:#f5f0e8;
+  --bg2:#fffdf8;
+  --bg3:#f0ebe0;
+  --border:#c0b8a8;
+  --text:#1a1510;
+  --text-sub:#6b5f4e;
+  --green:#1a6b4a;
+  --green-light:#1a8a5a;
+  --red:#b5271a;
+  --blue:#1a4a8a;
+  --orange:#9a7a28;
+  --purple:#6b4a8a;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-serif;font-size:15px;line-height:1.7;padding:20px}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP','Noto Serif JP',sans-serif;font-size:15px;line-height:1.7;padding:20px}
 .container{max-width:1200px;margin:0 auto}
 
 /* Header */
 .header{
-  background:linear-gradient(135deg,#1a2332 0%,#0d1117 50%,#1a1a2e 100%);
-  border:1px solid var(--border);
-  border-radius:16px;
+  background:#1a1510;
+  border:none;
+  border-bottom:4px solid #b5271a;
+  border-radius:0;
   padding:48px 40px 36px;
   text-align:center;
   position:relative;
   overflow:hidden;
   margin-bottom:28px;
+  color:#f5f0e8;
 }
 .header::before{
-  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
-  background:radial-gradient(ellipse at 30% 50%,rgba(88,166,255,0.1) 0%,transparent 60%),
-             radial-gradient(ellipse at 70% 50%,rgba(46,160,67,0.08) 0%,transparent 60%);
+  content:'';position:absolute;top:0;right:0;width:200px;height:100%;
+  background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(255,255,255,0.03) 8px,rgba(255,255,255,0.03) 16px);
 }
 .header-content{position:relative;z-index:1}
-.brand-badge{display:inline-block;background:rgba(88,166,255,0.15);border:1px solid rgba(88,166,255,0.4);border-radius:6px;padding:4px 16px;font-size:12px;color:var(--blue);letter-spacing:2px;margin-bottom:16px;font-weight:700}
-.header h1{font-size:2.4em;font-weight:900;margin-bottom:8px;letter-spacing:-0.5px}
-.header .subtitle{color:var(--blue);font-size:1.2em;font-weight:700;margin-bottom:8px}
-.header .date{color:var(--text-sub);font-size:0.85em}
+.brand-badge{display:inline-block;background:rgba(196,160,64,0.2);border:1px solid rgba(196,160,64,0.5);border-radius:6px;padding:4px 16px;font-size:12px;color:#c4a040;letter-spacing:2px;margin-bottom:16px;font-weight:700}
+.header h1{font-family:'Shippori Mincho',serif;font-size:2.4em;font-weight:700;margin-bottom:8px;letter-spacing:1px;color:#f5f0e8}
+.header .subtitle{color:#c4a040;font-size:1.2em;font-weight:700;margin-bottom:8px}
+.header .date{color:#a09888;font-size:0.85em}
 
 /* Section */
-.section{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:28px 32px;margin-bottom:24px}
-.section-title{font-size:1.25em;font-weight:900;margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);padding-bottom:12px}
+.section{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:28px 32px;margin-bottom:24px}
+.section-title{font-family:'Shippori Mincho',serif;font-size:1.25em;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border);padding-bottom:12px}
 .section-icon{font-size:1.1em}
 .badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:1px}
-.badge-green{background:rgba(46,160,67,0.2);color:var(--green-light);border:1px solid rgba(46,160,67,0.4)}
-.badge-red{background:rgba(248,81,73,0.2);color:var(--red);border:1px solid rgba(248,81,73,0.4)}
-.badge-blue{background:rgba(88,166,255,0.2);color:var(--blue);border:1px solid rgba(88,166,255,0.4)}
-.badge-orange{background:rgba(210,153,34,0.2);color:var(--orange);border:1px solid rgba(210,153,34,0.4)}
+.badge-green{background:rgba(26,107,74,0.12);color:var(--green);border:1px solid rgba(26,107,74,0.3)}
+.badge-red{background:rgba(181,39,26,0.12);color:var(--red);border:1px solid rgba(181,39,26,0.3)}
+.badge-blue{background:rgba(26,74,138,0.12);color:var(--blue);border:1px solid rgba(26,74,138,0.3)}
+.badge-orange{background:rgba(154,122,40,0.12);color:var(--orange);border:1px solid rgba(154,122,40,0.3)}
 
 /* Grid */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -64,7 +65,7 @@ body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-seri
 .grid-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px}
 
 /* Card */
-.card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:20px}
+.card{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:20px}
 .card-green{border-left:4px solid var(--green)}
 .card-red{border-left:4px solid var(--red)}
 .card-blue{border-left:4px solid var(--blue)}
@@ -79,7 +80,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}
 th{background:var(--bg3);color:var(--text-sub);font-weight:700;padding:10px 12px;text-align:left;border-bottom:1px solid var(--border)}
 td{padding:10px 12px;border-bottom:1px solid var(--border)}
 tr:last-child td{border-bottom:none}
-tr:hover td{background:rgba(88,166,255,0.04)}
+tr:hover td{background:rgba(26,74,138,0.06)}
 
 /* Big score */
 .big-number{font-size:4em;font-weight:900;line-height:1}
@@ -88,11 +89,11 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 
 /* SWOT */
 .swot-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.swot-box{border-radius:10px;padding:20px}
-.swot-s{background:rgba(46,160,67,0.1);border:1px solid rgba(46,160,67,0.3)}
-.swot-w{background:rgba(248,81,73,0.1);border:1px solid rgba(248,81,73,0.3)}
-.swot-o{background:rgba(88,166,255,0.1);border:1px solid rgba(88,166,255,0.3)}
-.swot-t{background:rgba(210,153,34,0.1);border:1px solid rgba(210,153,34,0.3)}
+.swot-box{border-radius:4px;padding:20px}
+.swot-s{background:rgba(26,107,74,0.08);border:1px solid rgba(26,107,74,0.25)}
+.swot-w{background:rgba(181,39,26,0.08);border:1px solid rgba(181,39,26,0.25)}
+.swot-o{background:rgba(26,74,138,0.08);border:1px solid rgba(26,74,138,0.25)}
+.swot-t{background:rgba(154,122,40,0.1);border:1px solid rgba(154,122,40,0.25)}
 .swot-title{font-weight:900;font-size:1em;margin-bottom:12px}
 .swot-s .swot-title{color:var(--green-light)}
 .swot-w .swot-title{color:var(--red)}
@@ -103,9 +104,9 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 .swot-list li::before{content:'▸';position:absolute;left:0;opacity:.7}
 
 /* Positioning Map */
-.pos-map{position:relative;background:var(--bg3);border:1px solid var(--border);border-radius:10px;height:380px;overflow:hidden}
-.pos-axis-h{position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(255,255,255,0.15)}
-.pos-axis-v{position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(255,255,255,0.15)}
+.pos-map{position:relative;background:var(--bg3);border:1px solid var(--border);border-radius:4px;height:380px;overflow:hidden}
+.pos-axis-h{position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(26,21,16,0.15)}
+.pos-axis-v{position:absolute;left:50%;top:0;bottom:0;width:1px;background:rgba(26,21,16,0.15)}
 .pos-label{position:absolute;font-size:11px;color:var(--text-sub);background:var(--bg3);padding:2px 8px;border-radius:4px}
 .pos-dot{position:absolute;transform:translate(-50%,-50%);text-align:center;cursor:default}
 .pos-dot-circle{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;margin:0 auto}
@@ -113,16 +114,16 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 
 /* Pillars */
 .pillar-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.pillar-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center}
+.pillar-card{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:16px;text-align:center}
 .pillar-icon{font-size:2em;margin-bottom:8px}
 .pillar-name{font-weight:700;font-size:13px;margin-bottom:4px}
 .pillar-desc{font-size:11px;color:var(--text-sub)}
 
 /* Scenario cards */
 .scenario-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
-.scenario-card{border-radius:10px;padding:20px}
-.scenario-a{background:rgba(88,166,255,0.12);border:1px solid rgba(88,166,255,0.35)}
-.scenario-b{background:rgba(248,81,73,0.12);border:1px solid rgba(248,81,73,0.35)}
+.scenario-card{border-radius:4px;padding:20px}
+.scenario-a{background:rgba(26,74,138,0.08);border:1px solid rgba(26,74,138,0.25)}
+.scenario-b{background:rgba(181,39,26,0.08);border:1px solid rgba(181,39,26,0.25)}
 .scenario-label{font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:8px}
 .scenario-a .scenario-label{color:var(--blue)}
 .scenario-b .scenario-label{color:var(--red)}
@@ -136,9 +137,9 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 .risk-matrix{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:2px;font-size:12px}
 .rm-header{background:var(--bg3);padding:8px 10px;text-align:center;font-weight:700;border-radius:4px}
 .rm-cell{padding:8px 10px;border-radius:4px;font-size:11px}
-.rm-low{background:rgba(46,160,67,0.15)}
-.rm-mid{background:rgba(210,153,34,0.15)}
-.rm-high{background:rgba(248,81,73,0.2)}
+.rm-low{background:rgba(26,107,74,0.1)}
+.rm-mid{background:rgba(154,122,40,0.12)}
+.rm-high{background:rgba(181,39,26,0.12)}
 .rm-axis{background:var(--bg3);display:flex;align-items:center;justify-content:center;font-weight:700;padding:8px;border-radius:4px}
 
 /* Mobile responsive */
@@ -161,16 +162,16 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 }
 </style>
 <style id="pw-gate-css">
-#pw-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:#0a0c14;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans JP",sans-serif}
+#pw-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:#f5f0e8;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans JP",sans-serif}
 #pw-overlay .pw-box{text-align:center;max-width:380px;width:100%;padding:24px}
-#pw-overlay h2{color:#e8eaf0;font-size:1.4rem;margin-bottom:6px}
-#pw-overlay .pw-sub{color:#8890a8;font-size:13px;margin-bottom:28px}
-#pw-overlay input[type=password]{width:100%;padding:13px 16px;border-radius:8px;border:1px solid #252a3d;background:#111420;color:#e8eaf0;font-size:16px;font-family:"Noto Sans JP",sans-serif;outline:none}
-#pw-overlay input:focus{border-color:#4a90d9}
-#pw-overlay button{width:100%;margin-top:10px;padding:13px;border-radius:8px;border:none;background:#58a6ff;color:#0d1117;font-size:15px;font-weight:700;font-family:"Noto Sans JP",sans-serif;cursor:pointer}
-#pw-overlay button:hover{background:#79b8ff}
-#pw-overlay .pw-err{color:#e63946;font-size:13px;margin-top:8px;display:none}
-#pw-overlay .pw-back{display:inline-block;margin-top:18px;color:#4a90d9;font-size:12px;text-decoration:none}
+#pw-overlay h2{color:#1a1510;font-size:1.4rem;margin-bottom:6px}
+#pw-overlay .pw-sub{color:#6b5f4e;font-size:13px;margin-bottom:28px}
+#pw-overlay input[type=password]{width:100%;padding:13px 16px;border-radius:8px;border:1px solid #c0b8a8;background:#fffdf8;color:#1a1510;font-size:16px;font-family:"Noto Sans JP",sans-serif;outline:none}
+#pw-overlay input:focus{border-color:#1a4a8a}
+#pw-overlay button{width:100%;margin-top:10px;padding:13px;border-radius:8px;border:none;background:#b5271a;color:#fff;font-size:15px;font-weight:700;font-family:"Noto Sans JP",sans-serif;cursor:pointer}
+#pw-overlay button:hover{background:#d94030}
+#pw-overlay .pw-err{color:#b5271a;font-size:13px;margin-top:8px;display:none}
+#pw-overlay .pw-back{display:inline-block;margin-top:18px;color:#1a4a8a;font-size:12px;text-decoration:none}
 </style>
 </head>
 <body>
@@ -249,7 +250,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 </div>
 
 <!-- ===== SEC1.5: 情勢変化 ===== -->
-<div class="section" style="border:1px solid rgba(210,153,34,0.5);background:linear-gradient(135deg,rgba(210,153,34,0.06),var(--bg2))">
+<div class="section" style="border:1px solid rgba(154,122,40,0.4);background:linear-gradient(135deg,rgba(154,122,40,0.06),var(--bg2))">
   <div class="section-title"><span class="section-icon">📰</span>情勢変化：辺野古ボート転覆事故（2026年3月16日）</div>
   <div style="margin-bottom:20px">
     <div class="grid-2" style="margin-bottom:16px">
@@ -271,6 +272,8 @@ tr:hover td{background:rgba(88,166,255,0.04)}
           <li><strong>論点シフト</strong>：「理念・感情」から「ガバナンス・安全管理」へ争点が移行する可能性</li>
           <li><strong>反基地運動の停滞</strong>：全抗議活動の自粛、海上活動は安全確認まで停止中</li>
           <li><strong>衆院選全敗との二重打撃</strong>：2月の沖縄1〜4区全敗と合わせ、オール沖縄の組織的求心力が低下</li>
+          <li><strong>古謝陣営のリスク</strong>：事故を直接・間接に政治利用した場合、有権者からの強い反発を招く可能性。「命の問題を選挙に利用するのか」という批判は致命的</li>
+          <li><strong>基地問題への関心再燃</strong>：事故を契機に基地問題全体への関心が高まる可能性があり、辺野古争点化は玉城陣営に有利に作用しうる</li>
         </ul>
       </div>
     </div>
@@ -329,9 +332,9 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <table style="font-size:13px">
         <tr><td style="color:var(--text-sub);width:90px">年齢</td><td><strong>66歳</strong></td></tr>
         <tr><td style="color:var(--text-sub)">経歴</td><td>タレント→衆議院4期→知事2期</td></tr>
-        <tr><td style="color:var(--text-sub)">スローガン</td><td><strong>「辺野古移設阻止」</strong></td></tr>
+        <tr><td style="color:var(--text-sub)">スローガン</td><td><strong>「誇りある豊かさ」</strong></td></tr>
         <tr><td style="color:var(--text-sub)">支持基盤</td><td>共産・社民・社大・立民・市民団体</td></tr>
-        <tr><td style="color:var(--text-sub)">政策軸</td><td>反基地・平和・オール沖縄</td></tr>
+        <tr><td style="color:var(--text-sub)">政策軸</td><td>平和・子どもの貧困対策・万国津梁（国際交流）</td></tr>
         <tr><td style="color:var(--text-sub)">辺野古</td><td>絶対阻止（現在も法廷闘争中）</td></tr>
       </table>
       <div style="margin-top:16px">
@@ -339,7 +342,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <ul style="font-size:12px;color:var(--text-sub);padding-left:16px">
           <li>現職の知名度・2期8年の実績PR</li>
           <li>オール沖縄の組織票（2022年は約36万基盤）</li>
-          <li>平和・感情票の動員力</li>
+          <li>平和・アイデンティティを軸とした支持基盤の結束力</li>
           <li>メディアとの良好な関係（地元2紙）</li>
         </ul>
       </div>
@@ -382,12 +385,13 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <li>女性票・30代無党派への訴求弱さ</li>
         <li>離島地域での組織基盤の弱さ</li>
         <li>過去の大型選挙経験なし（初の知事選）</li>
+        <li>自民党の全国的な課題（旧裏金問題等）が逆風になるリスク</li>
       </ul>
     </div>
     <div class="swot-box swot-o">
       <div class="swot-title">Opportunities（機会）</div>
       <ul class="swot-list">
-        <li>玉城県政8年間の経済停滞への不満増大</li>
+        <li>玉城県政8年間の経済政策の成果への疑問が増大</li>
         <li>中部PFAS水質汚染問題への解決需要</li>
         <li>子育て・教育費無償化への高い期待</li>
         <li>辺野古「現実路線」への疲弊感の広がり</li>
@@ -398,7 +402,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="swot-box swot-t">
       <div class="swot-title">Threats（脅威）</div>
       <ul class="swot-list">
-        <li>オール沖縄の感情票・動員力は依然健在</li>
+        <li>オール沖縄の支持基盤の再結集・動員力は依然健在</li>
         <li>辺野古問題での答弁ミスリスク</li>
         <li>反自民・高市政権への逆風波及</li>
         <li>投票率62%以上で逆転リスク浮上</li>
@@ -427,7 +431,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="swot-box swot-w">
       <div class="swot-title">Weaknesses（弱み）</div>
       <ul class="swot-list">
-        <li>8年間の経済実績への疑問（県民所得全国最下位継続）</li>
+        <li>8年間の経済実績への疑問（県民所得全国最下位継続 ※コロナ禍の観光業打撃も要因）</li>
         <li>辺野古阻止の公約未達成（最高裁でも敗訴）</li>
         <li>3期目出馬への「多選」批判</li>
         <li>66歳という年齢と「古い政治」イメージ</li>
@@ -439,7 +443,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="swot-box swot-o">
       <div class="swot-title">Opportunities（機会）</div>
       <ul class="swot-list">
-        <li>辺野古問題を争点化できれば感情票の再結集が可能</li>
+        <li>辺野古問題を争点化できれば支持基盤の再結集が可能</li>
         <li>高市政権への反発が沖縄で強く出る可能性</li>
         <li>投票率上昇で浮動票が流入する展開</li>
         <li>相手候補の知名度不足を突ける序盤戦の優位</li>
@@ -451,7 +455,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div class="swot-title">Threats（脅威）</div>
       <ul class="swot-list">
         <li>「変化」を求める有権者心理の強まり</li>
-        <li>経済停滞への不満が無党派層に広がっている</li>
+        <li>経済政策の成果への疑問が無党派層に広がっている</li>
         <li>保守統一（下地票統合）で対抗陣営が上積み</li>
         <li>辺野古ボート事故の長期的影響</li>
         <li>若年層の離反・投票率低下</li>
@@ -474,17 +478,17 @@ tr:hover td{background:rgba(88,166,255,0.04)}
     <div class="pos-label" style="bottom:6px;left:50%;transform:translateX(-50%)">&darr; 経済・生活</div>
     <!-- 玉城 -->
     <div class="pos-dot" style="left:72%;top:25%">
-      <div class="pos-dot-circle" style="background:rgba(248,81,73,0.3);border:2px solid var(--red);color:var(--red)">玉城</div>
+      <div class="pos-dot-circle" style="background:rgba(181,39,26,0.15);border:2px solid var(--red);color:var(--red)">玉城</div>
       <div class="pos-dot-label" style="color:var(--red)">理念 × 基地反対</div>
     </div>
     <!-- 古謝 -->
     <div class="pos-dot" style="left:36%;top:62%">
-      <div class="pos-dot-circle" style="background:rgba(88,166,255,0.2);border:2px solid var(--blue);color:var(--blue)">古謝</div>
+      <div class="pos-dot-circle" style="background:rgba(26,74,138,0.15);border:2px solid var(--blue);color:var(--blue)">古謝</div>
       <div class="pos-dot-label" style="color:var(--blue)">経済 × やや容認</div>
     </div>
     <!-- 無党派層 -->
     <div class="pos-dot" style="left:52%;top:58%">
-      <div class="pos-dot-circle" style="background:rgba(210,153,34,0.2);border:2px solid var(--orange);color:var(--orange);font-size:10px">無党<br>派層</div>
+      <div class="pos-dot-circle" style="background:rgba(154,122,40,0.15);border:2px solid var(--orange);color:var(--orange);font-size:10px">無党<br>派層</div>
       <div class="pos-dot-label" style="color:var(--orange)">最大の争奪ゾーン</div>
     </div>
   </div>
@@ -550,19 +554,19 @@ tr:hover td{background:rgba(88,166,255,0.04)}
       <div style="font-size:12px;color:var(--text-sub)">2022年知事選で下地幹郎氏が53,673票を獲得。宮古島・石垣を中心に分布。保守統一が実現すれば古謝に流れるが、一部は玉城支持や棄権に回る可能性も。<strong>古謝陣営の上積み余地</strong>。</div>
     </div>
     <div class="card" style="padding:16px">
-      <div class="badge" style="margin-bottom:8px;background:rgba(188,140,255,0.2);color:var(--purple);border:1px solid rgba(188,140,255,0.4)">注目セグメント 4</div>
+      <div class="badge" style="margin-bottom:8px;background:rgba(107,74,138,0.12);color:var(--purple);border:1px solid rgba(107,74,138,0.3)">注目セグメント 4</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">50〜60代 保革混在層</div>
       <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">推定票数: <strong style="color:var(--purple)">15〜18万票</strong></div>
-      <div style="font-size:12px;color:var(--text-sub)">最大ボリュームゾーン。経済・安定を重視するが平和感情も持つ。従来は玉城支持が多い世代だが、3期目への疲弊感から流動化の兆し。<strong>両候補にとって最重要層</strong>。</div>
+      <div style="font-size:12px;color:var(--text-sub)">最大ボリュームゾーン。経済・安定を重視するが平和感情も持つ。従来からオール沖縄支持が多く、<strong>玉城が優勢</strong>な世代だが、3期目への疲弊感から流動化の兆し。<strong>両候補にとって最重要層</strong>。</div>
     </div>
     <div class="card" style="padding:16px">
-      <div class="badge" style="margin-bottom:8px;background:rgba(88,166,255,0.15);color:var(--blue);border:1px solid rgba(88,166,255,0.3)">注目セグメント 5</div>
+      <div class="badge" style="margin-bottom:8px;background:rgba(26,74,138,0.12);color:var(--blue);border:1px solid rgba(26,74,138,0.3)">注目セグメント 5</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">10〜20代 若年層</div>
       <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">推定票数: <strong style="color:var(--blue)">4〜5万票</strong></div>
       <div style="font-size:12px;color:var(--text-sub)">TikTok・Instagramが主要情報源。学費・就職・将来不安に関心。辺野古問題への関心は上の世代より薄く、経済・生活重視。投票率の低さが課題で、<strong>どちらが動員できるかは未知数</strong>。</div>
     </div>
     <div class="card" style="padding:16px">
-      <div class="badge" style="margin-bottom:8px;background:rgba(46,160,67,0.15);color:var(--green-light);border:1px solid rgba(46,160,67,0.3)">注目セグメント 6</div>
+      <div class="badge" style="margin-bottom:8px;background:rgba(26,138,90,0.12);color:var(--green-light);border:1px solid rgba(26,138,90,0.3)">注目セグメント 6</div>
       <div style="font-weight:700;font-size:1em;margin-bottom:6px">離島住民（宮古島・石垣島等）</div>
       <div style="font-size:12px;color:var(--text-sub);margin-bottom:8px">推定票数: <strong style="color:var(--green-light)">6〜7万票</strong></div>
       <div style="font-size:12px;color:var(--text-sub)">交通インフラ・医療・経済格差が最大関心事。自衛隊配備問題では意見が分かれる。保守系首長が多い地域で<strong>古謝やや優勢</strong>だが、生活実感に基づく判断が強い。</div>
@@ -717,7 +721,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
         <li>8年間の経済実績への批判が広がるリスク</li>
         <li>3期目への多選批判・「変化なし」イメージ</li>
         <li>オール沖縄の求心力低下（衆院選4区全敗の影響）</li>
-        <li>若年層の投票率低下で感情票が減少</li>
+        <li>若年層の投票率低下で支持基盤の再結集が困難に</li>
       </ul>
     </div>
   </div>
@@ -762,29 +766,29 @@ tr:hover td{background:rgba(88,166,255,0.04)}
   <div class="scenario-grid" style="margin-bottom:24px">
     <div class="scenario-card scenario-b">
       <div class="scenario-label">SCENARIO D</div>
-      <div class="scenario-title">辺野古争点化で感情票結集</div>
+      <div class="scenario-title">実績アピール型勝利</div>
       <div class="scenario-prob">18%</div>
       <div class="scenario-detail">
-        辺野古問題が最大争点化し、無党派層が反基地感情で玉城に流れる。高投票率62%。<br>
-        <strong>得票: 古謝31万 vs 玉城37万</strong>
+        2期8年の子どもの貧困対策・観光業回復・首里城復興の実績を前面に訴求。「8年間で沖縄は変わった」という現職の強みを活かし、安定を求める有権者層を固める。<br>
+        <strong>得票: 玉城35万 vs 古謝32.5万</strong>
       </div>
     </div>
     <div class="scenario-card scenario-b">
       <div class="scenario-label">SCENARIO E</div>
-      <div class="scenario-title">反自民・高市逆風直撃</div>
+      <div class="scenario-title">辺野古・PFAS争点化で保革横断動員</div>
       <div class="scenario-prob">12%</div>
       <div class="scenario-detail">
-        全国的な自民・高市政権逆風が沖縄に波及。無党派が反自民票として玉城に。<br>
-        <strong>得票: 古謝30万 vs 玉城35万</strong>
+        辺野古問題に加え、PFAS汚染を基地由来の健康問題として争点化。中部の無党派層を取り込み、女性票・子育て世代の支持を拡大。<br>
+        <strong>得票: 玉城34万 vs 古謝33万</strong>
       </div>
     </div>
     <div class="scenario-card scenario-b">
       <div class="scenario-label">SCENARIO F</div>
-      <div class="scenario-title">現職の底力・認知度差</div>
+      <div class="scenario-title">古謝の失言・スキャンダルによる逆転</div>
       <div class="scenario-prob">10%</div>
       <div class="scenario-detail">
-        古謝の認知率が上がらず、現職の知名度と実績PRに負ける。オール沖縄の動員力健在。<br>
-        <strong>得票: 古謝31万 vs 玉城34万</strong>
+        古謝陣営の選挙戦中の失言やスキャンダルが表面化し、無党派層が離反。オール沖縄の組織力が相対的に優位に。<br>
+        <strong>得票: 玉城34.5万 vs 古謝31万</strong>
       </div>
     </div>
   </div>
@@ -814,7 +818,7 @@ tr:hover td{background:rgba(88,166,255,0.04)}
 </div>
 
 <!-- ===== FOOTER ===== -->
-<div style="background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px 32px;margin-top:8px;text-align:center">
+<div style="background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:24px 32px;margin-top:8px;text-align:center">
   <div style="color:var(--blue);font-weight:700;font-size:13px;margin-bottom:8px">U&I株倶楽部 調査部作成</div>
   <div style="font-size:12px;color:var(--text-sub)">
     作成: U&I株倶楽部 調査部 ｜ 作成日: 2026年3月23日<br>
@@ -833,8 +837,8 @@ new Chart(document.getElementById('winChart'),{
     labels:['古謝 60%','玉城 40%'],
     datasets:[{
       data:[60,40],
-      backgroundColor:['rgba(88,166,255,0.85)','rgba(248,81,73,0.7)'],
-      borderColor:['#58a6ff','#f85149'],
+      backgroundColor:['rgba(26,74,138,0.75)','rgba(181,39,26,0.65)'],
+      borderColor:['#1a4a8a','#b5271a'],
       borderWidth:2,
       hoverOffset:6
     }]
@@ -845,7 +849,7 @@ new Chart(document.getElementById('winChart'),{
     plugins:{
       legend:{
         position:'bottom',
-        labels:{color:'#8b949e',font:{size:12},padding:10}
+        labels:{color:'#6b5f4e',font:{size:12},padding:10}
       }
     }
   }
@@ -860,16 +864,16 @@ new Chart(document.getElementById('voteScenarioChart'),{
       {
         label:'古謝玄太（万票）',
         data:[33.0,33.5,33.5],
-        backgroundColor:'rgba(88,166,255,0.75)',
-        borderColor:'#58a6ff',
+        backgroundColor:'rgba(26,74,138,0.7)',
+        borderColor:'#1a4a8a',
         borderWidth:1.5,
         borderRadius:4
       },
       {
         label:'玉城デニー（万票）',
         data:[29.5,33.0,37.0],
-        backgroundColor:'rgba(248,81,73,0.6)',
-        borderColor:'#f85149',
+        backgroundColor:'rgba(181,39,26,0.6)',
+        borderColor:'#b5271a',
         borderWidth:1.5,
         borderRadius:4
       }
@@ -878,14 +882,14 @@ new Chart(document.getElementById('voteScenarioChart'),{
   options:{
     responsive:true,
     plugins:{
-      legend:{labels:{color:'#8b949e',font:{size:11}}},
+      legend:{labels:{color:'#6b5f4e',font:{size:11}}},
       tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.parsed.y+'万票'}}}
     },
     scales:{
-      x:{ticks:{color:'#8b949e'},grid:{color:'rgba(48,54,61,0.5)'}},
+      x:{ticks:{color:'#6b5f4e'},grid:{color:'rgba(192,184,168,0.4)'}},
       y:{
-        ticks:{color:'#8b949e',callback:function(v){return v+'万'}},
-        grid:{color:'rgba(48,54,61,0.5)'},
+        ticks:{color:'#6b5f4e',callback:function(v){return v+'万'}},
+        grid:{color:'rgba(192,184,168,0.4)'},
         min:26,
         max:40
       }
