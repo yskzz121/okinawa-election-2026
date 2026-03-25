@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>沖縄県知事選 保守12年連敗の構造分析｜U&I株倶楽部</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  :root {
+    --bg: #f5f0e8;
+    --surface: #fffdf8;
+    --surface2: #f0ebe0;
+    --border: #d6cfc0;
+    --border2: #c0b8a8;
+    --ink: #1a1510;
+    --ink2: #3d3628;
+    --ink3: #6b5f4e;
+    --ink4: #9a8f7e;
+    --red: #b5271a;
+    --red2: #d94030;
+    --blue: #1a4a8a;
+    --blue2: #2563a0;
+    --gold: #9a7a28;
+    --gold2: #c4a040;
+    --green: #1a6b4a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--ink);
+    color: #f5f0e8;
+    padding: 48px 56px 40px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid var(--red);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px; height: 100%;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(255,255,255,0.03) 8px,
+      rgba(255,255,255,0.03) 16px
+    );
+  }
+  .header-eyebrow {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold2);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .header h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    color: #f5f0e8;
+  }
+  .header h1 em { color: var(--gold2); font-style: normal; }
+  .header-sub {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #a09888;
+    font-size: 12px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  /* ── LAYOUT ── */
+  .container { max-width: 1080px; margin: 0 auto; padding: 48px 28px 80px; }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 64px; }
+  .section-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .section-subtitle {
+    font-size: 12px;
+    color: var(--ink4);
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-bottom: 28px;
+  }
+
+  /* ── GRID ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+
+  /* ── CARD ── */
+  .card { background: var(--surface); border: 1px solid var(--border2); border-radius: 4px; padding: 20px; }
+  .card-green { border-left: 4px solid var(--green); }
+  .card-red { border-left: 4px solid var(--red); }
+  .card-blue { border-left: 4px solid var(--blue); }
+  .card-orange { border-left: 4px solid var(--gold); }
+  .card-purple { border-left: 4px solid #6b4a8a; }
+  .card-label { font-family: 'Noto Sans JP', sans-serif; font-size: 11px; color: var(--ink3); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .card-value { font-size: 2em; font-weight: 900; line-height: 1.1; color: var(--ink); }
+  .card-note { font-size: 12px; color: var(--ink3); margin-top: 4px; }
+
+  /* ── TABLE ── */
+  .analysis-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 13px;
+    margin-bottom: 36px;
+  }
+  .analysis-table thead tr { background: var(--surface2); }
+  .analysis-table th {
+    padding: 11px 16px;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink3);
+    font-weight: 500;
+    border-bottom: 1px solid var(--border2);
+  }
+  .analysis-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--ink2);
+    line-height: 1.8;
+  }
+  .analysis-table td:first-child {
+    font-weight: 700;
+    color: var(--ink);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+    width: 80px;
+  }
+  .analysis-table tr:last-child td { border-bottom: none; }
+  .analysis-table tr:hover td { background: rgba(0,0,0,0.015); }
+
+  /* ── TIMELINE ── */
+  .timeline { margin-bottom: 48px; }
+  .tl-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 0;
+    margin-bottom: 0;
+  }
+  .tl-left {
+    padding: 20px 20px 20px 0;
+    text-align: right;
+    border-right: 2px solid var(--border2);
+    position: relative;
+  }
+  .tl-left::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 28px;
+    width: 10px; height: 10px;
+    background: var(--red);
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+  }
+  .tl-year-label {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 2px;
+  }
+  .tl-phase {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    color: var(--red);
+    letter-spacing: 2px;
+  }
+  .tl-right {
+    padding: 20px 0 20px 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .tl-item:last-child .tl-right { border-bottom: none; }
+  .tl-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .tl-body {
+    font-size: 13px;
+    color: var(--ink2);
+    line-height: 1.9;
+  }
+  .tl-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .tl-tag {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 2px;
+    border: 1px solid;
+    letter-spacing: 1px;
+  }
+  .tag-red { color: var(--red); border-color: var(--red); background: rgba(181,39,26,0.07); }
+  .tag-blue { color: var(--blue); border-color: var(--blue); background: rgba(26,74,138,0.07); }
+  .tag-gold { color: var(--gold); border-color: var(--gold); background: rgba(154,122,40,0.07); }
+  .tag-neutral { color: var(--ink3); border-color: var(--border2); }
+
+  /* ── FACTOR GRID ── */
+  .factor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px; }
+  .factor-block {
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .factor-head {
+    padding: 12px 18px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #f5f0e8;
+  }
+  .factor-head.red { background: var(--red); }
+  .factor-head.blue { background: var(--blue); }
+  .factor-head.neutral { background: var(--ink3); }
+  .factor-body { padding: 16px 18px; }
+  .factor-item {
+    display: flex;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--ink2);
+    line-height: 1.7;
+    align-items: flex-start;
+  }
+  .factor-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .fi-marker {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 2px;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+  .fi-red { background: rgba(181,39,26,0.12); color: var(--red); }
+  .fi-blue { background: rgba(26,74,138,0.12); color: var(--blue); }
+
+  /* ── INSIGHT CARDS ── */
+  .insight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px; }
+  .insight-card {
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    padding: 22px;
+    border-radius: 4px;
+    position: relative;
+  }
+  .insight-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+  }
+  .ic-red::before { background: var(--red); }
+  .ic-blue::before { background: var(--blue); }
+  .ic-gold::before { background: var(--gold); }
+  .ic-green::before { background: var(--green); }
+  .insight-num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .ic-red .insight-num { color: var(--red2); }
+  .ic-blue .insight-num { color: var(--blue2); }
+  .ic-gold .insight-num { color: var(--gold2); }
+  .ic-green .insight-num { color: var(--green); }
+  .insight-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--ink);
+  }
+  .insight-body { font-size: 13px; color: var(--ink2); line-height: 1.85; }
+
+  /* ── CAUSE CARD ── */
+  .cause-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; font-size: 13px; font-weight: 900; margin-bottom: 10px; flex-shrink: 0; }
+  .cause-title { font-weight: 900; font-size: 1.05em; margin-bottom: 8px; }
+  .cause-desc { font-size: 13px; color: var(--ink3); line-height: 1.6; }
+
+  /* ── QUOTE ── */
+  .quote-block {
+    border-left: 4px solid var(--red);
+    padding: 14px 20px;
+    background: var(--surface2);
+    margin: 20px 0;
+    font-size: 13px;
+    color: var(--ink2);
+    line-height: 1.85;
+    font-style: italic;
+  }
+  .quote-block cite {
+    display: block;
+    font-style: normal;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    color: var(--ink4);
+    margin-top: 8px;
+  }
+
+  /* ── PHASE MARKER ── */
+  .phase-marker { display: inline-block; background: rgba(26,74,138,0.1); border: 1px solid rgba(26,74,138,0.25); border-radius: 6px; padding: 3px 12px; font-size: 12px; color: var(--blue); font-weight: 700; letter-spacing: 1px; margin-bottom: 12px; font-family: 'Noto Sans JP', sans-serif; }
+
+  /* ── HIGHLIGHT BOX ── */
+  .highlight-box { background: rgba(181,39,26,0.06); border: 1px solid rgba(181,39,26,0.25); border-radius: 4px; padding: 20px; margin: 16px 0; }
+  .highlight-box.blue { background: rgba(26,74,138,0.06); border-color: rgba(26,74,138,0.25); }
+  .highlight-box.green { background: rgba(26,107,74,0.06); border-color: rgba(26,107,74,0.25); }
+  .highlight-box.orange { background: rgba(154,122,40,0.06); border-color: rgba(154,122,40,0.25); }
+
+  /* ── INSIGHT LIST ── */
+  .insight-list { list-style: none; font-size: 14px; }
+  .insight-list li { padding: 6px 0 6px 20px; position: relative; border-bottom: 1px solid var(--border); }
+  .insight-list li:last-child { border-bottom: none; }
+  .insight-list li::before { content: '▸'; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+
+  /* ── STRATEGY BLOCK ── */
+  .strategy-block {
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .sb-head {
+    background: var(--ink2);
+    color: #f5f0e8;
+    padding: 14px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .sb-num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.2);
+    line-height: 1;
+  }
+  .sb-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .sb-body {
+    padding: 18px 20px;
+    font-size: 13px;
+    color: var(--ink2);
+    line-height: 1.9;
+  }
+  .sb-body strong { color: var(--red); }
+
+  /* ── CHART CONTAINER ── */
+  .chart-container { position: relative; height: 320px; margin: 16px 0; }
+  .chart-container-sm { position: relative; height: 220px; margin: 16px 0; }
+
+  /* ── DIVIDER ── */
+  .divider { border: none; border-top: 1px solid var(--border2); margin: 48px 0; }
+
+  /* ── FINAL BOX ── */
+  .final-box {
+    background: var(--ink);
+    color: #f5f0e8;
+    padding: 32px 36px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+  .final-box h3 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold2);
+    margin-bottom: 16px;
+  }
+  .final-box p {
+    font-size: 13px;
+    line-height: 2;
+    color: #ccc8c0;
+    margin-bottom: 12px;
+  }
+  .final-box strong { color: #f5f0e8; }
+
+  /* ── FOOTNOTE ── */
+  .footnote {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    color: var(--ink4);
+    margin-top: 10px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4, .factor-grid, .insight-grid { grid-template-columns: 1fr; }
+    .header { padding: 28px 20px 24px; }
+    .header h1 { font-size: 1.4rem; }
+    .container { padding: 28px 16px 60px; }
+    .tl-item { grid-template-columns: 80px 1fr; }
+    .chart-container { height: 260px; }
+    .chart-container-sm { height: 200px; }
+    table, .analysis-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  }
+  @media (max-width: 480px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.2rem; }
+    .card-value { font-size: 1.6em; }
+  }
+</style>
+<style id="pw-gate-css">
+#pw-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:#0a0c14;display:flex;align-items:center;justify-content:center;font-family:"Noto Sans JP",sans-serif}
+#pw-overlay .pw-box{text-align:center;max-width:380px;width:100%;padding:24px}
+#pw-overlay h2{color:#e8eaf0;font-size:1.4rem;margin-bottom:6px}
+#pw-overlay .pw-sub{color:#8890a8;font-size:13px;margin-bottom:28px}
+#pw-overlay input[type=password]{width:100%;padding:13px 16px;border-radius:8px;border:1px solid #252a3d;background:#111420;color:#e8eaf0;font-size:16px;font-family:"Noto Sans JP",sans-serif;outline:none}
+#pw-overlay input:focus{border-color:#4a90d9}
+#pw-overlay button{width:100%;margin-top:10px;padding:13px;border-radius:8px;border:none;background:#e63946;color:#fff;font-size:15px;font-weight:700;font-family:"Noto Sans JP",sans-serif;cursor:pointer}
+#pw-overlay button:hover{background:#c1121f}
+#pw-overlay .pw-err{color:#e63946;font-size:13px;margin-top:8px;display:none}
+#pw-overlay .pw-back{display:inline-block;margin-top:18px;color:#4a90d9;font-size:12px;text-decoration:none}
+</style>
+</head>
+<body>
+<div id="pw-overlay"><div class="pw-box"><h2>パスワード認証</h2><div class="pw-sub">閲覧にはパスワードが必要です</div><form onsubmit="return pwCheck()"><input type="password" id="pw-field" placeholder="パスワードを入力" autofocus><button type="submit">認証</button></form><div class="pw-err" id="pw-err">パスワードが正しくありません</div><a class="pw-back" href="index.html">&larr; 一覧に戻る</a></div></div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-eyebrow">U&I株倶楽部 SPECIAL REPORT</div>
+  <h1>沖縄県知事選 <em>保守12年連敗の構造分析</em></h1>
+  <div class="header-sub">なぜ自民党は沖縄で勝てないのか ── 2014-2025年の全県選挙データから読み解く</div>
+</div>
+
+<div class="container">
+
+  <!-- ═══ SECTION 01: KEY NUMBERS ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 01</div>
+    <div class="section-title">数字が語る ── 全県選挙8連敗の全体像</div>
+    <div class="section-subtitle">2013年以降、保守系候補は沖縄の全県選挙で一度も勝利していない</div>
+
+    <div class="grid-4">
+      <div class="card card-red">
+        <div class="card-label">全県選挙 連敗数</div>
+        <div class="card-value" style="color:var(--red)">8連敗</div>
+        <div class="card-note">知事選3連敗 + 参院選5連敗<br>2013年〜2025年</div>
+      </div>
+      <div class="card card-red">
+        <div class="card-label">知事選 累計得票差</div>
+        <div class="card-value" style="color:var(--red)">&blacktriangle;24.5万票</div>
+        <div class="card-note">2014: &blacktriangle;10万 / 2018: &blacktriangle;8万 / 2022: &blacktriangle;6.5万</div>
+      </div>
+      <div class="card card-orange">
+        <div class="card-label">自民 比例得票率（沖縄）</div>
+        <div class="card-value" style="color:var(--gold)">約25%</div>
+        <div class="card-note">全国平均より10〜15pt低い<br>構造的な自民忌避</div>
+      </div>
+      <div class="card card-blue">
+        <div class="card-label">県民投票「反対」</div>
+        <div class="card-value" style="color:var(--blue)">72.15%</div>
+        <div class="card-note">2019年辺野古県民投票<br>43.4万票が「反対」</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 02: EXECUTIVE SUMMARY ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 02</div>
+    <div class="section-title">エグゼクティブサマリー</div>
+    <div class="section-subtitle">なぜこれほどの連敗が起きたのか──構造的要因の俯瞰</div>
+
+    <p style="font-size:15px;line-height:1.8;margin-bottom:16px">
+      2014年以来、保守系（自民党系）候補は沖縄の全県選挙で8連敗を喫している。知事選3連敗、参院選5連敗。なぜこのような異例の連敗が続いているのか。本レポートは、選挙データと歴史的経緯の両面からその構造的要因を分析する。
+    </p>
+
+    <div class="highlight-box">
+      <p style="font-size:14px;font-weight:700;color:var(--red);margin-bottom:8px">核心的な問い</p>
+      <p style="font-size:14px;line-height:1.8">
+        保守が嫌われているのではない。<strong>「沖縄の尊厳を売り渡す保守」が嫌われている。</strong><br>
+        2013年の仲井眞知事による辺野古埋め立て承認 ── 振興予算と引き換えに基地を受け入れ「いい正月になる」と笑った ── この一点が、過去12年の全ての敗北の起点である。県民の記憶に刻まれた「裏切り」を、自民党はいまだに清算できていない。
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 03: 全県選挙8連敗の全記録 ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 03</div>
+    <div class="section-title">全県選挙8連敗の全記録</div>
+    <div class="section-subtitle">2013年から2025年まで──保守系候補が越えられなかった壁</div>
+
+    <table class="analysis-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>年</th>
+          <th>選挙</th>
+          <th>オール沖縄系</th>
+          <th>自民系</th>
+          <th>得票差</th>
+          <th>投票率</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2013</td>
+          <td>参院選</td>
+          <td><strong style="color:var(--green)">糸数慶子 ●</strong></td>
+          <td>安里政晃</td>
+          <td style="color:var(--red)">&blacktriangle;約7万票</td>
+          <td>50.01%</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>2014</td>
+          <td style="font-weight:700">知事選</td>
+          <td><strong style="color:var(--green)">翁長雄志 ●</strong><br><span style="font-size:11px;color:var(--ink3)">360,820票</span></td>
+          <td>仲井眞弘多<br><span style="font-size:11px;color:var(--ink3)">261,076票</span></td>
+          <td style="color:var(--red);font-weight:700">&blacktriangle;99,744票</td>
+          <td>64.13%</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>2016</td>
+          <td>参院選</td>
+          <td><strong style="color:var(--green)">伊波洋一 ●</strong></td>
+          <td>島尻安伊子（現職大臣）</td>
+          <td style="color:var(--red)">&blacktriangle;約10.6万票</td>
+          <td>54.46%</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>2018</td>
+          <td style="font-weight:700">知事選</td>
+          <td><strong style="color:var(--green)">玉城デニー ●</strong><br><span style="font-size:11px;color:var(--ink3)">396,632票（史上最多）</span></td>
+          <td>佐喜真淳<br><span style="font-size:11px;color:var(--ink3)">316,458票</span></td>
+          <td style="color:var(--red);font-weight:700">&blacktriangle;80,174票</td>
+          <td>63.24%</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>2019</td>
+          <td>参院選</td>
+          <td><strong style="color:var(--green)">高良鉄美 ●</strong></td>
+          <td>安里繁信</td>
+          <td style="color:var(--red)">&blacktriangle;約7万票</td>
+          <td>46.41%</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>2022</td>
+          <td style="font-weight:700">知事選</td>
+          <td><strong style="color:var(--green)">玉城デニー ●</strong><br><span style="font-size:11px;color:var(--ink3)">339,767票</span></td>
+          <td>佐喜真淳<br><span style="font-size:11px;color:var(--ink3)">274,844票</span></td>
+          <td style="color:var(--red);font-weight:700">&blacktriangle;64,923票</td>
+          <td>57.22%</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>2022</td>
+          <td>参院選</td>
+          <td><strong style="color:var(--green)">伊波洋一 ●</strong></td>
+          <td>古謝玄太</td>
+          <td style="color:var(--red)">&blacktriangle;約2,900票</td>
+          <td>52.47%</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>2025</td>
+          <td>参院選</td>
+          <td><strong style="color:var(--green)">高良沙哉 ●</strong></td>
+          <td>奥間亮</td>
+          <td style="color:var(--red)">&blacktriangle;約3.3万票</td>
+          <td>51.2%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box blue">
+      <p style="font-size:14px"><strong>注目すべきパターン:</strong> 知事選の負け幅は3回連続で縮小（&blacktriangle;10万&rarr;&blacktriangle;8万&rarr;&blacktriangle;6.5万）。2022年参院選では古謝玄太が2,900票差まで肉薄。<strong>全県選挙で勝てない構造は弱まりつつある</strong>が、依然として「壁」は越えられていない。この構造は2026年知事選でも持続するのか、それとも転換点を迎えるのかが注目される。</p>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 04: 得票差トレンド ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 04</div>
+    <div class="section-title">知事選 得票差トレンド</div>
+    <div class="section-subtitle">差は縮小しているが、保守系は依然として「壁」を越えられない</div>
+
+    <div class="chart-container">
+      <canvas id="marginChart"></canvas>
+    </div>
+    <div class="grid-3" style="margin-top:16px">
+      <div class="card card-red">
+        <div class="card-label">2014年 翁長 vs 仲井眞</div>
+        <div class="card-value" style="color:var(--red)">&blacktriangle;99,744</div>
+        <div class="card-note">「裏切り」への審判。過去最大の敗北</div>
+      </div>
+      <div class="card card-orange">
+        <div class="card-label">2018年 玉城 vs 佐喜真</div>
+        <div class="card-value" style="color:var(--gold)">&blacktriangle;80,174</div>
+        <div class="card-note">翁長の「弔い合戦」。玉城が史上最多得票</div>
+      </div>
+      <div class="card card-blue">
+        <div class="card-label">2022年 玉城 vs 佐喜真</div>
+        <div class="card-value" style="color:var(--blue)">&blacktriangle;64,923</div>
+        <div class="card-note">差は縮小も統一教会問題が直撃</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 05: 転換点タイムライン ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 05</div>
+    <div class="section-title">転換点タイムライン ── 何がいつ壊れたのか</div>
+    <div class="section-subtitle">自民党沖縄の凋落は一夜にして起きたのではない。1995年から30年にわたる積み重ねの結果である</div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">1995</span>
+          <span class="tl-phase">原点</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">米兵少女暴行事件</div>
+          <div class="tl-body">県民大会に8.5万人。SACO合意で普天間返還合意も「県内移設」が条件に。沖縄の怒りの原点。</div>
+          <div class="tl-tags"><span class="tl-tag tag-red">沖縄基地問題の転換点</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">1998</span>
+          <span class="tl-phase">保守県政</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">保守県政16年間（1998〜2014年）</div>
+          <div class="tl-body">稲嶺恵一&rarr;仲井眞弘多が4期連続で保守県政を維持。ただし仲井眞は2006年・2010年ともに<strong>「県外移設」を公約</strong>に掲げて当選。</div>
+          <div class="tl-tags"><span class="tl-tag tag-neutral">保守県政の安定期</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">2009</span>
+          <span class="tl-phase">裏切り</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">鳩山政権の「最低でも県外」撤回</div>
+          <div class="tl-body"><strong>「最低でも県外」</strong>を掲げて政権交代&rarr;撤回&rarr;辺野古回帰。後に「方便だった」と発言。<strong>「本土の政治家は結局沖縄を裏切る」</strong>という認識が決定的に。</div>
+          <div class="tl-tags"><span class="tl-tag tag-gold">本土政治への不信の固定化</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">2013</span>
+          <span class="tl-phase">建白書</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">「建白書」── オール沖縄の理念的原点</div>
+          <div class="tl-body">全41市町村長・議長ら140人が上京し安倍首相に<strong>「辺野古断念」の建白書</strong>提出。銀座デモ行進。超党派の県民総意が「オール沖縄」の理念的原点に。</div>
+          <div class="tl-tags"><span class="tl-tag tag-blue">超党派の結集</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">2013</span>
+          <span class="tl-phase">転換点</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">仲井眞知事、辺野古埋め立てを承認 ── 決定的転換点</div>
+          <div class="tl-body">仲井眞知事が辺野古埋め立てを承認。振興予算3,500億円と引き換えに、<strong style="color:var(--red)">「いい正月になる」</strong>と発言。「県外移設」公約の明確な裏切り。県議会が知事辞任決議を可決。<strong>この瞬間が、12年連敗の全ての起点。</strong></div>
+          <div class="tl-tags"><span class="tl-tag tag-red">12年連敗の起点</span><span class="tl-tag tag-red">公約違反</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">2014</span>
+          <span class="tl-phase">誕生</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">「オール沖縄」誕生と翁長圧勝</div>
+          <div class="tl-body">自民党県連幹事長だった翁長雄志が離党・出馬。<strong>「イデオロギーよりアイデンティティ」</strong>を掲げ保革の垣根を破壊。知事選で仲井眞に10万票差の圧勝。衆院選でも4区全敗。</div>
+          <div class="tl-tags"><span class="tl-tag tag-blue">保革融合の実現</span><span class="tl-tag tag-gold">アイデンティティ政治</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">2018</span>
+          <span class="tl-phase">継承</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">翁長の死と玉城デニーの継承</div>
+          <div class="tl-body">翁長知事が膵臓がんで死去。遺志を継いだ玉城デニーが<strong>史上最多39.7万票</strong>で当選。「弔い合戦」ムードが保守系候補を圧倒。</div>
+          <div class="tl-tags"><span class="tl-tag tag-blue">弔い合戦の威力</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">2019</span>
+          <span class="tl-phase">県民投票</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">県民投票「反対」72.15%</div>
+          <div class="tl-body">辺野古埋め立ての賛否を問う県民投票で<strong style="color:var(--blue)">反対72.15%（43.4万票）</strong>。政府は事実上無視し工事を続行。「民意が踏みにじられた」感覚が固定化。</div>
+          <div class="tl-tags"><span class="tl-tag tag-blue">民意の可視化</span><span class="tl-tag tag-red">政府は無視</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">2022</span>
+          <span class="tl-phase">逆風</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">統一教会問題の直撃</div>
+          <div class="tl-body">佐喜真候補の旧統一教会合同結婚式出席が発覚。保守系候補の信頼性に直撃。玉城再選。ただし得票差は&blacktriangle;6.5万票に縮小。</div>
+          <div class="tl-tags"><span class="tl-tag tag-red">外部要因が決定的に作用</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">2023</span>
+          <span class="tl-phase">代執行</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">辺野古代執行──法的手段の枯渇</div>
+          <div class="tl-body">辺野古設計変更を巡り国が代執行。最高裁で県敗訴確定。<strong>法的手段は枯渇</strong>し「辺野古反対」の旗の実効性がゼロ化。同時に「諦め感」が広がり始める。</div>
+          <div class="tl-tags"><span class="tl-tag tag-neutral">争点力の低下</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <span class="tl-year-label">2026</span>
+          <span class="tl-phase">地殻変動</span>
+        </div>
+        <div class="tl-right">
+          <div class="tl-title">衆院選で保守系が沖縄4区全勝（史上初）</div>
+          <div class="tl-body">2026年2月の衆院選で保守系が<strong style="color:var(--green)">沖縄4区全勝（史上初）</strong>。ただし全県1区の構造は未だ突破できていない。</div>
+          <div class="tl-tags"><span class="tl-tag tag-gold">小選挙区と全県選挙の乖離</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══ SECTION 06: 5つの構造的課題 ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 06</div>
+    <div class="section-title">保守系候補が直面してきた5つの構造的課題</div>
+    <div class="section-subtitle">12年の連敗は、5つの構造的要因が重層的に作用した結果である</div>
+
+    <!-- 課題1 -->
+    <div class="card card-red" style="margin-bottom:20px">
+      <div style="display:flex;align-items:flex-start;gap:16px">
+        <div class="cause-num" style="background:rgba(181,39,26,0.12);color:var(--red)">1</div>
+        <div>
+          <div class="cause-title" style="color:var(--red)">「尊厳の売り渡し」の原罪 ── 仲井眞の承認問題</div>
+          <div class="cause-desc">
+            2013年12月、仲井眞知事は「県外移設」の公約を翻し、辺野古埋め立てを承認した。振興予算3,500億円と引き換えに基地を受け入れ、「いい正月になる」と発言した。県民がこれを<strong style="color:var(--ink)">「沖縄の尊厳を金で売った」</strong>と受け取ったことが、全ての起点となった。<br><br>
+            この「原罪」は、以降の保守系候補すべてに「あなたも同じことをするのでは？」という疑念として付きまとっている。仲井眞個人の問題ではなく、<strong style="color:var(--ink)">自民党そのものの沖縄に対する姿勢の象徴</strong>として記憶されている。<br><br>
+            <em style="color:var(--ink2);font-size:13px">この「原罪」の記憶がどこまで薄れるかが、今後の保守系候補の命運を左右する。</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 課題2 -->
+    <div class="card card-red" style="margin-bottom:20px">
+      <div style="display:flex;align-items:flex-start;gap:16px">
+        <div class="cause-num" style="background:rgba(181,39,26,0.12);color:var(--red)">2</div>
+        <div>
+          <div class="cause-title" style="color:var(--red)">「保守 vs 革新」の土俵に乗り続ける構造</div>
+          <div class="cause-desc">
+            自民党は毎回「自民・公明推薦」を前面に出し、「保守 vs 革新」の構図で戦ってきた。しかし沖縄の有権者の過半数は無党派層であり、この構図は逆効果である。<br><br>
+            翁長雄志が成功したのは、自ら保守政治家でありながら<strong style="color:var(--ink)">「イデオロギーよりアイデンティティ」</strong>を掲げ、保革の枠組みを破壊したからである。自民党はこの枠組み破壊に対抗する新しい戦い方を12年間見つけられていない。
+          </div>
+          <div class="quote-block" style="margin-top:12px">
+            「自ら望んで基地を提供したことは一度もない」── 翁長雄志（2015年、国連人権理事会にて）
+            <cite>※自民党元県連幹事長が合理性の土俵を降り、「尊厳の土俵」で戦ったことが保革を超えた支持を生んだ</cite>
+          </div>
+          <p style="margin-top:12px"><em style="color:var(--ink2);font-size:13px">翁長が構築したこの枠組みは、翁長亡き後もなお沖縄政治の基本構造として機能している。</em></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 課題3 -->
+    <div class="card card-orange" style="margin-bottom:20px">
+      <div style="display:flex;align-items:flex-start;gap:16px">
+        <div class="cause-num" style="background:rgba(154,122,40,0.12);color:var(--gold)">3</div>
+        <div>
+          <div class="cause-title" style="color:var(--gold)">「アメとムチ」政策 ── 振興予算と基地のリンク</div>
+          <div class="cause-desc">
+            安倍政権以降、菅官房長官（当時）は沖縄振興予算と辺野古への協力度を明確にリンクさせた。2020年には「両者はリンクしている」と公式に明言。<br><br>
+            <strong style="color:var(--ink)">辺野古容認の仲井眞時代に3,501億円（ピーク）&rarr; 辺野古反対の翁長・玉城時代に3,000億円割れへ</strong>。この露骨な「アメとムチ」は、自民党候補が訴える「国との良好な関係で振興を」というメッセージを、<strong style="color:var(--ink)">「基地を受け入れれば金をやる」</strong>という恫喝に変換してしまう。<br><br>
+            <em style="color:var(--ink2);font-size:13px">振興予算と基地問題の連動が解消されない限り、保守系候補のメッセージは構造的に限界を抱える。</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 課題4 -->
+    <div class="card card-orange" style="margin-bottom:20px">
+      <div style="display:flex;align-items:flex-start;gap:16px">
+        <div class="cause-num" style="background:rgba(154,122,40,0.12);color:var(--gold)">4</div>
+        <div>
+          <div class="cause-title" style="color:var(--gold)">候補者の「物語」の不在 ── 「何を考えているかわからない」</div>
+          <div class="cause-desc">
+            保守系候補は、辺野古問題での立場を曖昧にし続けてきた。佐喜真淳は2回の知事選で「辺野古」への賛否を明言せず、「普天間の一日も早い返還」を繰り返した。<br><br>
+            この「戦略的曖昧さ」は裏目に出た。有権者は<strong style="color:var(--ink)">「何を考えているかわからない候補」</strong>に投票しない。一方、翁長と玉城には明確な「物語」があった ── 翁長は「保守が保革を超えて立ち上がった」物語、玉城は「翁長の遺志を継ぐ」物語である。<br><br>
+            <em style="color:var(--ink2);font-size:13px">有権者が求めているのは「曖昧な中間」ではなく、「明確な立場と説得力のある物語」であることがデータから読み取れる。</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 課題5 -->
+    <div class="card card-orange" style="margin-bottom:20px">
+      <div style="display:flex;align-items:flex-start;gap:16px">
+        <div class="cause-num" style="background:rgba(154,122,40,0.12);color:var(--gold)">5</div>
+        <div>
+          <div class="cause-title" style="color:var(--gold)">民意の無視 ── 県民投票72%を踏みにじった代償</div>
+          <div class="cause-desc">
+            2019年の県民投票で72.15%が辺野古反対に投票した。政府は「結果は真摯に受け止める」としつつ工事を続行し、2023〜2024年には代執行まで行った。<br><br>
+            自民党候補はこの「民意の無視」と一体視される構造から逃れられない。「国と協力する」と言うたびに、県民には<strong style="color:var(--ink)">「72%の民意を無視した側の人間」</strong>として映る。<br><br>
+            <em style="color:var(--ink2);font-size:13px">この「民意との乖離」は、全県選挙のたびに保守系候補に付きまとう構造的ハンディキャップである。</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 07: 振興予算 ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 07</div>
+    <div class="section-title">沖縄振興予算の推移 ── 数字が語る「アメとムチ」</div>
+    <div class="section-subtitle">振興予算と辺野古容認の関係を客観的に示すデータ</div>
+
+    <div class="chart-container">
+      <canvas id="budgetChart"></canvas>
+    </div>
+    <div class="grid-2" style="margin-top:16px">
+      <div class="highlight-box">
+        <p style="font-size:13px"><strong style="color:var(--red)">仲井眞承認の翌年（2014年度）</strong><br>
+        振興予算 <strong>3,501億円（過去最高）</strong><br>
+        基地受け入れの「対価」として、政府は予算を過去最高に引き上げた。</p>
+      </div>
+      <div class="highlight-box blue">
+        <p style="font-size:13px"><strong style="color:var(--blue)">翁長・玉城県政（2015年度〜）</strong><br>
+        振興予算は一貫して<strong>減額傾向</strong>。2022年度以降は<strong>5年連続で3,000億円割れ</strong>。<br>
+        菅官房長官は「リンクしている」と公言。</p>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--ink3);margin-top:16px">
+      政府は辺野古容認の県政には予算増、反対の県政には予算減という対応を取ってきた。この構造は客観的な数字が示しており、「アメとムチ」と呼ばれてきた。振興予算が政治的なレバレッジとして機能する構造は、保守・革新いずれの候補にとっても無視できない政治環境を形成している。
+    </p>
+  </div>
+
+  <!-- ═══ SECTION 08: オール沖縄の形成と変容 ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 08</div>
+    <div class="section-title">「オール沖縄」とは何だったのか</div>
+    <div class="section-subtitle">保革融合から革新連合へ── 4つのフェーズで辿る変遷</div>
+
+    <div class="phase-marker">PHASE 1: 結成（2014年）</div>
+    <p style="font-size:14px;margin-bottom:16px">
+      「建白書」の精神を掲げ、翁長雄志を中心に保守離党組・革新政党・経済界（金秀・かりゆし等）・市民団体が結集。文字通りの「オール沖縄」だった。<strong style="color:var(--green)">保守と革新が手を結んだ日本政治史上稀な超党派連合。</strong>
+    </p>
+
+    <div class="phase-marker" style="background:rgba(26,107,74,0.1);border-color:rgba(26,107,74,0.25);color:var(--green)">PHASE 2: 全盛期（2014〜2018年）</div>
+    <p style="font-size:14px;margin-bottom:16px">
+      知事選・衆院選・参院選で圧勝を重ねる。翁長知事のカリスマ的リーダーシップの下、県選出国会議員の大部分を占有。辺野古反対の全県的民意を体現する「無敵の連合体」。
+    </p>
+
+    <div class="phase-marker" style="background:rgba(154,122,40,0.1);border-color:rgba(154,122,40,0.25);color:var(--gold)">PHASE 3: 経済界の離脱（2018〜2021年）</div>
+    <div class="grid-2" style="margin-bottom:16px">
+      <div class="card card-orange">
+        <div class="card-label">2018年 かりゆしグループ脱退</div>
+        <div class="cause-desc">「革新色が強くなりすぎた」「知事がしがらみで政治的リーダーシップを発揮できていない」と批判して脱退。</div>
+      </div>
+      <div class="card card-orange">
+        <div class="card-label">2021年 金秀グループ離脱</div>
+        <div class="cause-desc">翁長の最大支援者だった呉屋守將会長が「基地反対だけでは沖縄の未来は開けない。これからは経済」と述べ、衆院選で自民候補を支持に転換。</div>
+      </div>
+    </div>
+
+    <div class="phase-marker" style="background:rgba(181,39,26,0.1);border-color:rgba(181,39,26,0.25);color:var(--red)">PHASE 4: 「革新主導化」と退潮（2022年〜）</div>
+    <p style="font-size:14px;margin-bottom:12px">
+      経済界離脱後、実質的な運営で共産党・社民党の比重が増大。当初の「保革を超えた」運動体から<strong style="color:var(--red)">事実上の革新共闘体制</strong>に変質。市長選では2022年以降12連敗。
+    </p>
+
+    <div class="highlight-box blue">
+      <p style="font-size:14px">
+        オール沖縄は当初の「保革超越の県民運動」から、徐々に革新政党主導の政治連合へと変質してきた。全県選挙では依然として強さを見せるが、市長選12連敗が示すように基盤は確実に変化している。2026年知事選は、この変化の帰結が試される選挙となる。
+      </p>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 09: 有権者構造分析 ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 09</div>
+    <div class="section-title">有権者の構造分析 ── 無党派層と棄権者の動向</div>
+    <div class="section-subtitle">沖縄知事選の勝敗を分ける最大の変数は、無党派層と棄権者にある</div>
+
+    <div class="grid-2" style="margin-bottom:20px">
+      <div>
+        <h3 style="font-size:15px;font-weight:700;margin-bottom:12px;color:var(--blue)">無党派層の投票行動（知事選）</h3>
+        <div class="chart-container-sm">
+          <canvas id="indepChart"></canvas>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:15px;font-weight:700;margin-bottom:12px;color:var(--blue)">知事選投票率の推移</h3>
+        <div class="chart-container-sm">
+          <canvas id="turnoutChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card card-red">
+        <div class="card-label">無党派層の壁</div>
+        <div class="card-value" style="color:var(--red);font-size:1.6em">58-60%</div>
+        <div class="card-note">無党派層のオール沖縄支持率。保守系は28%にとどまる。30pt以上の差が最大の敗因。</div>
+      </div>
+      <div class="card card-orange">
+        <div class="card-label">40代の投票率低下</div>
+        <div class="card-value" style="color:var(--gold);font-size:1.6em">&blacktriangle;8.3pt</div>
+        <div class="card-note">2014年66.4%&rarr;2022年58.1%。投票所に来ていない有権者層が存在する。</div>
+      </div>
+      <div class="card card-blue">
+        <div class="card-label">棄権者数（2022年）</div>
+        <div class="card-value" style="color:var(--blue);font-size:1.6em">約49万人</div>
+        <div class="card-note">玉城の得票（34万）を超える規模。未投票者の動向が結果を大きく左右する。</div>
+      </div>
+    </div>
+
+    <div class="highlight-box orange" style="margin-top:16px">
+      <p style="font-size:14px"><strong style="color:var(--gold)">世代別の政治意識:</strong><br>
+      若年層（18〜34歳）は高齢層と比べ、基地問題への不公平感が弱く、米軍基地が経済にプラスと認識する傾向がある。ただし「若者＝保守化」は単純化しすぎで、SNSメディアの影響による無党派化が実態に近い。<strong>「沖縄アイデンティティ」の形成がメディア消費パターンの変化で弱まっている世代。</strong><br><br>
+      この有権者構造は、保守系にとっても革新系にとっても重要な示唆を含んでいる。</p>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 10: ねじれ ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 10</div>
+    <div class="section-title">知事選 vs 市町村選の「ねじれ」 ── 2つの選挙は別の論理で動く</div>
+    <div class="section-subtitle">全県選挙と市町村選挙で正反対の結果が出る構造的メカニズム</div>
+
+    <div class="grid-2" style="margin-bottom:20px">
+      <div class="card card-red">
+        <div class="card-label">全県選挙（知事選・参院選）</div>
+        <div class="card-value" style="color:var(--red);font-size:1.4em">保守 8連敗</div>
+        <div class="card-note">基地問題が「沖縄 vs 本土」の対立軸として全面化。「尊厳の選挙」になるため保守不利。</div>
+      </div>
+      <div class="card card-green">
+        <div class="card-label">市町村選挙</div>
+        <div class="card-value" style="color:var(--green);font-size:1.4em">保守 優位</div>
+        <div class="card-note">生活・経済が争点。那覇市長選奪還（2022年）、名護市長選2連勝。オール沖縄は市長選12連敗中。</div>
+      </div>
+    </div>
+
+    <table class="analysis-table">
+      <thead>
+        <tr>
+          <th>選挙</th>
+          <th>年</th>
+          <th>結果</th>
+          <th>争点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>名護市長選</td>
+          <td>2018</td>
+          <td><span style="color:var(--green)">保守勝利</span>（渡具知武豊）</td>
+          <td>辺野古を争点にせず経済・子育てで勝利</td>
+        </tr>
+        <tr>
+          <td>名護市長選</td>
+          <td>2022</td>
+          <td><span style="color:var(--green)">保守勝利</span>（渡具知再選）</td>
+          <td>経済実績で信任。再編交付金の効果</td>
+        </tr>
+        <tr>
+          <td>那覇市長選</td>
+          <td>2022</td>
+          <td><span style="color:var(--green)">保守勝利</span>（知念覚）</td>
+          <td>オール沖縄の象徴的牙城を奪還</td>
+        </tr>
+        <tr>
+          <td>衆院選（小選挙区）</td>
+          <td>2026.2</td>
+          <td><span style="color:var(--green)">保守系4区全勝</span>（史上初）</td>
+          <td>経済・生活争点 + 小選挙区の個人戦</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="strategy-block" style="margin-top:20px">
+      <div class="sb-head">
+        <div class="sb-num">◉</div>
+        <div class="sb-title">この構造は何を意味するのか</div>
+      </div>
+      <div class="sb-body">
+        争点が基地・アイデンティティのときはオール沖縄が強く、経済・生活のときは保守が強いという構造は、<strong>2026年知事選の争点設定が勝敗を左右する</strong>ことを示唆している。<br><br>
+        名護市長選（辺野古を争点にしない戦略）と衆院選（経済・暮らし争点）の保守勝利パターンが、全県1区の知事選に転用可能かどうかが焦点となる。一方で、知事選特有の「沖縄の声を国に届ける」という大義名分が争点をアイデンティティに引き戻す力も健在である。
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 11: 候補者選定 ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 11</div>
+    <div class="section-title">候補者選定の軌跡 ── 3回の知事選で何が起きたか</div>
+    <div class="section-subtitle">保守系候補が抱えた構造的問題を選挙ごとに検証する</div>
+
+    <div class="grid-3">
+      <div class="card" style="border-top:4px solid var(--red)">
+        <div style="font-size:12px;color:var(--ink3);margin-bottom:4px">2014年知事選</div>
+        <div style="font-weight:900;font-size:1.1em;margin-bottom:8px">仲井眞弘多</div>
+        <div style="font-size:24px;font-weight:900;color:var(--red);margin-bottom:8px">&blacktriangle;99,744票</div>
+        <ul class="insight-list" style="font-size:12px">
+          <li>公約違反（県外&rarr;辺野古承認）</li>
+          <li>「いい正月」発言の致命傷</li>
+          <li>県議会の辞任決議で求心力喪失</li>
+          <li>翁長の「保革超え」に対抗策なし</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:4px solid var(--gold)">
+        <div style="font-size:12px;color:var(--ink3);margin-bottom:4px">2018年 / 2022年知事選</div>
+        <div style="font-weight:900;font-size:1.1em;margin-bottom:8px">佐喜真淳（2回出馬）</div>
+        <div style="font-size:24px;font-weight:900;color:var(--gold);margin-bottom:8px">&blacktriangle;8万 / &blacktriangle;6.5万</div>
+        <ul class="insight-list" style="font-size:12px">
+          <li>辺野古への立場を明言せず曖昧戦略</li>
+          <li>「弔い合戦」に対抗する物語なし</li>
+          <li>統一教会問題（2022年）</li>
+          <li>無党派層の支持率3割弱で頭打ち</li>
+          <li>同一候補の2回連続出馬で新鮮味なし</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:4px solid var(--blue)">
+        <div style="font-size:12px;color:var(--ink3);margin-bottom:4px">2026年知事選（予定）</div>
+        <div style="font-weight:900;font-size:1.1em;margin-bottom:8px">古謝玄太</div>
+        <div style="font-size:24px;font-weight:900;color:var(--blue);margin-bottom:8px">初挑戦</div>
+        <ul class="insight-list" style="font-size:12px">
+          <li>経済界主導の選考（政党色を排除）</li>
+          <li>42歳 ── 24歳差の世代交代訴求</li>
+          <li>2022参院選で2,900票差の実績</li>
+          <li>候補者の「物語」がまだ構築途上</li>
+          <li>「エリート」イメージの受け止めが課題</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="highlight-box" style="margin-top:16px">
+      <p style="font-size:14px"><strong style="color:var(--red)">共通する失敗パターン:</strong></p>
+      <ul class="insight-list" style="font-size:14px;margin-top:8px">
+        <li><strong>基地問題を避ける &ne; 基地問題を解決する。</strong>曖昧さは不信感を生む。</li>
+        <li><strong>「国との関係」を売りにする = 「基地との取引」に聞こえる。</strong>仲井眞の呪縛から逃れられない。</li>
+        <li><strong>「物語」を持たない候補は勝てない。</strong>翁長・玉城には明確な物語があった。</li>
+        <li><strong>自民党本部主導の候補選定は「本土の論理の押し付け」と映る。</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ═══ SECTION 12: 自民比例得票率 ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 12</div>
+    <div class="section-title">自民党の「構造的不人気」 ── 比例得票率が示す壁</div>
+    <div class="section-subtitle">全国では「自民一強」でも、沖縄では構造的に25%前後で頭打ち</div>
+
+    <div class="chart-container">
+      <canvas id="proportionalChart"></canvas>
+    </div>
+    <p style="font-size:14px;color:var(--ink3);margin-top:12px">
+      衆院選比例代表における自民党の沖縄県内得票率は、全国平均を常に<strong style="color:var(--ink)">10〜15ポイント下回る</strong>。2014年の急落（翁長ショック）以降、回復していない。全国では「自民一強」が続いても、沖縄では<strong style="color:var(--ink)">構造的に25%前後で頭打ち</strong>している。これは個別選挙の問題ではなく、自民党というブランド自体が沖縄では毀損されていることを示す。
+    </p>
+  </div>
+
+  <!-- ═══ SECTION 13: 経済データ ═══ -->
+  <div class="section">
+    <div class="section-label">SECTION 13</div>
+    <div class="section-title">沖縄経済の構造 ── 基地経済依存の変化</div>
+    <div class="section-subtitle">「基地がなくなれば経済が困る」という前提はデータで検証できる</div>
+
+    <div class="grid-2" style="margin-bottom:20px">
+      <div>
+        <h3 style="font-size:15px;font-weight:700;margin-bottom:12px;color:var(--blue)">基地関連収入 vs 観光収入</h3>
+        <div class="chart-container-sm">
+          <canvas id="econChart"></canvas>
+        </div>
+      </div>
+      <div>
+        <div class="grid-2" style="gap:12px">
+          <div class="card card-blue">
+            <div class="card-label">基地関連収入（県経済比率）</div>
+            <div class="card-value" style="color:var(--blue);font-size:1.6em">約5%</div>
+            <div class="card-note">復帰直後の15%から大幅低下</div>
+          </div>
+          <div class="card card-green">
+            <div class="card-label">観光収入（2019年）</div>
+            <div class="card-value" style="color:var(--green);font-size:1.6em">7,340億円</div>
+            <div class="card-note">入域観光客1,016万人（史上初1千万超）</div>
+          </div>
+          <div class="card card-red">
+            <div class="card-label">1人当たり県民所得</div>
+            <div class="card-value" style="color:var(--red);font-size:1.6em">全国最下位</div>
+            <div class="card-note">約220〜240万円。全国平均の約7割</div>
+          </div>
+          <div class="card card-red">
+            <div class="card-label">子どもの貧困率</div>
+            <div class="card-value" style="color:var(--red);font-size:1.6em">29.9%</div>
+            <div class="card-note">全国平均の約2倍（2015年県調査）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strategy-block">
+      <div class="sb-head">
+        <div class="sb-num">◉</div>
+        <div class="sb-title">経済データが示す構造変化</div>
+      </div>
+      <div class="sb-body">
+        <strong>基地依存度は5%まで低下。</strong>「基地がなくなると経済が困る」論は数字の上では根拠が薄くなっている。那覇新都心（返還跡地）は年間税収199億円を生み出しており、返還後の方が経済的に豊かという実証データが存在する。<br><br>
+        一方、県民所得・貧困率は全国ワースト。<strong>「暮らしの改善」は有権者にとって切実な課題</strong>であり、2026年知事選においてもこのテーマが大きな争点となることは確実である。観光7,340億円 vs 基地関連1,000億円という数字は、沖縄経済の主役がすでに観光に移っていることを示している。
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ═══ CONCLUSION ═══ -->
+  <div class="final-box">
+    <h3>結論 ── 2026年知事選の焦点</h3>
+    <p>
+      12年にわたる保守系候補の全県選挙連敗は、個別の選挙戦術の問題ではなく、<strong>沖縄と中央政府の関係性</strong>という根幹的な構造に根ざしている。「尊厳の売り渡し」の原罪、「保革 vs アイデンティティ」の枠組み転換、振興予算と基地のリンク、候補者の物語の不在、そして民意の無視 ── これら5つの構造的要因が重層的に作用してきた。
+    </p>
+    <p style="font-size:14px;font-weight:700;color:var(--gold2);margin:20px 0 12px">12年の構造から浮かぶ2026年の焦点</p>
+    <p>
+      <strong>1. 「政党の候補」か「沖縄の候補」か</strong> ── 保守系候補が自民党色を超えた独自のポジションを確立できるかが問われる。12年間の「自民・公明推薦」前面戦略は機能してこなかった。<br><br>
+      <strong>2. 候補者の「物語」の説得力</strong> ── 翁長には「保守が立ち上がった」物語、玉城には「翁長の遺志」物語があった。2026年の両候補がどのような物語を有権者に提示できるかがカギとなる。<br><br>
+      <strong>3. 基地問題の「再定義」</strong> ── 辺野古を巡る法的手段が枯渇した今、基地問題をどのように再定義し、有権者に対して誠実な立場を示せるかが両陣営に問われる。<br><br>
+      <strong>4. 争点の主導権</strong> ── 基地・アイデンティティが主戦場ならオール沖縄有利、経済・暮らしが主戦場なら構造が変わる。争点設定の主導権争いが選挙戦の本質的な戦いとなる。<br><br>
+      <strong>5. 無党派層と棄権者の動向</strong> ── 約49万人の棄権者と過半数を占める無党派層。この層をどちらが動かせるかが、最終的な勝敗を決定づける最大の変数である。
+    </p>
+  </div>
+
+  <div class="quote-block" style="border-left-color:var(--gold);margin-bottom:40px">
+    2026年沖縄県知事選は、この12年の構造が持続するのか、それとも転換点となるのかを問う選挙である。有権者が選ぶのは、単なる政策の違いではなく、沖縄のアイデンティティと暮らしの未来の方向性そのものである。
+  </div>
+
+  <p class="footnote" style="text-align:center;">
+    本レポートはU&I株倶楽部 調査部が作成した分析資料です。特定の候補者・政党を支持するものではありません。<br>
+    出典：Wikipedia（各年知事選・関連人物記事）・沖縄タイムス・琉球新報・OKITIVE・nippon.com・自治体問題研究所・八重山日報・OKIRON 等 公開情報に基づく分析<br>
+    U&I株倶楽部 調査部作成｜2026年3月
+  </p>
+
+</div>
+
+<script>
+var PW_HASH="0f741576ac812cab54af2138b9633930a373028830bf72cd3ded6af3d7b1e2eb";
+async function pwSha(s){var b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("")}
+async function pwCheck(){var h=await pwSha(document.getElementById("pw-field").value);if(h===PW_HASH){sessionStorage.setItem("okinawa2026_auth","1");document.getElementById("pw-overlay").remove()}else{document.getElementById("pw-err").style.display="block"}return false}
+(function(){if(sessionStorage.getItem("okinawa2026_auth")==="1"){var o=document.getElementById("pw-overlay");if(o)o.remove()}})();
+
+// === Chart 1: 知事選 得票差トレンド ===
+new Chart(document.getElementById('marginChart'),{
+  type:'bar',
+  data:{
+    labels:['2014年\n翁長 vs 仲井眞','2018年\n玉城 vs 佐喜真','2022年\n玉城 vs 佐喜真'],
+    datasets:[
+      {
+        label:'オール沖縄系 得票',
+        data:[360820, 396632, 339767],
+        backgroundColor:'rgba(26,74,138,0.7)',
+        borderColor:'#1a4a8a',
+        borderWidth:1.5,
+        borderRadius:4
+      },
+      {
+        label:'自民系 得票',
+        data:[261076, 316458, 274844],
+        backgroundColor:'rgba(181,39,26,0.7)',
+        borderColor:'#b5271a',
+        borderWidth:1.5,
+        borderRadius:4
+      }
+    ]
+  },
+  options:{
+    responsive:true,
+    maintainAspectRatio:false,
+    plugins:{
+      legend:{position:'top',labels:{color:'#6b5f4e',font:{family:'Noto Sans JP',size:12}}},
+      tooltip:{
+        callbacks:{
+          label:function(c){return c.dataset.label+': '+c.raw.toLocaleString()+'票'}
+        }
+      }
+    },
+    scales:{
+      x:{ticks:{color:'#6b5f4e',font:{family:'Noto Sans JP',size:11}},grid:{color:'rgba(192,184,168,0.4)'}},
+      y:{
+        ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return (v/10000).toFixed(0)+'万'}},
+        grid:{color:'rgba(192,184,168,0.4)'},
+        beginAtZero:true
+      }
+    }
+  }
+});
+
+// === Chart 2: 振興予算推移 ===
+new Chart(document.getElementById('budgetChart'),{
+  type:'line',
+  data:{
+    labels:['2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'],
+    datasets:[{
+      label:'沖縄振興予算（億円）',
+      data:[2937, 3001, 3501, 3340, 3350, 3150, 3010, 3010, 3010, 3010, 2998, 2979, 2956, 2941, 2930],
+      borderColor:'#1a4a8a',
+      backgroundColor:'rgba(26,74,138,0.08)',
+      fill:true,
+      tension:0.3,
+      pointRadius:5,
+      pointBackgroundColor:function(ctx){
+        return ctx.dataIndex === 2 ? '#b5271a' : '#1a4a8a';
+      },
+      pointBorderColor:function(ctx){
+        return ctx.dataIndex === 2 ? '#b5271a' : '#1a4a8a';
+      },
+      pointRadius:function(ctx){
+        return ctx.dataIndex === 2 ? 8 : 5;
+      }
+    }]
+  },
+  options:{
+    responsive:true,
+    maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{
+        callbacks:{
+          label:function(c){return c.raw.toLocaleString()+'億円'}
+        }
+      }
+    },
+    scales:{
+      x:{ticks:{color:'#6b5f4e',font:{size:11}},grid:{color:'rgba(192,184,168,0.4)'}},
+      y:{
+        ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v.toLocaleString()+'億'}},
+        grid:{color:'rgba(192,184,168,0.4)'},
+        min:2700,
+        max:3600
+      }
+    }
+  }
+});
+
+// === Chart 3: 無党派層の投票行動 ===
+new Chart(document.getElementById('indepChart'),{
+  type:'bar',
+  data:{
+    labels:['2014年','2018年','2022年'],
+    datasets:[
+      {
+        label:'オール沖縄系への投票',
+        data:[62, 60, 58],
+        backgroundColor:'rgba(26,74,138,0.7)',
+        borderColor:'#1a4a8a',
+        borderWidth:1.5,
+        borderRadius:4
+      },
+      {
+        label:'自民系への投票',
+        data:[24, 26, 28],
+        backgroundColor:'rgba(181,39,26,0.7)',
+        borderColor:'#b5271a',
+        borderWidth:1.5,
+        borderRadius:4
+      }
+    ]
+  },
+  options:{
+    responsive:true,
+    maintainAspectRatio:false,
+    plugins:{
+      legend:{position:'top',labels:{color:'#6b5f4e',font:{size:11}}},
+      tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.raw+'%'}}}
+    },
+    scales:{
+      x:{ticks:{color:'#6b5f4e',font:{size:11}},grid:{display:false}},
+      y:{ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v+'%'}},grid:{color:'rgba(192,184,168,0.4)'},max:70,beginAtZero:true}
+    }
+  }
+});
+
+// === Chart 4: 投票率推移 ===
+new Chart(document.getElementById('turnoutChart'),{
+  type:'line',
+  data:{
+    labels:['2014年','2018年','2022年'],
+    datasets:[{
+      label:'知事選 投票率',
+      data:[64.13, 63.24, 57.22],
+      borderColor:'#9a7a28',
+      backgroundColor:'rgba(154,122,40,0.08)',
+      fill:true,
+      tension:0.3,
+      pointRadius:6,
+      pointBackgroundColor:'#9a7a28'
+    }]
+  },
+  options:{
+    responsive:true,
+    maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{label:function(c){return '投票率: '+c.raw+'%'}}}
+    },
+    scales:{
+      x:{ticks:{color:'#6b5f4e',font:{size:11}},grid:{display:false}},
+      y:{ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v+'%'}},grid:{color:'rgba(192,184,168,0.4)'},min:50,max:70}
+    }
+  }
+});
+
+// === Chart 5: 自民比例得票率 ===
+new Chart(document.getElementById('proportionalChart'),{
+  type:'line',
+  data:{
+    labels:['2012年','2014年','2017年','2021年','2024年'],
+    datasets:[
+      {
+        label:'自民党 比例得票率（沖縄）',
+        data:[26.2, 22.5, 24.8, 25.1, 26.8],
+        borderColor:'#b5271a',
+        backgroundColor:'rgba(181,39,26,0.08)',
+        fill:true,
+        tension:0.3,
+        pointRadius:6,
+        pointBackgroundColor:'#b5271a'
+      },
+      {
+        label:'自民党 比例得票率（全国平均）',
+        data:[37.4, 33.1, 33.3, 34.7, 36.0],
+        borderColor:'#9a8f7e',
+        backgroundColor:'rgba(154,143,126,0.05)',
+        fill:false,
+        tension:0.3,
+        pointRadius:5,
+        pointBackgroundColor:'#9a8f7e',
+        borderDash:[6,3]
+      }
+    ]
+  },
+  options:{
+    responsive:true,
+    maintainAspectRatio:false,
+    plugins:{
+      legend:{position:'top',labels:{color:'#6b5f4e',font:{family:'Noto Sans JP',size:12}}},
+      tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+c.raw+'%'}}}
+    },
+    scales:{
+      x:{ticks:{color:'#6b5f4e',font:{size:11}},grid:{color:'rgba(192,184,168,0.4)'}},
+      y:{ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v+'%'}},grid:{color:'rgba(192,184,168,0.4)'},min:15,max:45}
+    }
+  }
+});
+
+// === Chart 6: 基地関連 vs 観光収入 ===
+new Chart(document.getElementById('econChart'),{
+  type:'bar',
+  data:{
+    labels:['基地関連収入','観光収入（2019年）'],
+    datasets:[{
+      data:[1000, 7340],
+      backgroundColor:['rgba(26,74,138,0.7)','rgba(26,107,74,0.7)'],
+      borderColor:['#1a4a8a','#1a6b4a'],
+      borderWidth:1.5,
+      borderRadius:4
+    }]
+  },
+  options:{
+    responsive:true,
+    maintainAspectRatio:false,
+    indexAxis:'y',
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{label:function(c){return c.raw.toLocaleString()+'億円'}}}
+    },
+    scales:{
+      x:{ticks:{color:'#6b5f4e',font:{size:11},callback:function(v){return v.toLocaleString()+'億'}},grid:{color:'rgba(192,184,168,0.4)'},beginAtZero:true},
+      y:{ticks:{color:'#6b5f4e',font:{family:'Noto Sans JP',size:12}},grid:{display:false}}
+    }
+  }
+});
+</script>
+</body>
+</html>

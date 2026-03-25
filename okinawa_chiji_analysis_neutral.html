@@ -12,18 +12,22 @@
     --surface2: #f0ebe0;
     --border: #d6cfc0;
     --border2: #c0b8a8;
-    --accent: #b5271a;
-    --accent2: #1a4a8a;
-    --accent3: #9a7a28;
-    --text: #1a1510;
-    --text-muted: #6b5f4e;
+    --ink: #1a1510;
+    --ink2: #3d3628;
+    --ink3: #6b5f4e;
+    --ink4: #9a8f7e;
+    --red: #b5271a;
+    --red2: #d94030;
+    --blue: #1a4a8a;
+    --blue2: #2563a0;
+    --gold: #9a7a28;
+    --gold2: #c4a040;
     --green: #1a6b4a;
-    --yellow: #9a7a28;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
     background: var(--bg);
-    color: var(--text);
+    color: var(--ink);
     font-family: 'Noto Serif JP', 'Shippori Mincho', serif;
     font-size: 14px;
     line-height: 1.9;
@@ -31,26 +35,31 @@
 
   /* ── HEADER ── */
   .header {
-    background: var(--text);
+    background: var(--ink);
     color: #f5f0e8;
     padding: 48px 56px 40px;
     position: relative;
     overflow: hidden;
-    border-bottom: 4px solid var(--accent);
+    border-bottom: 4px solid var(--red);
   }
-  .header::before {
+  .header::after {
     content: '';
     position: absolute;
     top: 0; right: 0;
     width: 200px; height: 100%;
-    background: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(255,255,255,0.03) 8px, rgba(255,255,255,0.03) 16px);
-    pointer-events: none;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 8px,
+      rgba(255,255,255,0.03) 8px,
+      rgba(255,255,255,0.03) 16px
+    );
   }
-  .header-tag {
+  .header-eyebrow {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 11px;
     letter-spacing: 4px;
-    color: #c4a040;
+    color: var(--gold2);
     text-transform: uppercase;
     margin-bottom: 12px;
   }
@@ -62,7 +71,7 @@
     color: #f5f0e8;
     line-height: 1.3;
   }
-  .header h1 span { color: #c4a040; font-style: normal; }
+  .header h1 span { color: var(--gold2); font-style: normal; }
   .header-sub {
     font-family: 'Noto Sans JP', sans-serif;
     color: #a09888;
@@ -74,27 +83,30 @@
   /* ── LAYOUT ── */
   .container { max-width: 1080px; margin: 0 auto; padding: 48px 28px 80px; }
 
-  /* ── SECTION TITLE ── */
+  /* ── SECTION ── */
   .big-section { margin-bottom: 64px; }
+  .section-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--red);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
   .section-title {
     font-family: 'Shippori Mincho', serif;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--text);
-    margin-bottom: 24px;
+    color: var(--ink);
+    margin-bottom: 6px;
     padding-bottom: 12px;
-    border-bottom: 2px solid var(--text);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    border-bottom: 2px solid var(--ink);
   }
-  .section-title::before {
-    content: '';
-    display: inline-block;
-    width: 16px; height: 3px;
-    background: var(--accent);
-    border-radius: 2px;
+  .section-subtitle {
+    font-size: 12px;
+    color: var(--ink4);
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-bottom: 28px;
   }
 
   /* ── CARDS ── */
@@ -110,7 +122,7 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 11px;
     letter-spacing: 2px;
-    color: var(--text-muted);
+    color: var(--ink3);
     text-transform: uppercase;
     margin-bottom: 6px;
   }
@@ -118,28 +130,28 @@
     font-family: 'Shippori Mincho', serif;
     font-size: 28px;
     font-weight: 700;
-    color: var(--text);
+    color: var(--ink);
     margin-bottom: 16px;
   }
-  .card-year span { font-size: 14px; color: var(--text-muted); }
+  .card-year span { font-size: 14px; color: var(--ink3); }
 
   /* KPI row */
   .kpi-row { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 14px; }
   .kpi { flex: 1; min-width: 80px; }
-  .kpi-label { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 3px; }
+  .kpi-label { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; color: var(--ink3); letter-spacing: 1px; margin-bottom: 3px; }
   .kpi-val {
     font-family: 'Shippori Mincho', serif;
     font-size: 22px;
     font-weight: 700;
-    color: var(--text);
+    color: var(--ink);
   }
-  .kpi-val.up { color: var(--accent2); }
-  .kpi-val.down { color: var(--accent); }
+  .kpi-val.up { color: var(--blue); }
+  .kpi-val.down { color: var(--red); }
 
   /* candidate rows */
   .cand-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
   .cand-row { display: flex; align-items: center; gap: 10px; }
-  .cand-name { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 13px; min-width: 80px; color: var(--text); }
+  .cand-name { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 13px; min-width: 80px; color: var(--ink); }
   .cand-bar-wrap { flex: 1; background: var(--border); border-radius: 4px; height: 22px; overflow: hidden; position: relative; }
   .cand-bar {
     height: 100%;
@@ -155,10 +167,10 @@
   .bar-red { background: linear-gradient(90deg, #b5271a 0%, #8a1e14 100%); }
   .bar-blue { background: linear-gradient(90deg, #1a4a8a 0%, #143a6e 100%); }
   .bar-gray { background: linear-gradient(90deg, #9a8f7e 0%, #7a7060 100%); }
-  .cand-votes { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; color: var(--text-muted); min-width: 85px; text-align: right; }
+  .cand-votes { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; color: var(--ink3); min-width: 85px; text-align: right; }
   .winner-tag {
     font-size: 10px;
-    background: var(--accent2);
+    background: var(--blue);
     color: #fff;
     padding: 1px 6px;
     border-radius: 3px;
@@ -166,7 +178,7 @@
   }
   .lose-tag {
     font-size: 10px;
-    background: var(--accent);
+    background: var(--red);
     color: #fff;
     padding: 1px 6px;
     border-radius: 3px;
@@ -203,7 +215,7 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 11px;
     letter-spacing: 2px;
-    color: var(--text-muted);
+    color: var(--ink3);
     font-weight: 500;
     border-bottom: 1px solid var(--border2);
   }
@@ -212,16 +224,16 @@
     padding: 11px 14px;
     text-align: center;
     border-bottom: 1px solid var(--border);
-    color: #3d3628;
+    color: var(--ink2);
   }
-  td:first-child { text-align: left; font-weight: 700; color: var(--text); font-family: 'Noto Sans JP', sans-serif; font-size: 12px; }
+  td:first-child { text-align: left; font-weight: 700; color: var(--ink); font-family: 'Noto Sans JP', sans-serif; font-size: 12px; }
   tr:last-child td { border-bottom: none; }
   tr:hover td { background: rgba(0,0,0,0.015); }
-  .heat-high { color: var(--accent); font-weight: 700; }
-  .heat-mid { color: var(--yellow); }
-  .heat-low { color: #9a8f7e; }
+  .heat-high { color: var(--red); font-weight: 700; }
+  .heat-mid { color: var(--gold); }
+  .heat-low { color: var(--ink4); }
   .delta-pos { color: var(--green); font-size: 11px; }
-  .delta-neg { color: var(--accent); font-size: 11px; }
+  .delta-neg { color: var(--red); font-size: 11px; }
 
   /* ── INLINE BAR ── */
   .inline-bar-wrap { display: flex; align-items: center; gap: 8px; }
@@ -239,7 +251,7 @@
     font-family: 'Shippori Mincho', serif;
     font-size: 16px;
     font-weight: 700;
-    color: var(--text);
+    color: var(--ink);
     margin-bottom: 20px;
   }
   .chart-svg-wrap { width: 100%; overflow-x: auto; }
@@ -247,7 +259,7 @@
   /* ── AGE BAR CHART ── */
   .age-chart { display: flex; flex-direction: column; gap: 10px; }
   .age-row { display: grid; grid-template-columns: 60px 1fr 60px; align-items: center; gap: 10px; }
-  .age-label { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; color: var(--text-muted); text-align: right; }
+  .age-label { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; color: var(--ink3); text-align: right; }
   .age-bar-wrap { background: var(--border); border-radius: 4px; height: 28px; position: relative; overflow: hidden; }
   .age-bar-inner {
     position: absolute; left: 0; top: 0; height: 100%;
@@ -255,7 +267,7 @@
     display: flex; align-items: center; padding-left: 10px;
     font-size: 12px; font-weight: 700; color: #fff;
   }
-  .age-val { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; color: var(--text-muted); }
+  .age-val { font-family: 'Noto Sans JP', sans-serif; font-size: 12px; color: var(--ink3); }
 
   /* ── INSIGHT CARDS ── */
   .insight-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px; }
@@ -273,44 +285,59 @@
     top: 0; left: 0;
     width: 100%; height: 3px;
   }
-  .insight-card.red::before { background: var(--accent); }
-  .insight-card.blue::before { background: var(--accent2); }
-  .insight-card.yellow::before { background: var(--yellow); }
+  .insight-card.red::before { background: var(--red); }
+  .insight-card.blue::before { background: var(--blue); }
+  .insight-card.gold::before { background: var(--gold); }
   .insight-card.green::before { background: var(--green); }
   .insight-num {
     font-family: 'Shippori Mincho', serif;
-    font-size: 40px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 8px;
   }
-  .insight-card.red .insight-num { color: #d94030; }
-  .insight-card.blue .insight-num { color: #2563a0; }
-  .insight-card.yellow .insight-num { color: #c4a040; }
+  .insight-card.red .insight-num { color: var(--red2); }
+  .insight-card.blue .insight-num { color: var(--blue2); }
+  .insight-card.gold .insight-num { color: var(--gold2); }
   .insight-card.green .insight-num { color: var(--green); }
-  .insight-title { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 14px; margin-bottom: 8px; color: var(--text); }
-  .insight-body { font-size: 13px; color: #3d3628; line-height: 1.85; }
+  .insight-title { font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 14px; margin-bottom: 8px; color: var(--ink); }
+  .insight-body { font-size: 13px; color: var(--ink2); line-height: 1.85; }
 
   /* ── STRATEGY BLOCK ── */
   .strategy-block {
     background: var(--surface);
     border: 1px solid var(--border2);
     border-radius: 4px;
-    padding: 28px;
     margin-bottom: 20px;
     overflow: hidden;
   }
-  .strategy-num {
-    font-family: 'Shippori Mincho', serif;
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--border);
-    line-height: 1;
-    margin-bottom: 4px;
+  .sb-head {
+    background: var(--ink2);
+    color: #f5f0e8;
+    padding: 14px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: baseline;
   }
-  .strategy-title { font-family: 'Noto Sans JP', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
-  .strategy-body { font-size: 13px; color: #3d3628; line-height: 1.9; }
-  .strategy-body strong { color: var(--accent); }
+  .sb-num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.2);
+    line-height: 1;
+  }
+  .sb-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .sb-body {
+    padding: 18px 20px;
+    font-size: 13px;
+    color: var(--ink2);
+    line-height: 1.9;
+  }
+  .sb-body strong { color: var(--red); }
   .strategy-tag {
     display: inline-block;
     font-family: 'Noto Sans JP', sans-serif;
@@ -322,35 +349,35 @@
     margin-right: 6px;
     letter-spacing: 1px;
   }
-  .tag-red { background: rgba(181,39,26,0.1); color: var(--accent); border: 1px solid rgba(181,39,26,0.3); }
-  .tag-blue { background: rgba(26,74,138,0.1); color: var(--accent2); border: 1px solid rgba(26,74,138,0.3); }
+  .tag-red { background: rgba(181,39,26,0.1); color: var(--red); border: 1px solid rgba(181,39,26,0.3); }
+  .tag-blue { background: rgba(26,74,138,0.1); color: var(--blue); border: 1px solid rgba(26,74,138,0.3); }
   .tag-green { background: rgba(26,107,74,0.1); color: var(--green); border: 1px solid rgba(26,107,74,0.3); }
-  .tag-yellow { background: rgba(154,122,40,0.1); color: var(--yellow); border: 1px solid rgba(154,122,40,0.3); }
+  .tag-gold { background: rgba(154,122,40,0.1); color: var(--gold); border: 1px solid rgba(154,122,40,0.3); }
 
   /* ── DIVIDER ── */
   .divider { border: none; border-top: 1px solid var(--border2); margin: 48px 0; }
 
   /* ── FOOTNOTE ── */
-  .footnote { font-family: 'Noto Sans JP', sans-serif; font-size: 11px; color: #9a8f7e; margin-top: 12px; }
+  .footnote { font-family: 'Noto Sans JP', sans-serif; font-size: 11px; color: var(--ink4); margin-top: 12px; }
 
   /* ── HIGHLIGHT BOX ── */
   .highlight-box {
     background: var(--surface);
     border: 1px solid var(--border2);
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid var(--red);
     border-radius: 4px;
     padding: 20px 24px;
     margin-bottom: 40px;
     font-size: 13px;
     line-height: 1.9;
-    color: #3d3628;
+    color: var(--ink2);
   }
-  .highlight-box strong { color: var(--accent); }
+  .highlight-box strong { color: var(--red); }
   .highlight-box .hl-title {
     font-family: 'Noto Sans JP', sans-serif;
     font-size: 12px;
     letter-spacing: 3px;
-    color: var(--accent);
+    color: var(--red);
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 700;
@@ -368,7 +395,7 @@
     th, td { padding: 8px 8px; white-space: nowrap; }
     .age-row { grid-template-columns: 50px 1fr 44px; gap: 6px; }
     .age-label { font-size: 11px; }
-    .section-title { font-size: 14px; }
+    .section-title { font-size: 16px; }
     .kpi-val { font-size: 18px; }
     .card { padding: 16px; }
     .card-year { font-size: 22px; }
@@ -380,9 +407,9 @@
     .insight-num { font-size: 28px; }
     .insight-title { font-size: 13px; }
     .insight-body { font-size: 11px; }
-    .strategy-num { font-size: 36px; }
-    .strategy-title { font-size: 15px; }
-    .strategy-body { font-size: 12px; }
+    .sb-num { font-size: 24px; }
+    .sb-title { font-size: 13px; }
+    .sb-body { font-size: 12px; }
     .highlight-box { padding: 16px; font-size: 12px; }
     .chart-title { font-size: 13px; }
   }
@@ -409,7 +436,7 @@
 
 <!-- HEADER -->
 <div class="header">
-  <div class="header-tag">U&I株倶楽部 特別レポート</div>
+  <div class="header-eyebrow">U&I株倶楽部 特別レポート</div>
   <h1>沖縄県知事選<span> 定量分析レポート</span></h1>
   <div class="header-sub">直近3回（2014・2018・2022）の投票データ分析</div>
 </div>
@@ -465,7 +492,7 @@
         </div>
         <div class="margin-box margin-lose">
           <span>オール沖縄（翁長）vs 自民（仲井眞）の票差</span>
-          <strong style="color:var(--accent2)">+99,744票</strong>
+          <strong style="color:var(--blue)">+99,744票</strong>
         </div>
         <p class="footnote">※喜納昌吉氏（民主・7,821票）も出馬。有効投票合計：699,164票</p>
       </div>
@@ -506,7 +533,7 @@
         </div>
         <div class="margin-box margin-lose">
           <span>玉城 vs 佐喜真（自公維）の票差</span>
-          <strong style="color:var(--accent2)">+80,174票</strong>
+          <strong style="color:var(--blue)">+80,174票</strong>
         </div>
         <p class="footnote">※他に兼島俊（3,638票）・渡口初美（3,482票）も出馬。過去最多得票（39.6万票）を記録</p>
       </div>
@@ -554,7 +581,7 @@
         </div>
         <div class="margin-box margin-lose">
           <span>玉城 vs 佐喜真の票差</span>
-          <strong style="color:var(--accent)">+64,988票</strong>
+          <strong style="color:var(--red)">+64,988票</strong>
         </div>
         <p class="footnote">統一教会問題が佐喜真陣営に打撃。票差は18年比で縮小</p>
       </div>
@@ -624,19 +651,19 @@
       <div class="chart-title">有権者数と投票参加者数の比較</div>
       <div style="display:flex; flex-direction:column; gap:20px;">
         <div>
-          <div style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">2014年 ― 有権者109.8万人 ／ 投票70.6万人（64.1%）</div>
+          <div style="font-size:12px; color:var(--ink3); margin-bottom:8px;">2014年 ― 有権者109.8万人 ／ 投票70.6万人（64.1%）</div>
           <div style="background:var(--border); border-radius:4px; height:32px; overflow:hidden;">
             <div style="width:64.1%; height:100%; background:linear-gradient(90deg, #4a90d9, #2563a0); display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:700; color:#fff;">64.1%</div>
           </div>
         </div>
         <div>
-          <div style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">2018年 ― 有権者114.7万人 ／ 投票72.5万人（63.2%）</div>
+          <div style="font-size:12px; color:var(--ink3); margin-bottom:8px;">2018年 ― 有権者114.7万人 ／ 投票72.5万人（63.2%）</div>
           <div style="background:var(--border); border-radius:4px; height:32px; overflow:hidden;">
             <div style="width:63.2%; height:100%; background:linear-gradient(90deg, #4a90d9, #2563a0); display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:700; color:#fff;">63.2%</div>
           </div>
         </div>
         <div>
-          <div style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">2022年 ― 有権者116.6万人 ／ 投票67.5万人（57.9%）</div>
+          <div style="font-size:12px; color:var(--ink3); margin-bottom:8px;">2022年 ― 有権者116.6万人 ／ 投票67.5万人（57.9%）</div>
           <div style="background:var(--border); border-radius:4px; height:32px; overflow:hidden;">
             <div style="width:57.9%; height:100%; background:linear-gradient(90deg, #e63946, #c1121f); display:flex; align-items:center; padding-left:12px; font-size:12px; font-weight:700; color:#fff;">57.9%</div>
           </div>
@@ -671,7 +698,7 @@
             <td class="heat-low">47.27%</td>
             <td class="heat-low">47.55%</td>
             <td><span class="delta-pos">+0.28pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">選挙権付与（18歳）後ほぼ横ばい</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">選挙権付与（18歳）後ほぼ横ばい</td>
           </tr>
           <tr>
             <td>20代</td>
@@ -679,7 +706,7 @@
             <td class="heat-low">44.90%</td>
             <td class="heat-low">42.96%</td>
             <td><span class="delta-neg">▲4.44pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">3回連続で低下。最も低い年代帯</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">3回連続で低下。最も低い年代帯</td>
           </tr>
           <tr>
             <td>30代</td>
@@ -687,7 +714,7 @@
             <td class="heat-mid">57.29%</td>
             <td class="heat-mid">52.25%</td>
             <td><span class="delta-neg">▲5.53pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">急落。最も伸び代がある世代</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">急落。最も伸び代がある世代</td>
           </tr>
           <tr>
             <td>40代</td>
@@ -695,7 +722,7 @@
             <td class="heat-mid">65.50%</td>
             <td class="heat-mid">58.11%</td>
             <td><span class="delta-neg">▲8.30pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">3回で▲8.3ptの大幅下落★要注目</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">3回で▲8.3ptの大幅下落★要注目</td>
           </tr>
           <tr>
             <td>50代</td>
@@ -703,7 +730,7 @@
             <td class="heat-high">72.20%</td>
             <td class="heat-high">67.13%</td>
             <td><span class="delta-neg">▲5.64pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">高水準を維持。主要票田の一つ</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">高水準を維持。主要票田の一つ</td>
           </tr>
           <tr>
             <td>60代</td>
@@ -711,7 +738,7 @@
             <td class="heat-high">76.83%</td>
             <td class="heat-high">73.94%</td>
             <td><span class="delta-neg">▲3.76pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">最も投票率が高い現役世代</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">最も投票率が高い現役世代</td>
           </tr>
           <tr>
             <td>70代</td>
@@ -719,7 +746,7 @@
             <td class="heat-high">77.88%</td>
             <td class="heat-high">76.90%</td>
             <td><span class="delta-neg">▲1.24pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">最高投票率。安定したシニア層</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">最高投票率。安定したシニア層</td>
           </tr>
           <tr>
             <td>80代以上</td>
@@ -727,7 +754,7 @@
             <td class="heat-mid">51.88%</td>
             <td class="heat-mid">54.36%</td>
             <td><span class="delta-pos">+1.44pt</span></td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted)">高齢だが期日前投票活用で安定</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3)">高齢だが期日前投票活用で安定</td>
           </tr>
         </tbody>
       </table>
@@ -832,11 +859,11 @@
             <td style="text-align:left; font-size:12px;">最も固い玉城票</td>
           </tr>
           <tr>
-            <td style="font-weight:900; color:var(--yellow);">無党派層 ★</td>
-            <td style="color:var(--yellow);">〜50%</td>
-            <td class="heat-high" style="color:var(--yellow);">58〜60%</td>
-            <td class="heat-low" style="color:var(--accent);">〜28%</td>
-            <td style="text-align:left; font-size:12px; color:var(--yellow); font-weight:700;">最大票田！ここで大差がついた</td>
+            <td style="font-weight:900; color:var(--gold);">無党派層 ★</td>
+            <td style="color:var(--gold);">〜50%</td>
+            <td class="heat-high" style="color:var(--gold);">58〜60%</td>
+            <td class="heat-low" style="color:var(--red);">〜28%</td>
+            <td style="text-align:left; font-size:12px; color:var(--gold); font-weight:700;">最大票田！ここで大差がついた</td>
           </tr>
         </tbody>
       </table>
@@ -860,33 +887,33 @@
         <tbody>
           <tr>
             <td>10〜20代</td>
-            <td style="color:var(--accent);">佐喜真 優勢</td>
+            <td style="color:var(--red);">佐喜真 優勢</td>
             <td>経済・就職に関心高い。基地よりも生活重視</td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted);">保守系は若年層の支持傾向を活かせるか。オール沖縄は基地以外の争点設定で巻き返せるかが鍵</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3);">保守系は若年層の支持傾向を活かせるか。オール沖縄は基地以外の争点設定で巻き返せるかが鍵</td>
           </tr>
           <tr>
             <td>30代</td>
-            <td style="color:var(--accent);">佐喜真 優勢</td>
+            <td style="color:var(--red);">佐喜真 優勢</td>
             <td>子育て・教育・住宅ローン世代</td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted);">両陣営とも生活政策の訴求力が問われる。投票率低下への対応が共通課題</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3);">両陣営とも生活政策の訴求力が問われる。投票率低下への対応が共通課題</td>
           </tr>
           <tr>
             <td>40代</td>
-            <td style="color:var(--accent2);">玉城 優勢</td>
+            <td style="color:var(--blue);">玉城 優勢</td>
             <td>働き盛り。基地問題への関心も高い</td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted);">保守系にとっては最重要攻略層。オール沖縄にとっては優位を維持できるかの正念場</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3);">保守系にとっては最重要攻略層。オール沖縄にとっては優位を維持できるかの正念場</td>
           </tr>
           <tr>
             <td>50〜60代</td>
-            <td style="color:var(--accent2);">玉城 優勢</td>
+            <td style="color:var(--blue);">玉城 優勢</td>
             <td>投票率高く、オール沖縄の組織票の中核</td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted);">オール沖縄の牙城。保守系は一部切り崩しが現実的目標。現職批判票の受け皿になれるか</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3);">オール沖縄の牙城。保守系は一部切り崩しが現実的目標。現職批判票の受け皿になれるか</td>
           </tr>
           <tr>
             <td>70代以上</td>
-            <td style="color:var(--accent2);">玉城 優勢</td>
+            <td style="color:var(--blue);">玉城 優勢</td>
             <td>最高投票率。革新系組織票が強固</td>
-            <td style="text-align:left; font-size:12px; color:var(--text-muted);">革新系の固い地盤。大きな変動は見込みにくいが、世代交代の影響に注目</td>
+            <td style="text-align:left; font-size:12px; color:var(--ink3);">革新系の固い地盤。大きな変動は見込みにくいが、世代交代の影響に注目</td>
           </tr>
         </tbody>
       </table>
@@ -934,19 +961,19 @@
           <tr>
             <td>維新・国民民主等</td>
             <td>約20,000票</td>
-            <td><span style="color:var(--yellow)">上積み可能</span></td>
+            <td><span style="color:var(--gold)">上積み可能</span></td>
             <td style="text-align:left; font-size:12px;">「改革・中道」軸での吸収が課題</td>
           </tr>
           <tr>
-            <td style="color:var(--yellow); font-weight:900;">無党派層 ★★★</td>
-            <td style="color:var(--yellow);">約75,000票（28%）</td>
-            <td style="color:var(--yellow); font-weight:700;">最大の上積み余地</td>
-            <td style="text-align:left; font-size:12px; color:var(--yellow);">獲得率を40%超に引き上げられるかが勝敗を分ける</td>
+            <td style="color:var(--gold); font-weight:900;">無党派層 ★★★</td>
+            <td style="color:var(--gold);">約75,000票（28%）</td>
+            <td style="color:var(--gold); font-weight:700;">最大の上積み余地</td>
+            <td style="text-align:left; font-size:12px; color:var(--gold);">獲得率を40%超に引き上げられるかが勝敗を分ける</td>
           </tr>
           <tr>
             <td>下地票の行方</td>
             <td>—（2022年下地票53,673）</td>
-            <td><span style="color:var(--accent2)">争奪戦</span></td>
+            <td><span style="color:var(--blue)">争奪戦</span></td>
             <td style="text-align:left; font-size:12px;">保守・オール沖縄双方にとって取り込み対象</td>
           </tr>
           <tr>
@@ -982,36 +1009,36 @@
           <tbody>
             <tr><td>2014年</td><td>392,786人</td><td>—</td></tr>
             <tr><td>2018年</td><td>421,507人</td><td><span class="delta-neg">+28,721人増</span></td></tr>
-            <tr><td>2022年</td><td><strong style="color:var(--accent)">490,391人</strong></td><td><span class="delta-neg">+68,884人増</span></td></tr>
+            <tr><td>2022年</td><td><strong style="color:var(--red)">490,391人</strong></td><td><span class="delta-neg">+68,884人増</span></td></tr>
           </tbody>
         </table>
 </div>
-        <p class="footnote" style="margin-top:10px">2022年の棄権者数は <strong style="color:var(--accent)">49万人</strong>。<br>玉城の得票（34万票）を大きく上回る。</p>
+        <p class="footnote" style="margin-top:10px">2022年の棄権者数は <strong style="color:var(--red)">49万人</strong>。<br>玉城の得票（34万票）を大きく上回る。</p>
       </div>
 
       <div class="chart-container" style="margin-bottom:0">
         <div class="chart-title">棄権者のプロファイル推計</div>
         <div style="display:flex; flex-direction:column; gap:10px; margin-top:4px;">
           <div>
-            <div style="font-size:12px; color:var(--text-muted); margin-bottom:5px;">20代 棄権者（有権者の57%が棄権）</div>
+            <div style="font-size:12px; color:var(--ink3); margin-bottom:5px;">20代 棄権者（有権者の57%が棄権）</div>
             <div style="background:var(--border); border-radius:4px; height:22px; overflow:hidden;">
               <div style="width:57%; height:100%; background:linear-gradient(90deg,#e63946,#c1121f); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">57%</div>
             </div>
           </div>
           <div>
-            <div style="font-size:12px; color:var(--text-muted); margin-bottom:5px;">30代 棄権者（有権者の47.75%が棄権）</div>
+            <div style="font-size:12px; color:var(--ink3); margin-bottom:5px;">30代 棄権者（有権者の47.75%が棄権）</div>
             <div style="background:var(--border); border-radius:4px; height:22px; overflow:hidden;">
               <div style="width:47.75%; height:100%; background:linear-gradient(90deg,#f4a261,#e07c4a); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">47.75%</div>
             </div>
           </div>
           <div>
-            <div style="font-size:12px; color:var(--text-muted); margin-bottom:5px;">40代 棄権者（有権者の41.89%が棄権）</div>
+            <div style="font-size:12px; color:var(--ink3); margin-bottom:5px;">40代 棄権者（有権者の41.89%が棄権）</div>
             <div style="background:var(--border); border-radius:4px; height:22px; overflow:hidden;">
               <div style="width:41.89%; height:100%; background:linear-gradient(90deg,#f4a261,#e07c4a); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">41.89%</div>
             </div>
           </div>
           <div>
-            <div style="font-size:12px; color:var(--text-muted); margin-bottom:5px;">60代 棄権者（有権者の26%が棄権）</div>
+            <div style="font-size:12px; color:var(--ink3); margin-bottom:5px;">60代 棄権者（有権者の26%が棄権）</div>
             <div style="background:var(--border); border-radius:4px; height:22px; overflow:hidden;">
               <div style="width:26%; height:100%; background:linear-gradient(90deg,#4a90d9,#2563a0); display:flex; align-items:center; padding-left:8px; font-size:11px; font-weight:700; color:#fff; white-space:nowrap;">26%</div>
             </div>
@@ -1052,14 +1079,14 @@
         </div>
       </div>
 
-      <div class="insight-card yellow">
+      <div class="insight-card gold">
         <div class="insight-num">40代</div>
         <div class="insight-title">40代の投票率急落が最大のシグナル</div>
         <div class="insight-body">
           40代の投票率は2014年（66.4%）→2022年（58.1%）と<strong>▲8.3pt</strong>の最大下落。この世代は子育て・教育費・住宅ローンで最も生活の苦しさを感じている層であり、かつ有権者数が最も多いボリュームゾーン。両陣営にとって、この「眠れる40代票」を動かす政策とメッセージが勝敗の鍵を握る。
         </div>
         <div>
-          <span class="strategy-tag tag-yellow">40代の掘り起こしが勝敗を決める</span>
+          <span class="strategy-tag tag-gold">40代の掘り起こしが勝敗を決める</span>
         </div>
       </div>
 
@@ -1094,7 +1121,7 @@
         </div>
         <div>
           <span class="strategy-tag tag-blue">過去最大の接戦へ</span>
-          <span class="strategy-tag tag-yellow">候補者・争点次第で変動</span>
+          <span class="strategy-tag tag-gold">候補者・争点次第で変動</span>
         </div>
       </div>
     </div>
@@ -1105,39 +1132,47 @@
     <div class="section-title">SECTION 08 ― 2026年知事選の注目ポイント</div>
 
     <div class="strategy-block">
-      <div class="strategy-num">01</div>
-      <div class="strategy-title">無党派層の争奪戦 ― 有権者の半数を巡る攻防</div>
-      <div class="strategy-body">
+      <div class="sb-head">
+        <div class="sb-num">01</div>
+        <div class="sb-title">無党派層の争奪戦 ― 有権者の半数を巡る攻防</div>
+      </div>
+      <div class="sb-body">
         2022年最大の勝敗要因は無党派層の獲得率差（約30pt）。<strong>保守系候補の課題は獲得率28%を40%超に引き上げること</strong>。経済・暮らし重視のメッセージで無党派層に刺さる政策を打ち出せるか。一方、<strong>オール沖縄候補は58〜60%の高い獲得率を維持する必要</strong>があり、現職の実績や政策継続の訴求力が問われる。
+        <div style="margin-top:12px"><span class="strategy-tag tag-red">保守系：獲得率40%超が必須</span><span class="strategy-tag tag-blue">オール沖縄：過半数維持が防衛線</span></div>
       </div>
-      <div><span class="strategy-tag tag-red">保守系：獲得率40%超が必須</span><span class="strategy-tag tag-blue">オール沖縄：過半数維持が防衛線</span></div>
     </div>
 
     <div class="strategy-block">
-      <div class="strategy-num">02</div>
-      <div class="strategy-title">40代の「棄権票」をどちらが掘り起こすか</div>
-      <div class="strategy-body">
+      <div class="sb-head">
+        <div class="sb-num">02</div>
+        <div class="sb-title">40代の「棄権票」をどちらが掘り起こすか</div>
+      </div>
+      <div class="sb-body">
         40代は投票率が最も急落した世代（▲8pt）であり、かつ最大ボリューム世代。<strong>子育て・物価・賃金・住宅</strong>に特化した政策パッケージで「あなたの暮らしが変わる」という具体的なビジョンを届けられた陣営が有利になる。基地問題だけでは動かない層に、生活政策で訴求できるかが分水嶺。
+        <div style="margin-top:12px"><span class="strategy-tag tag-gold">40代戦略が勝敗の鍵</span><span class="strategy-tag tag-green">生活政策の具体性</span></div>
       </div>
-      <div><span class="strategy-tag tag-yellow">40代戦略が勝敗の鍵</span><span class="strategy-tag tag-green">生活政策の具体性</span></div>
     </div>
 
     <div class="strategy-block">
-      <div class="strategy-num">03</div>
-      <div class="strategy-title">若年層の投票率変動 ― 上がれば保守有利、下がればオール沖縄有利</div>
-      <div class="strategy-body">
+      <div class="sb-head">
+        <div class="sb-num">03</div>
+        <div class="sb-title">若年層の投票率変動 ― 上がれば保守有利、下がればオール沖縄有利</div>
+      </div>
+      <div class="sb-body">
         20〜30代は保守系候補に傾いているが投票率が低い。<strong>この世代の投票率が5pt上がれば純増2〜3万票が保守系に流れる計算</strong>。保守系にとってはSNS・ショート動画・若者参加型イベント等での投票率向上が直接的な票増につながる。オール沖縄にとっては、若年層への政策浸透と支持の裾野拡大が守りの戦略となる。
+        <div style="margin-top:12px"><span class="strategy-tag tag-green">投票率が構図を変える</span><span class="strategy-tag tag-blue">両陣営のSNS戦略に注目</span></div>
       </div>
-      <div><span class="strategy-tag tag-green">投票率が構図を変える</span><span class="strategy-tag tag-blue">両陣営のSNS戦略に注目</span></div>
     </div>
 
     <div class="strategy-block">
-      <div class="strategy-num">04</div>
-      <div class="strategy-title">票差縮小トレンドの継続性 ― 構造変化か一時的現象か</div>
-      <div class="strategy-body">
-        ▲10万→▲8万→▲6.5万という縮小トレンドが2026年も続くかどうか。<strong>保守系にとっては「勢いがある」というナラティブの構築材料</strong>となり、<strong>オール沖縄にとっては危機感の醸成と組織固め</strong>の契機となる。ただし、候補者の魅力・外部環境（政権支持率、経済情勢、基地問題の展開）によってトレンドは反転しうる点に注意が必要。
+      <div class="sb-head">
+        <div class="sb-num">04</div>
+        <div class="sb-title">票差縮小トレンドの継続性 ― 構造変化か一時的現象か</div>
       </div>
-      <div><span class="strategy-tag tag-red">構造的変化の検証</span><span class="strategy-tag tag-yellow">外部要因による変動リスク</span></div>
+      <div class="sb-body">
+        ▲10万→▲8万→▲6.5万という縮小トレンドが2026年も続くかどうか。<strong>保守系にとっては「勢いがある」というナラティブの構築材料</strong>となり、<strong>オール沖縄にとっては危機感の醸成と組織固め</strong>の契機となる。ただし、候補者の魅力・外部環境（政権支持率、経済情勢、基地問題の展開）によってトレンドは反転しうる点に注意が必要。
+        <div style="margin-top:12px"><span class="strategy-tag tag-red">構造的変化の検証</span><span class="strategy-tag tag-gold">外部要因による変動リスク</span></div>
+      </div>
     </div>
 
   </div>
