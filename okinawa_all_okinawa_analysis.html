@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特集 沖縄県知事選2026｜第5話 オール沖縄とは一体？</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f0e8;--surface:#fffdf8;--surface2:#f0ebe0;--border:#d6cfc0;--border2:#c0b8a8;--ink:#1a1510;--ink2:#3d3628;--ink3:#6b5f4e;--ink4:#9a8f7e;--red:#b5271a;--red2:#d94030;--blue:#1a4a8a;--blue2:#2563a0;--gold:#9a7a28;--gold2:#c4a040;--green:#1a6b4a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Serif JP','Shippori Mincho',serif;font-size:14px;line-height:1.9}
+
+/* ── LOGO BADGE ── */
+.logo-badge{position:fixed;top:16px;left:16px;z-index:999;display:flex;align-items:center;gap:8px;background:var(--ink);border:1px solid rgba(196,160,64,.25);border-radius:8px;padding:8px 14px;text-decoration:none;color:var(--gold2);font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;box-shadow:0 2px 12px rgba(0,0,0,.15);transition:all .15s}
+.logo-badge:hover{background:var(--gold2);color:var(--ink);border-color:var(--gold2)}
+.logo-badge svg{flex-shrink:0}
+
+/* ── HEADER (centered, bg image) ── */
+.header{background:var(--ink);color:#f5f0e8;padding:72px 32px 56px;position:relative;overflow:hidden;border-bottom:4px solid var(--green);text-align:center}
+.header::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url('https://upload.wikimedia.org/wikipedia/commons/3/33/OkinawaCivilians.jpg') center/cover no-repeat;opacity:.12}
+.header::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(26,21,16,.6) 0%,rgba(26,21,16,.85) 100%)}
+.header>*{position:relative;z-index:1}
+.header-top-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
+.header-series-badge{font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;color:var(--ink);background:var(--gold2);border-radius:4px;padding:4px 14px}
+.header-eyebrow{font-family:'Noto Sans JP',sans-serif;font-size:12px;letter-spacing:4px;color:var(--gold2)}
+.header h1{font-family:'Shippori Mincho',serif;font-size:38px;font-weight:800;letter-spacing:3px;line-height:1.35;color:#f5f0e8;max-width:700px;margin:0 auto}
+.header h1 em{color:var(--red2);font-style:normal}
+.header-theme{font-family:'Shippori Mincho',serif;color:var(--red2);font-size:18px;margin-top:14px;letter-spacing:3px;font-weight:700}
+.header-theme em{font-style:normal}
+.header-sub{font-family:'Noto Sans JP',sans-serif;color:#a09888;font-size:12px;margin-top:10px;letter-spacing:1px}
+
+/* ── LAYOUT ── */
+.container{max-width:1080px;margin:0 auto;padding:48px 28px 80px}
+.section{margin-bottom:64px}
+.section-label{font-family:'Noto Sans JP',sans-serif;font-size:10px;letter-spacing:4px;color:var(--green);text-transform:uppercase;margin-bottom:6px}
+.section-title{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:6px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.section-subtitle{font-size:12px;color:var(--ink4);font-family:'Noto Sans JP',sans-serif;margin-bottom:28px}
+
+/* ── HERO QUOTE ── */
+.hero-quote{text-align:center;padding:56px 24px;max-width:720px;margin:0 auto 48px}
+.hero-quote blockquote{font-family:'Shippori Mincho',serif;font-size:42px;font-weight:700;color:var(--gold2);line-height:1.5;letter-spacing:3px;font-style:italic}
+@media(max-width:768px){.hero-quote blockquote{font-size:26px}}
+.hero-quote .hq-source{font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--ink4);margin-top:16px;text-align:right;letter-spacing:1px}
+
+/* ── PROSE ── */
+.prose{max-width:820px}
+.prose p{margin-bottom:22px;text-align:justify}
+.prose h3{font-family:'Shippori Mincho',serif;font-size:17px;font-weight:700;color:var(--ink);margin:36px 0 14px;padding-left:14px;border-left:3px solid var(--green)}
+.prose h4{font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;color:var(--ink2);margin:24px 0 10px;letter-spacing:1px}
+.prose blockquote{border-left:3px solid var(--gold2);padding:14px 20px;margin:20px 0 24px;background:var(--surface);font-style:italic;color:var(--ink2);border-radius:0 4px 4px 0}
+.prose blockquote .bq-source{display:block;font-style:normal;font-size:11px;color:var(--ink4);margin-top:8px;font-family:'Noto Sans JP',sans-serif}
+
+/* ── TURNING POINT CARDS ── */
+.tp-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:28px 32px;margin:24px 0;border-left:5px solid var(--red)}
+.tp-num{font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:900;letter-spacing:3px;color:var(--red);margin-bottom:4px}
+.tp-title{font-family:'Shippori Mincho',serif;font-size:19px;font-weight:700;color:var(--ink);margin-bottom:10px}
+.tp-text{font-size:13px;color:var(--ink2);line-height:1.9}
+.tp-text blockquote{border-left:3px solid var(--gold2);padding:10px 16px;margin:14px 0 0;background:var(--surface2);font-style:italic;font-size:13px;border-radius:0 4px 4px 0}
+
+/* ── PHOTO FIGURE ── */
+.photo-fig{margin:28px 0 32px;border-radius:6px;overflow:hidden;border:1px solid var(--border);background:var(--surface)}
+.photo-fig img{width:100%;height:260px;object-fit:cover;display:block}
+.photo-fig.tall img{height:340px}
+.photo-fig figcaption{padding:10px 16px;font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--ink3);line-height:1.6}
+.photo-fig figcaption .credit{color:var(--ink4);font-size:10px}
+
+/* ── PROFILE CARD ── */
+.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:28px 0 36px}
+.profile-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.profile-head{position:relative}
+.profile-head.head-green{border-top:4px solid var(--green)}
+.profile-head.head-blue{border-top:4px solid var(--blue)}
+.profile-head.head-gold{border-top:4px solid var(--gold2)}
+.profile-portrait{width:100%;height:260px;object-fit:cover;display:block}
+.profile-info{padding:16px 24px 12px}
+.profile-name{font-family:'Shippori Mincho',serif;font-size:22px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.profile-role{font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--ink4);letter-spacing:1px}
+.profile-body{padding:14px 24px 22px}
+.profile-body dt{font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;color:var(--ink4);letter-spacing:2px;text-transform:uppercase;margin-top:10px}
+.profile-body dt:first-child{margin-top:0}
+.profile-body dd{font-size:13px;color:var(--ink2);margin-top:2px;line-height:1.7}
+
+/* ── VISUAL TIMELINE ── */
+.vtl{position:relative;margin:28px 0 36px}
+.vtl-item{display:grid;grid-template-columns:110px 28px 1fr;min-height:80px;position:relative}
+.vtl-year-col{text-align:right;padding:12px 12px 12px 0;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;color:var(--green);letter-spacing:1px}
+.vtl-item.vt-red .vtl-year-col{color:var(--red)}
+.vtl-item.vt-gold .vtl-year-col{color:var(--gold2)}
+.vtl-item.vt-blue .vtl-year-col{color:var(--blue)}
+.vtl-line-col{position:relative;display:flex;flex-direction:column;align-items:center}
+.vtl-line-col::before{content:'';position:absolute;top:0;bottom:0;width:2px;background:var(--border2)}
+.vtl-dot{width:12px;height:12px;border-radius:50%;background:var(--green);border:2px solid var(--bg);position:relative;z-index:1;margin-top:16px}
+.vtl-item.vt-red .vtl-dot{background:var(--red)}
+.vtl-item.vt-gold .vtl-dot{background:var(--gold2)}
+.vtl-item.vt-blue .vtl-dot{background:var(--blue)}
+.vtl-content{padding:10px 16px 20px}
+.vtl-title{font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.vtl-desc{font-size:12px;color:var(--ink3);line-height:1.7}
+.vtl-photo{width:100%;max-width:420px;height:180px;object-fit:cover;border-radius:4px;margin-top:8px;border:1px solid var(--border);cursor:pointer;transition:transform .2s}
+.vtl-photo:hover{transform:scale(1.02)}
+.vtl-photo-wrap{position:relative;display:inline-block;max-width:420px;width:100%}
+.vtl-tooltip{display:none;position:absolute;bottom:calc(100% + 8px);left:0;right:0;background:var(--ink);color:#f5f0e8;font-family:'Noto Sans JP',sans-serif;font-size:11px;padding:10px 14px;border-radius:6px;line-height:1.6;z-index:10;pointer-events:none;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+.vtl-photo-wrap:hover .vtl-tooltip{display:block}
+/* tooltip for text */
+.info-tip{position:relative;border-bottom:1px dotted var(--gold2);cursor:help;color:var(--ink)}
+.info-tip .info-popup{display:none;position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);width:280px;background:var(--ink);color:#f5f0e8;font-family:'Noto Sans JP',sans-serif;font-size:11px;padding:10px 14px;border-radius:6px;line-height:1.6;z-index:20;box-shadow:0 4px 16px rgba(0,0,0,.3);font-weight:400;text-align:left}
+.info-tip:hover .info-popup{display:block}
+
+/* ── FIGURE GRID ── */
+.figure-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0 32px}
+.figure-chip{background:var(--surface);border:1px solid var(--border);border-radius:6px;overflow:hidden;text-align:center}
+.figure-chip img{width:100%;height:120px;object-fit:cover;display:block}
+.figure-chip .fc-placeholder{width:100%;height:120px;display:flex;align-items:center;justify-content:center;background:var(--surface2);color:var(--ink4);font-family:'Noto Sans JP',sans-serif;font-size:28px}
+.figure-chip .fc-name{font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;color:var(--ink);padding:8px 6px 2px}
+.figure-chip .fc-role{font-family:'Noto Sans JP',sans-serif;font-size:10px;color:var(--ink4);padding:0 6px 8px;line-height:1.4}
+
+/* ── ORG / DATA / BAR ── */
+.org-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0 32px}
+.org-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px 18px}
+.org-card-title{font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.org-card-title.oc-green{color:var(--green)}.org-card-title.oc-blue{color:var(--blue)}.org-card-title.oc-red{color:var(--red)}.org-card-title.oc-gold{color:var(--gold2)}
+.org-item{font-size:12px;color:var(--ink2);padding:3px 0;font-family:'Noto Sans JP',sans-serif;line-height:1.6}
+.org-item .org-note{color:var(--ink4);font-size:10px}
+
+.data-table{width:100%;border-collapse:collapse;margin:24px 0 32px;font-family:'Noto Sans JP',sans-serif;font-size:12px}
+.data-table th{background:var(--ink);color:#f5f0e8;font-weight:500;padding:10px 12px;text-align:left;font-size:11px;letter-spacing:1px}
+.data-table th.th-right{text-align:right}
+.data-table td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--ink2);vertical-align:top}
+.data-table td.td-right{text-align:right;font-variant-numeric:tabular-nums}
+.data-table tr:nth-child(even) td{background:var(--surface)}
+.data-table .winner{color:var(--green);font-weight:700}
+.data-table .loser{color:var(--ink4)}
+
+.bar-chart{margin:20px 0 28px}
+.bar-row{display:grid;grid-template-columns:100px 1fr 80px;gap:10px;align-items:center;margin-bottom:8px}
+.bar-label{font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:500;color:var(--ink2);text-align:right}
+.bar-track{height:22px;background:var(--surface2);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px}
+.bar-fill.bf-green{background:linear-gradient(90deg,var(--green),#2a8f6a)}.bar-fill.bf-red{background:linear-gradient(90deg,var(--red),#d45040)}.bar-fill.bf-blue{background:linear-gradient(90deg,var(--blue),#3070b0)}.bar-fill.bf-gold{background:linear-gradient(90deg,var(--gold),var(--gold2))}.bar-fill.bf-gray{background:#9a8f7e}
+.bar-value{font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--ink2);font-variant-numeric:tabular-nums}
+
+.trend-table{width:100%;border-collapse:collapse;margin:24px 0 28px;font-family:'Noto Sans JP',sans-serif;font-size:12px}
+.trend-table th{background:var(--ink);color:#f5f0e8;padding:8px 10px;font-size:10px;font-weight:500;letter-spacing:1px}
+.trend-table td{padding:8px 10px;border-bottom:1px solid var(--border);text-align:center}
+.trend-table td:first-child{text-align:left;font-weight:700}
+.trend-table tr:nth-child(even) td{background:var(--surface)}
+.trend-win{color:var(--green);font-weight:700}.trend-lose{color:var(--red);font-weight:700}.trend-draw{color:var(--gold);font-weight:700}
+
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border2);border-radius:6px;overflow:hidden;margin:24px 0 32px}
+.compare-col{padding:24px}
+.compare-col:first-child{border-right:1px solid var(--border2)}
+.compare-col.bg-light{background:var(--surface)}.compare-col.bg-alt{background:var(--surface2)}
+.compare-label{font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid currentColor}
+.compare-label.cl-green{color:var(--green)}.compare-label.cl-blue{color:var(--blue)}
+
+.insight-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:24px 28px;margin:24px 0 32px;border-top:4px solid var(--gold2)}
+.insight-label{font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;margin-bottom:10px}
+.insight-text{font-size:13px;color:var(--ink2);line-height:1.9}
+.crisis-box{background:#faf5ef;border:1px solid var(--border);border-left:4px solid var(--red);border-radius:0 6px 6px 0;padding:22px 26px;margin:24px 0 32px}
+.crisis-label{font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;color:var(--red);text-transform:uppercase;margin-bottom:8px}
+.crisis-text{font-size:13px;color:var(--ink2);line-height:1.9}
+
+/* ── ACCORDION ── */
+.acc-toggle{font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;color:var(--green);cursor:pointer;padding:12px 36px 12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:6px;margin:16px 0 0;position:relative;user-select:none}
+.acc-toggle::after{content:'▼';position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:.7em;color:var(--ink4);transition:transform .25s}
+.acc-toggle.open::after{transform:translateY(-50%) rotate(180deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .4s ease;border:1px solid transparent;border-top:0;border-radius:0 0 6px 6px}
+.acc-body.open{max-height:3000px;border-color:var(--border);padding:20px}
+
+/* ── SECTION HEADER WITH BG ── */
+.sec-header-img{position:relative;border-radius:8px;overflow:hidden;margin-bottom:24px;height:200px}
+.sec-header-img img{width:100%;height:100%;object-fit:cover;display:block}
+.sec-header-img::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(180deg,rgba(26,21,16,0) 30%,rgba(26,21,16,.7) 100%)}
+.sec-header-img .shi-text{position:absolute;bottom:16px;left:20px;z-index:1;color:#f5f0e8;font-family:'Shippori Mincho',serif;font-size:20px;font-weight:700;letter-spacing:2px}
+
+.back-link{display:inline-block;font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--ink3);text-decoration:none;letter-spacing:1px;margin-bottom:32px;transition:color .2s}
+.back-link:hover{color:var(--green)}
+
+/* ── PASSWORD ── */
+#pw-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center}
+.pw-box{text-align:center;max-width:380px;width:100%;padding:24px}
+.pw-box .brand{font-family:'Noto Sans JP',sans-serif;font-size:11px;letter-spacing:3px;color:var(--green);margin-bottom:8px}
+.pw-box h2{font-family:'Shippori Mincho',serif;font-size:1.3rem;font-weight:700;margin-bottom:24px;color:var(--ink)}
+.pw-box input{width:100%;padding:12px 16px;border-radius:4px;border:1px solid var(--border);background:var(--surface);font-size:16px;font-family:'Noto Sans JP',sans-serif;color:var(--ink);outline:none}
+.pw-box input:focus{border-color:var(--green)}
+.pw-box button{width:100%;margin-top:12px;padding:12px;border-radius:4px;border:none;background:var(--green);color:#fff;font-size:14px;font-weight:700;font-family:'Noto Sans JP',sans-serif;cursor:pointer}
+.pw-box button:hover{background:#145538}
+.pw-error{color:var(--red);font-size:12px;margin-top:10px;display:none}
+
+.footer{text-align:center;font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--ink4);padding:40px 0 32px;border-top:1px solid var(--border);margin-top:40px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .header{padding:48px 20px 36px}.header h1{font-size:22px}.header-theme{font-size:15px}
+  .container{padding:28px 16px 48px}.profile-grid,.compare-grid{grid-template-columns:1fr}
+  .compare-col:first-child{border-right:none;border-bottom:1px solid var(--border2)}
+  .org-grid,.figure-grid{grid-template-columns:1fr 1fr}
+  .vtl-item{grid-template-columns:70px 24px 1fr}.vtl-year-col{font-size:10px}
+  .data-table,.trend-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .bar-row{grid-template-columns:70px 1fr 60px}
+  .logo-badge{top:10px;left:10px;padding:6px 10px;font-size:10px}
+  .hero-quote blockquote{font-size:17px}
+  .tp-card{padding:20px 18px}.tp-title{font-size:16px}
+  .sec-header-img{height:150px}
+}
+@media(max-width:480px){
+  .header h1{font-size:18px}.section-title{font-size:18px}
+  .figure-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .vtl-item{grid-template-columns:55px 20px 1fr}
+  .org-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Password Gate -->
+<div id="pw-overlay">
+  <div class="pw-box">
+    <div class="brand">特集 沖縄県知事選2026 ── 第5話</div>
+    <h2>オール沖縄とは一体？</h2>
+    <form onsubmit="return pwCheck()"><input type="password" id="pw-input" placeholder="パスワードを入力" autofocus><button type="submit">閲覧する</button></form>
+    <div class="pw-error" id="pw-error">パスワードが正しくありません</div>
+  </div>
+</div>
+
+<a class="logo-badge" href="index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>ポータル</a>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top-row">
+    <span class="header-series-badge">第5話</span>
+    <span class="header-eyebrow">Atlas Daily 特集</span>
+  </div>
+  <h1>オール沖縄とは<em>一体</em>何なのか</h1>
+  <div class="header-theme">─ <em>反骨</em>と<em>弱者</em>の物語 ─</div>
+  <div class="header-sub">翁長雄志・玉城デニー、二人の知事が背負った沖縄の70年｜アトラス編集部AIチーム</div>
+</div>
+
+<div class="container">
+<a class="back-link" href="index.html">← 分析レポート一覧へ戻る</a>
+
+<!-- ── HERO QUOTE ── -->
+<div class="hero-quote">
+  <blockquote style="color:#a09888;">保守も革新も関係ない。<br>これは沖縄の<em style="color:var(--red);font-style:italic;">尊厳</em>の問題だ</blockquote>
+  <div class="hq-source">── 元沖縄県知事 翁長雄志氏</div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEC 01: 導入 -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">introduction</div>
+  <div class="section-title">「オール沖縄」── その名に込められた意味</div>
+  <div class="prose">
+    <p>「オール沖縄」。この言葉を初めて聞く人は、沖縄の全県民が一枚岩になった政治運動を想像するかもしれない。しかし実態は、そう単純なものではない。保守と革新が手を組む──日本本土では考えられないこの「奇跡」は、なぜ沖縄でだけ可能になったのか。そして、なぜ今、その連合体は崩壊の淵に立っているのか。</p>
+    <p>この物語を理解するには、二人の男の人生をたどる必要がある。一人は、自民党の保守本流から沖縄の旗を掲げ続けた翁長雄志。もう一人は、米軍人の父と沖縄の母の間に生まれ、ラジオのマイクから政治の世界へ飛び込んだ玉城デニー。</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEC 02: ビジュアルタイムライン -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">section 01 — visual timeline</div>
+  <div class="section-title">源流 ── 1945年から2026年、81年の軌跡</div>
+  <div class="section-subtitle">写真で辿る沖縄の闘いの歴史。画像や点線の用語にカーソルを合わせると詳細が表示されます。</div>
+
+  <div class="vtl">
+    <div class="vtl-item vt-red"><div class="vtl-year-col">1945</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">沖縄戦終結 ── 住民の4人に1人が犠牲に</div>
+      <div class="vtl-desc">米軍は4月1日に本島上陸。「<span class="info-tip">ニミッツ布告<span class="info-popup">米太平洋艦隊司令官ニミッツ元帥が発令。日本政府の行政権・司法権を全面停止し、米軍による直接統治を宣言した布告。沖縄の27年間の米軍統治の法的起点。</span></span>」で日本の行政権を停止、占領統治を開始。</div>
+      <div class="vtl-photo-wrap"><img class="vtl-photo" src="https://upload.wikimedia.org/wikipedia/commons/3/33/OkinawaCivilians.jpg" alt="沖縄戦の民間人"><div class="vtl-tooltip">沖縄戦中の沖縄の民間人。住民約12万人が犠牲に。米軍の猛攻と日本軍の「捨て石」作戦の中、住民は戦闘に巻き込まれた。（写真: 米軍 / パブリックドメイン）</div></div>
+    </div></div>
+
+    <div class="vtl-item vt-red"><div class="vtl-year-col">1955</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">「<span class="info-tip">銃剣とブルドーザー<span class="info-popup">1953年の「土地収用令」に基づき、米軍が武装兵を出動させブルドーザーで家屋を押しつぶしながら軍用地を強制接収した手法の通称。特に伊江島（1955年3月）では家屋に火をつけ、飲料水タンクを引き倒すなど苛烈を極めた。</span></span>」── 伊江島の土地強制接収</div>
+      <div class="vtl-desc">阿波根昌鴻は非暴力の「乞食行進」で抵抗。那覇から糸満、辺土まで歩き通して土地強奪の不当性を訴えた。</div>
+      <div class="vtl-photo-wrap"><img class="vtl-photo" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Iejima_March_1955.jpg" alt="伊江島乞食行進 1955年"><div class="vtl-tooltip">1955年7月、家と土地を奪われた伊江島の農民が「乞食行進」を実施。那覇の琉球政府前から南北を歩き通した非暴力抵抗の記録。（写真: 阿波根昌鴻 / PD）</div></div>
+    </div></div>
+
+    <div class="vtl-item vt-gold"><div class="vtl-year-col">1956</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">「<span class="info-tip">島ぐるみ闘争<span class="info-popup">1956年7月、米軍の軍用地料一括払い方針（プライス勧告）に対し、全沖縄の市町村で住民大会が開催。約15万人が那覇高校グラウンドに結集した「四原則貫徹県民大会」は、保革・階層を超えた全島的抵抗運動の頂点。「オール沖縄」の原型とされる。</span></span>」── 約15万人が結集</div>
+      <div class="vtl-desc">「<span class="info-tip">プライス勧告<span class="info-popup">1956年6月、米国民政府（USCAR）が沖縄住民に伝達した軍用地料に関する報告書。軍用地料の一括払い方式を推奨し、住民の土地所有権を実質的に否定する内容だったため、全島的な反発を招いた。</span></span>」への反発が全島に拡大。7月28日、那覇高校グラウンドに約15万人が結集した「四原則貫徹県民大会」──オール沖縄の原型。</div>
+    </div></div>
+
+    <div class="vtl-item"><div class="vtl-year-col">1972.5.15</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">沖縄の日本復帰</div>
+      <div class="vtl-desc">27年間の米軍統治を経て日本に復帰。しかし広大な米軍基地はそのまま残された。</div>
+      <div class="vtl-photo-wrap"><img class="vtl-photo" src="https://upload.wikimedia.org/wikipedia/commons/3/35/Military_Ceremony_-_Japan%2C_Okinawa%2C_Naha_Wheel_Base_1972%2C5.jpg" alt="1972年沖縄復帰式典"><div class="vtl-tooltip">1972年5月、那覇ホイールベースでの軍事式典（沖縄返還関連）。県民が夢見た「核も基地もない平和な沖縄」は実現せず、復帰後も国土0.6%に在日米軍の約70%が集中し続ける。（写真: 米陸軍 / PD）</div></div>
+    </div></div>
+
+    <div class="vtl-item vt-red"><div class="vtl-year-col">1995.9</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">米兵少女暴行事件 ── 8万5千人の県民大会</div>
+      <div class="vtl-desc">海兵隊員3名が12歳の少女を集団暴行。日米地位協定で身柄引き渡し拒否。10月21日、宜野湾で約8.5万人が抗議。</div>
+      <div class="vtl-photo-wrap"><img class="vtl-photo" src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Marine_Corps_Air_Station_Futenma_20160720.jpg" alt="普天間飛行場"><div class="vtl-tooltip">普天間飛行場 ── 宜野湾市の市街地に囲まれた「世界一危険な基地」。1996年に返還合意も、移設先が辺野古となり30年未解決。（写真: Suikotei / CC BY-SA 4.0）</div></div>
+    </div></div>
+
+    <div class="vtl-item vt-gold"><div class="vtl-year-col">2007.9</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">教科書検定問題 ── 11万人の県民大会</div>
+      <div class="vtl-desc">沖縄戦「集団自決」の軍強制記述が削除。保革超党派で11万人が抗議。翁長雄志のオール沖縄「原体験」。</div>
+      <div class="vtl-photo-wrap"><img class="vtl-photo" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Cornerstone_of_Peace.jpg" alt="平和の礎"><div class="vtl-tooltip">平和の礎（へいわのいしじ）── 糸満市摩文仁の平和祈念公園にある、沖縄戦の全戦没者24万人超の名を刻んだ記念碑。国籍・軍民の区別なく刻銘。（写真: Wikimedia / CC）</div></div>
+    </div></div>
+
+    <div class="vtl-item vt-red"><div class="vtl-year-col">2010.5</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">鳩山首相「最低でも県外」を断念</div>
+      <div class="vtl-desc">民主党政権の約束は反故に。後に「抑止力は方便だった」と認める。沖縄の日本政府への不信が決定的に。</div>
+    </div></div>
+
+    <div class="vtl-item vt-gold"><div class="vtl-year-col">2012-13</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">建白書提出 ── 全41市町村長が署名</div>
+      <div class="vtl-desc">オスプレイ配備反対県民大会を経て、2013年1月28日に全41市町村の首長・議長が署名した建白書を首相に提出。オール沖縄の原点。</div>
+      <div class="vtl-photo-wrap"><img class="vtl-photo" src="https://upload.wikimedia.org/wikipedia/commons/4/40/MV-22B_Ospreys_with_VMM-265_fly_in_formation_over_Okinawa_%289249392%29.jpg" alt="沖縄上空のオスプレイ"><div class="vtl-tooltip">MV-22Bオスプレイの沖縄上空での編隊飛行。2012年10月に普天間配備が強行され、県民の猛反発を招いた。（写真: 米海兵隊 / PD）</div></div>
+    </div></div>
+
+    <div class="vtl-item vt-red"><div class="vtl-year-col">2013.12</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">仲井眞知事が辺野古埋め立て承認</div>
+      <div class="vtl-desc">移設反対を翻す。自民党沖縄県連が分裂。翁長の決定的な転機。</div>
+    </div></div>
+
+    <div class="vtl-item"><div class="vtl-year-col">2014.11</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">翁長雄志、知事選に圧勝 ── オール沖縄の誕生</div>
+      <div class="vtl-desc">仲井眞に約10万票差。得票360,820票。衆院選でもオール沖縄が全4区で勝利。</div>
+      <div class="vtl-photo-wrap"><img class="vtl-photo" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Onagatakeshi2016aug.jpg" alt="翁長雄志" style="object-position:center 15%"><div class="vtl-tooltip">翁長雄志（1950-2018）── 記者会見に臨む沖縄県知事。保守本流から自民党と決別し「イデオロギーよりアイデンティティ」を掲げオール沖縄を率いた。（写真: Zohang Yuriy / CC BY-SA 4.0）</div></div>
+    </div></div>
+
+    <div class="vtl-item"><div class="vtl-year-col">2015.12</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">「オール沖縄会議」正式結成</div>
+      <div class="vtl-desc">22幹事団体が参加する恒常的運動組織として発足。</div>
+      <div class="vtl-photo-wrap"><img class="vtl-photo" src="https://upload.wikimedia.org/wikipedia/commons/2/20/%E5%BA%A7%E3%82%8A%E8%BE%BC%E3%81%BF_5068%E6%97%A5_%2825872367757%29.jpg" alt="辺野古座り込み"><div class="vtl-tooltip">辺野古キャンプ・シュワブ前の座り込み抗議。2014年から続く長期抗議の象徴的風景。島ぐるみ会議が毎週木曜にバスを運行。（写真: Hajime NAKANO / CC BY 2.0）</div></div>
+    </div></div>
+
+    <div class="vtl-item vt-red"><div class="vtl-year-col">2018.8.8</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">翁長雄志知事、死去（67歳）</div>
+      <div class="vtl-desc">膵臓がん。肝臓転移を伏せたまま公務を続け、埋め立て承認「撤回」表明の12日後に息を引き取った。</div>
+    </div></div>
+
+    <div class="vtl-item vt-blue"><div class="vtl-year-col">2018.9</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">玉城デニー、知事選当選 ── 復帰後最多得票</div>
+      <div class="vtl-desc">翁長の遺志を継ぎ396,632票を獲得。佐喜真淳に約8万票差。</div>
+      <div class="vtl-photo-wrap"><img class="vtl-photo" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Denny_Tamaki_in_2023_%28cropped%29.jpg" alt="玉城デニー" style="object-position:center 25%"><div class="vtl-tooltip">玉城デニー（1959年生）── 米海兵隊員の父と沖縄人の母の間に生まれたアメラジアン。翁長の後継として2018年・2022年に知事選勝利。（写真: 内閣官房 / CC BY 4.0）</div></div>
+    </div></div>
+
+    <div class="vtl-item vt-red"><div class="vtl-year-col">2024.6</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">県議選でオール沖縄与党が過半数割れ</div>
+      <div class="vtl-desc">与党20議席（過半数24）。投票率は過去最低の45.26%。</div>
+    </div></div>
+
+    <div class="vtl-item vt-red"><div class="vtl-year-col">2026.2</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content">
+      <div class="vtl-title">衆院選でオール沖縄が全4区全敗</div>
+      <div class="vtl-desc">小選挙区制導入以降初、自民が沖縄全区を独占。壊滅的敗北。</div>
+    </div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEC 03: 翁長雄志 -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">section 02 — takeshi onaga</div>
+  <div class="section-title">翁長雄志 ── 保守の反骨</div>
+
+  <div class="profile-grid">
+    <div class="profile-card">
+      <div class="profile-head head-green">
+        <img class="profile-portrait" src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Takeshi_Onaga_%282016%29.jpg" alt="翁長雄志" style="object-position:center 30%">
+        <div class="profile-info"><div class="profile-name">翁長 雄志</div><div class="profile-role">おなが たけし ｜ 1950-2018</div></div>
+      </div>
+      <div class="profile-body"><dl>
+        <dt>生誕</dt><dd>1950年10月2日 真和志村（現・那覇市）</dd>
+        <dt>家系</dt><dd>父・翁長助静（元真和志市長、「魂魄之塔」建立者）。兄・助裕（県副知事）</dd>
+        <dt>経歴</dt><dd>法政大学法学部卒→那覇市議2期→県議2期→自民党県連幹事長→那覇市長4期→沖縄県知事</dd>
+        <dt>死去</dt><dd>2018年8月8日 膵臓がん（67歳）在職中</dd>
+      </dl></div>
+    </div>
+    <div class="profile-card">
+      <div class="profile-head head-gold">
+        <img class="profile-portrait" src="https://upload.wikimedia.org/wikipedia/commons/b/be/%E9%AD%82%E9%AD%84%E3%81%AE%E5%A1%94.jpg" alt="魂魄之塔" style="object-position:center 40%">
+        <div class="profile-info"><div class="profile-name">魂魄之塔と父・助静</div><div class="profile-role">翁長家の「政治の原点」</div></div>
+      </div>
+      <div class="profile-body"><dl>
+        <dt>父・翁長助静</dt><dd>教育者・政治家。沖縄戦で父・助信を目前で失う。摩文仁の遺骨を収集し沖縄初の慰霊碑「魂魄之塔」を建立。</dd>
+        <dt>遺した言葉</dt><dd>「<strong>政治の原点は平和なんだ</strong>」</dd>
+      </dl></div>
+    </div>
+  </div>
+
+  <div class="prose">
+    <h3>保守本流の政治家として ── 経歴と人物像</h3>
+    <p>小学1年から父の選挙運動を手伝い、12歳で「那覇市長になる」と級友に宣言。法政大学法学部に琉球政府奨学金で進学し、1972年の沖縄復帰を東京で迎えた。在京中「琉球人お断り」の差別を経験──これが後の政治信念の原点となる。</p>
+  </div>
+
+  <!-- 翁長キャリアタイムライン -->
+  <div class="vtl" style="margin:20px 0 28px">
+    <div class="vtl-item"><div class="vtl-year-col">1969</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">那覇高校卒業、法政大学法学部へ</div><div class="vtl-desc">琉球政府奨学金で上京。1972年の復帰を東京で経験。</div></div></div>
+    <div class="vtl-item"><div class="vtl-year-col">1985</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">那覇市議会議員に初当選（自民党公認）</div><div class="vtl-desc">34歳。県連の若手ホープとして頭角を現す。2期7年。</div></div></div>
+    <div class="vtl-item"><div class="vtl-year-col">1992</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">沖縄県議会議員に当選</div><div class="vtl-desc">2期。自民党県連幹事長に就任。辺野古移設推進決議の旗振り役。革新・大田県政と激しく対立。</div></div></div>
+    <div class="vtl-item"><div class="vtl-year-col">2000</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">那覇市長に当選（4期16年）</div><div class="vtl-desc">「市役所は市民に対する最大のサービス業」。ゆいレール開通（2003年）、国際通りトランジットモール、福州市との友好深化。生涯一度も落選せず。</div></div></div>
+    <div class="vtl-item vt-gold"><div class="vtl-year-col">2007</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">教科書検定問題 ── 最初の転機</div><div class="vtl-desc">保革超党派の県民大会に那覇市長として参加。オール沖縄の「原体験」。</div></div></div>
+    <div class="vtl-item vt-red"><div class="vtl-year-col">2014</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">自民党を離党、知事選に圧勝</div><div class="vtl-desc">「イデオロギーよりアイデンティティ」。仲井眞に約10万票差。</div></div></div>
+  </div>
+
+  <div class="prose">
+    <p>周囲からは「信念の人」「闘う保守」と評された。共産党の志位和夫委員長と共闘した際には「一緒に行動して本当に違和感がない。なぜもっと前から一緒にならなかったのか」と語った。</p>
+    <blockquote>魂の飢餓感 ── 基地により人命や生活が脅かされ、尊厳や誇りも傷つけられる沖縄県民の心情<span class="bq-source">── 翁長雄志の代名詞的フレーズ</span></blockquote>
+  </div>
+
+  <div class="prose"><h3>転機 ── 三つの出来事が保守を変えた</h3></div>
+
+  <div class="tp-card">
+    <div class="tp-num">TURNING POINT 01</div>
+    <div class="tp-title">教科書検定問題（2007年9月）</div>
+    <div class="tp-text">
+      <p>文科省が高校教科書から沖縄戦「集団自決」の軍強制記述を削除。多くの生存者が「軍から手榴弾を渡された」と証言しているにもかかわらず──。県民の感情は「沖縄戦の記憶を本土に否定された」という怒りに変わった。</p>
+      <p>9月29日、宜野湾海浜公園に<strong>11万6千人</strong>が結集。保守の仲井眞知事も、自民党の翁長那覇市長も壇上に立った。保革の壁が溶けた瞬間だった。</p>
+      <blockquote>平和を希求する思いは保革を問わず、全県民の根底に流れていることを実感した。<span class="bq-source">── 翁長雄志、県民大会にて</span></blockquote>
+      <p style="margin-top:10px;font-size:12px;color:var(--ink3)">→ この「保革を超えた結集」の成功体験が、7年後の「建白書」（全41市町村長署名）とオール沖縄結成への直接的布石となった。</p>
+    </div>
+  </div>
+  <div class="tp-card">
+    <div class="tp-num">TURNING POINT 02</div>
+    <div class="tp-title">鳩山政権「最低でも県外」の断念（2010年5月）</div>
+    <div class="tp-text">
+      <p>2009年の政権交代で「最低でも県外」を約束した鳩山由紀夫は、わずか8ヶ月で撤回。「学べば学ぶにつけ、海兵隊の抑止力が分かった」──後にこの「抑止力」は「方便だった」と本人が認めた。</p>
+      <p>県民の感情は「失望」を超えて「諦め」に変わった。本土の政治に期待しても裏切られる。保守も革新も関係なく、その認識が沖縄中に広がった。日米安保を支持してきた保守政治家・翁長にとっても、日本政府への不信は決定的なものとなった。</p>
+      <p style="margin-top:10px;font-size:12px;color:var(--ink3)">→ 「本土の政党に頼らない」という意識が、2年後のオスプレイ反対県民大会と建白書提出へとつながっていく。</p>
+    </div>
+  </div>
+  <div class="tp-card">
+    <div class="tp-num">TURNING POINT 03</div>
+    <div class="tp-title">仲井眞知事の辺野古埋め立て承認（2013年12月27日）</div>
+    <div class="tp-text">
+      <p>仲井眞知事は「県外移設」を掲げて当選していたにもかかわらず、安倍首相との面会後、年間3,000億円×8年の振興予算と引き換えに辺野古埋め立てを承認した。県民の感情は「裏切り」に煮えたぎった。</p>
+      <p>翁長は仲井眞を「県民への裏切り」と断じ、自民党と決別。辺野古反対を貫く自民党地方議員、金秀グループ、かりゆしグループなどの保守・経済界が翁長のもとに結集し、「オール沖縄」が形を成していった。</p>
+      <blockquote>イデオロギーよりアイデンティティ。<span class="bq-source">── 翁長雄志</span></blockquote>
+      <p style="margin-top:10px;font-size:12px;color:var(--ink3)">→ 翌2014年11月の知事選で翁長が約10万票差の圧勝。同年の衆院選でもオール沖縄が沖縄全4区を制覇し、保革共闘の「奇跡」が実現した。</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <h3>知事として、そして死 ── 弔い合戦へ</h3>
+    <p>2014年11月、約10万票差で圧勝。2015年に埋め立て承認を取り消し、国との法廷闘争を開始。同年9月、国連人権理事会で沖縄の自己決定権を訴えた。</p>
+    <blockquote>ウチナーンチュ、ウシェーティナイビランドー（沖縄の人をなめてはいけない）<span class="bq-source">── 翁長雄志、2015年県民大会</span></blockquote>
+    <p>2018年4月、膵臓がん手術後に肝臓転移が判明。「12月まで持たない」と覚悟しながら、家族以外に病状を伏せて公務を続けた。7月27日、抗がん剤の副作用で口内炎が口全体に広がり、まともに歩けない状態で命がけの記者会見に臨み、埋め立て承認「撤回」を表明。</p>
+    <blockquote>何百年も苦労してきた私たちの沖縄が、やっと飛び立とうとしている。その足を引っぱろうというようなものは、到底容認できない。<span class="bq-source">── 翁長雄志、2018年7月27日 最後の記者会見</span></blockquote>
+    <p>8月8日、浦添総合病院で逝去。67歳。病室で妻・樹子に「県民に足りないと言われるかもしれないけど、自分にできることは精いっぱいやった」と語った。樹子は答えた──「あなたに足りないと言うウチナーンチュはいない」。</p>
+    <p>翁長の死は「弔い合戦」の号砲となった。生前に残された音声録音で後継指名された玉城デニーは、9月30日の知事選で<strong>復帰後最多の39万6,632票</strong>を獲得して圧勝。翁長の息子・雄治に繰り返し語っていた言葉は、そのままオール沖縄の遺産となった。</p>
+    <blockquote>ウチナーンチュが心を一つにして闘うときには、おまえが想像するよりもはるかに大きな力になる。<span class="bq-source">── 翁長雄志、息子・雄治に語った言葉</span></blockquote>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEC 04: 玉城デニー -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">section 03 — denny tamaki</div>
+  <div class="section-title">玉城デニー ── 弱者の物語</div>
+
+  <div class="profile-grid">
+    <div class="profile-card">
+      <div class="profile-head head-blue">
+        <img class="profile-portrait" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Denny_Tamaki_in_2023_%28cropped%29.jpg" alt="玉城デニー" style="object-position:center 22%">
+        <div class="profile-info"><div class="profile-name">玉城 デニー</div><div class="profile-role">たまき でにー（本名: 康裕）｜ 1959年生</div></div>
+      </div>
+      <div class="profile-body"><dl>
+        <dt>出自</dt><dd>父は米海兵隊員（帰国後音信不通）、母は伊江島出身。日本初のアメラジアン出身国会議員</dd>
+        <dt>前職</dt><dd>琉球放送ラジオDJ（「ふれ愛パレット」）</dd>
+        <dt>経歴</dt><dd>沖縄市議1期→衆議院議員4期（自由党幹事長）→沖縄県知事2018年～</dd>
+      </dl></div>
+    </div>
+    <div class="profile-card">
+      <div class="profile-head" style="border-top:4px solid var(--ink4)">
+        <div class="profile-info" style="padding-top:20px"><div class="profile-name">二人の対比</div><div class="profile-role">翁長雄志 vs 玉城デニー</div></div>
+      </div>
+      <div class="profile-body"><dl>
+        <dt>出自</dt><dd>翁長: 保守政治家一家の三男<br>玉城: 米軍人の混血児、母子家庭</dd>
+        <dt>政治スタイル</dt><dd>翁長: 「闘う知事」── 対峙と信念<br>玉城: 「語る知事」── 対話と協調</dd>
+        <dt>求心力の源泉</dt><dd>翁長: 保守の「裏切り」という物語の力<br>玉城: 出自そのものが沖縄の矛盾の体現</dd>
+      </dl></div>
+    </div>
+  </div>
+
+  <div class="prose">
+    <h3>生い立ちと青春時代</h3>
+    <p>1959年、米軍統治下の与那城村（現・うるま市）に生まれる。母は伊江島出身の玉城ヨシさん。辺野古方面で住み込みの仕事に就いたため、1歳から10歳まで与那城村の母の友人・知花カツさん宅に預けられた。生みの母を「アンマー」、育ての母を「オッカー」と呼び分けた。小学4年で母と暮らし始め、「康裕」に改名。</p>
+    <p>与那城小学校、与勝第二中学校を経て、沖縄県立前原高校へ進学。入学当初はバレーボール部に入るも半年で退部し、応援団のリーダー部へ。長髪にしてロックバンド「ウィザード」のボーカルに。ギブソンのエレキギターを剥き出しのまま登校し、コザの歓楽街で米兵の前でロックを演奏するヤンチャな青春時代を送った。</p>
+    <p>高校卒業後、上京して上智社会福祉専門学校（福祉主事任用課程）を卒業。帰沖後は福祉関係の臨時職員、インテリア内装業、音響関係の会社を経て、30歳でタレントとして独立した。</p>
+  </div>
+
+  <!-- デニー キャリアタイムライン -->
+  <div class="vtl" style="margin:20px 0 28px">
+    <div class="vtl-item"><div class="vtl-year-col">1959</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">与那城村（現・うるま市）に生まれる</div><div class="vtl-desc">米海兵隊員の父と沖縄人の母。母の友人宅で育つ。</div></div></div>
+    <div class="vtl-item"><div class="vtl-year-col">1978</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">前原高校卒業 → 上智社会福祉専門学校</div><div class="vtl-desc">バンド「ウィザード」のボーカル。福祉主事任用課程を修了。</div></div></div>
+    <div class="vtl-item vt-blue"><div class="vtl-year-col">1989</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">琉球放送ラジオDJ「ふれ愛パレット」</div><div class="vtl-desc">ウチナーグチを駆使し高齢者層から絶大な支持。沖縄全県に名を知られる存在に。</div></div></div>
+    <div class="vtl-item"><div class="vtl-year-col">2002</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">沖縄市議に史上最多得票でトップ当選</div><div class="vtl-desc">ラジオでの知名度が政治への入口に。</div></div></div>
+    <div class="vtl-item vt-blue"><div class="vtl-year-col">2009</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">衆議院議員に初当選（沖縄3区・民主党）</div><div class="vtl-desc">4期務める。2012年に消費増税反対で民主党除籍。自由党幹事長に。</div></div></div>
+    <div class="vtl-item vt-gold"><div class="vtl-year-col">2017</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">希望の党合流を拒否「水と油」</div><div class="vtl-desc">無所属で出馬し4期目当選。信念を貫く姿勢を示す。</div></div></div>
+    <div class="vtl-item vt-blue"><div class="vtl-year-col">2018</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">翁長の遺志を継ぎ知事選当選（396,632票）</div><div class="vtl-desc">復帰後最多得票。「弔い合戦」で佐喜真に約8万票差の圧勝。</div></div></div>
+    <div class="vtl-item"><div class="vtl-year-col">2022</div><div class="vtl-line-col"><div class="vtl-dot"></div></div><div class="vtl-content"><div class="vtl-title">知事再選（339,767票）</div><div class="vtl-desc">得票は前回から5.7万票減。オール沖縄の退潮が数字に表れ始める。</div></div></div>
+  </div>
+
+  <div class="prose">
+    <h3>知事としての政策</h3>
+    <p>子どもの貧困対策を「県政の最重要政策」に位置づけ、基金を30億→60億円に拡充。保育料無料化、中高生バス無料化、子ども医療費無料化を実現。経済面ではアジア経済戦略構想や万国津梁会議を新設。2023年の国連人権理事会やワシントンD.C.での発信など国際的アプローチも積極的に展開。フジロックでギターを弾くなど親しみやすさを見せる一方、政策実行力や政治資金問題で批判も受けている。</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEC 05: 組織構造 -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">section 04 — structure</div>
+  <div class="section-title">オール沖縄の支持母体と組織構造</div>
+
+  <div class="org-grid">
+    <div class="org-card"><div class="org-card-title oc-green">政党</div>
+      <div class="org-item"><strong>日本共産党</strong> 沖縄県委員会</div>
+      <div class="org-item"><strong>社会民主党</strong> 沖縄県連</div>
+      <div class="org-item"><strong>沖縄社会大衆党</strong> <span class="org-note">（1950年設立の沖縄固有政党）</span></div>
+      <div class="org-item"><strong>立憲民主党</strong> 沖縄県連</div>
+      <div class="org-item"><strong>れいわ新選組</strong> <span class="org-note">（部分参加）</span></div>
+    </div>
+    <div class="org-card"><div class="org-card-title oc-blue">労働組合</div>
+      <div class="org-item"><strong>連合沖縄</strong> <span class="org-note">（約3.8万人）</span></div>
+      <div class="org-item"><strong>沖縄県労連</strong></div>
+      <div class="org-item"><strong>自治労</strong> 沖縄県本部</div>
+      <div class="org-item"><strong>沖教組</strong> <span class="org-note">（日教組加盟）</span></div>
+      <div class="org-item"><strong>全日本港湾労働組合</strong></div>
+    </div>
+    <div class="org-card"><div class="org-card-title oc-red">市民団体</div>
+      <div class="org-item"><strong>沖縄平和運動センター</strong></div>
+      <div class="org-item"><strong>ヘリ基地反対協議会</strong></div>
+      <div class="org-item"><strong>島ぐるみ会議</strong> <span class="org-note">（市町村単位）</span></div>
+      <div class="org-item"><strong>沖縄平和市民連絡会</strong></div>
+      <div class="org-item"><strong>県統一連</strong></div>
+    </div>
+  </div>
+
+  <div class="crisis-box">
+    <div class="crisis-label">離脱した経済界</div>
+    <div class="crisis-text"><strong>金秀グループ（呉屋守將）</strong>── 初代共同代表。「赤い服が目立つ」として2018年辞任、2021年自民支持に転換。<br><strong>かりゆしグループ</strong>── 2018年4月脱会。「政党色が強くなった」。</div>
+  </div>
+
+  <div class="prose"><h3>主要幹部・キーパーソン</h3></div>
+  <div class="figure-grid">
+    <div class="figure-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Takeshi_Onaga_%282016%29.jpg" alt="翁長雄志" style="object-position:center 30%"><div class="fc-name">翁長雄志</div><div class="fc-role">創始者・元知事（故人）</div></div>
+    <div class="figure-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Denny_Tamaki_in_2023_%28cropped%29.jpg" alt="玉城デニー" style="object-position:center 22%"><div class="fc-name">玉城デニー</div><div class="fc-role">現知事（2018年～）</div></div>
+    <div class="figure-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Ihayoichi_2019.jpg" alt="伊波洋一" style="object-position:center 20%"><div class="fc-name">伊波洋一</div><div class="fc-role">参議院議員・無所属</div></div>
+    <div class="figure-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Keiko_Itokazu_2015.jpg" alt="糸数慶子" style="object-position:center 15%"><div class="fc-name">糸数慶子</div><div class="fc-role">元参議員・社大党 共同代表</div></div>
+    <div class="figure-chip"><div class="fc-placeholder">稲</div><div class="fc-name">稲嶺進</div><div class="fc-role">前名護市長 共同代表</div></div>
+    <div class="figure-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Seiken_Akamine_190627-M-HB452-1219.jpg" alt="赤嶺政賢" style="object-position:center 20%"><div class="fc-name">赤嶺政賢</div><div class="fc-role">元衆議員・日本共産党</div></div>
+    <div class="figure-chip"><div class="fc-placeholder">高</div><div class="fc-name">高良鉄美</div><div class="fc-role">元参議員・社大党委員長</div></div>
+    <div class="figure-chip"><div class="fc-placeholder">照</div><div class="fc-name">照屋寛徳</div><div class="fc-role">元衆議員・社会民主党</div></div>
+    <div class="figure-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Kunio_Arakaki_20160728_%28cropped%29.jpg" alt="新垣邦男" style="object-position:center 20%"><div class="fc-name">新垣邦男</div><div class="fc-role">元衆議員・元社民→中道改革</div></div>
+    <div class="figure-chip"><div class="fc-placeholder">屋</div><div class="fc-name">屋良朝博</div><div class="fc-role">元衆議員・立憲民主党</div></div>
+    <div class="figure-chip"><div class="fc-placeholder">山</div><div class="fc-name">山城博治</div><div class="fc-role">平和運動センター議長</div></div>
+    <div class="figure-chip"><div class="fc-placeholder">呉</div><div class="fc-name">呉屋守將</div><div class="fc-role">金秀G会長（離脱）</div></div>
+  </div>
+
+  <div class="prose"><h3>オール沖縄支援による主要当選実績</h3></div>
+  <table class="data-table">
+    <thead><tr><th>年</th><th>選挙</th><th>当選者</th><th>政党</th><th class="th-right">得票数</th></tr></thead>
+    <tbody>
+      <tr><td>2014</td><td>知事選</td><td class="winner">翁長雄志</td><td>無所属（オール沖縄）</td><td class="td-right">360,820</td></tr>
+      <tr><td>2014</td><td>衆院選（全4区勝利）</td><td class="winner">赤嶺・照屋・玉城・仲里</td><td>共産/社民/生活/無所属</td><td class="td-right">──</td></tr>
+      <tr><td>2016</td><td>参院選</td><td class="winner">伊波洋一</td><td>無所属（オール沖縄）</td><td class="td-right">356,355</td></tr>
+      <tr><td>2017</td><td>衆院選（3勝1敗）</td><td class="winner">赤嶺・照屋・玉城</td><td>共産/社民/無所属</td><td class="td-right">──</td></tr>
+      <tr><td>2018</td><td>知事選</td><td class="winner">玉城デニー</td><td>無所属（オール沖縄）</td><td class="td-right">396,632</td></tr>
+      <tr><td>2019</td><td>参院選</td><td class="winner">高良鉄美</td><td>無所属（社大党）</td><td class="td-right">298,831</td></tr>
+      <tr><td>2022</td><td>知事選（再選）</td><td class="winner">玉城デニー</td><td>無所属（オール沖縄）</td><td class="td-right">339,767</td></tr>
+      <tr><td>2022</td><td>参院選</td><td class="winner">伊波洋一</td><td>無所属（オール沖縄）</td><td class="td-right">274,235</td></tr>
+      <tr><td>2025</td><td>参院選</td><td class="winner">高良沙哉</td><td>無所属（オール沖縄）</td><td class="td-right">265,203</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEC 06: 選挙データ -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">section 05 — quantitative data</div>
+  <div class="section-title">選挙データで見るオール沖縄の軌跡</div>
+
+  <div class="prose"><h3>知事選 得票数の推移</h3></div>
+  <div class="prose" style="margin-bottom:8px"><h4 style="margin:0">2014年 ── 翁長 vs 仲井眞（約10万票差）</h4></div>
+  <div class="bar-chart" style="margin-top:4px">
+    <div class="bar-row"><div class="bar-label">翁長雄志</div><div class="bar-track"><div class="bar-fill bf-green" style="width:91%"></div></div><div class="bar-value">360,820</div></div>
+    <div class="bar-row"><div class="bar-label">仲井眞弘多</div><div class="bar-track"><div class="bar-fill bf-red" style="width:66%"></div></div><div class="bar-value">261,076</div></div>
+  </div>
+  <div class="prose" style="margin-bottom:8px"><h4 style="margin:0">2018年 ── 玉城 vs 佐喜真（約8万票差・過去最多得票）</h4></div>
+  <div class="bar-chart" style="margin-top:4px">
+    <div class="bar-row"><div class="bar-label">玉城デニー</div><div class="bar-track"><div class="bar-fill bf-green" style="width:100%"></div></div><div class="bar-value winner">396,632</div></div>
+    <div class="bar-row"><div class="bar-label">佐喜真淳</div><div class="bar-track"><div class="bar-fill bf-red" style="width:80%"></div></div><div class="bar-value">316,458</div></div>
+  </div>
+  <div class="prose" style="margin-bottom:8px"><h4 style="margin:0">2022年 ── 玉城再選 vs 佐喜真（得票5.7万減）</h4></div>
+  <div class="bar-chart" style="margin-top:4px">
+    <div class="bar-row"><div class="bar-label">玉城デニー</div><div class="bar-track"><div class="bar-fill bf-green" style="width:86%"></div></div><div class="bar-value">339,767</div></div>
+    <div class="bar-row"><div class="bar-label">佐喜真淳</div><div class="bar-track"><div class="bar-fill bf-red" style="width:69%"></div></div><div class="bar-value">274,844</div></div>
+  </div>
+
+  <div class="prose"><h3>参院選 ── 票差の急縮小</h3></div>
+  <table class="data-table">
+    <thead><tr><th>年</th><th>オール沖縄系</th><th class="th-right">得票</th><th>自民系</th><th class="th-right">得票</th><th class="th-right">票差</th></tr></thead>
+    <tbody>
+      <tr><td>2016</td><td class="winner">伊波洋一</td><td class="td-right">356,355</td><td>島尻安伊子</td><td class="td-right">249,955</td><td class="td-right winner">+106,400</td></tr>
+      <tr><td>2019</td><td class="winner">高良鉄美</td><td class="td-right">298,831</td><td>安里繁信</td><td class="td-right">234,928</td><td class="td-right winner">+63,903</td></tr>
+      <tr><td>2022</td><td class="winner">伊波洋一</td><td class="td-right">274,235</td><td>古謝玄太</td><td class="td-right">271,347</td><td class="td-right" style="color:var(--gold2);font-weight:700">+2,888</td></tr>
+    </tbody>
+  </table>
+
+  <div class="prose"><h3>衆院選 ── 全盛期から全敗へ</h3></div>
+  <table class="trend-table">
+    <thead><tr><th>区</th><th>2014</th><th>2021</th><th>2024</th><th>2026.2</th></tr></thead>
+    <tbody>
+      <tr><td>1区</td><td class="trend-win">赤嶺○</td><td class="trend-win">赤嶺○</td><td class="trend-win">赤嶺○</td><td class="trend-lose">赤嶺×</td></tr>
+      <tr><td>2区</td><td class="trend-win">照屋○</td><td class="trend-win">新垣○</td><td class="trend-win">新垣○</td><td class="trend-lose">分裂×</td></tr>
+      <tr><td>3区</td><td class="trend-win">玉城○</td><td class="trend-lose">屋良×</td><td class="trend-lose">屋良×</td><td class="trend-lose">屋良×</td></tr>
+      <tr><td>4区</td><td class="trend-win">仲里○</td><td class="trend-lose">金城×</td><td class="trend-lose">金城×</td><td class="trend-lose">砥板×</td></tr>
+      <tr style="background:var(--surface2)"><td><strong>勝敗</strong></td><td class="trend-win">4勝0敗</td><td class="trend-draw">2勝2敗</td><td class="trend-draw">2勝2敗</td><td class="trend-lose">0勝4敗</td></tr>
+    </tbody>
+  </table>
+
+  <div class="insight-card">
+    <div class="insight-label">数字が示す構造変化</div>
+    <div class="insight-text">参院選票差は6年で<strong>106,400→2,888</strong>へ急縮小。知事選得票は<strong>39.7万→34.0万</strong>（5.7万票減）。衆院選は2014年の全勝から2026年の全敗へ。数字は一貫して退潮を示す。</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEC 07: 日教組・沖教組 -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">section 06 — teachers union</div>
+  <div class="section-title">日教組・沖教組と「平和教育」</div>
+
+  <div class="sec-header-img">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Okinawa_Educational_School.JPG" alt="戦後沖縄の教育復興">
+    <div class="shi-text">「教え子再び戦場へ送らない」</div>
+  </div>
+
+  <!-- 日教組アコーディオン -->
+  <div class="acc-toggle" onclick="toggleAcc(this)">日教組（日本教職員組合）の歴史と概要 ▸ 詳細を開く</div>
+  <div class="acc-body">
+    <div class="prose">
+      <h4>設立（1947年）</h4>
+      <p>GHQの民主化政策のもと、戦前の皇国史観教育への反省から「教え子を再び戦場に送るな」をスローガンに結成。初代委員長は荒木正三郎。設立時の組織率はほぼ100%。</p>
+      <h4>全盛期（1950-70年代）</h4>
+      <p>組織率は1958年に約86.3%のピーク。1958年の勤務評定闘争、1961年の学力テスト反対闘争（旭川学テ事件→1976年最高裁判決）、1975年の主任制反対闘争と、「闘う組合」のイメージを確立した。</p>
+      <h4>分裂と路線転換（1989年～）</h4>
+      <p>1989年、連合結成に参加する路線を選択。反対派（共産党系）が離脱し全教（全日本教職員組合）を結成。1995年に文部省との「和解」に踏み切り、「参加・提言・改革」路線へ転換。</p>
+    </div>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">1958年</div><div class="bar-track"><div class="bar-fill bf-green" style="width:86%"></div></div><div class="bar-value">86.3%</div></div>
+      <div class="bar-row"><div class="bar-label">1980年</div><div class="bar-track"><div class="bar-fill bf-green" style="width:45%"></div></div><div class="bar-value">約45%</div></div>
+      <div class="bar-row"><div class="bar-label">2000年</div><div class="bar-track"><div class="bar-fill bf-gold" style="width:28%"></div></div><div class="bar-value">約28%</div></div>
+      <div class="bar-row"><div class="bar-label">2024年</div><div class="bar-track"><div class="bar-fill bf-red" style="width:19%"></div></div><div class="bar-value">18.8%</div></div>
+    </div>
+    <div class="prose">
+      <h4>政治との関係</h4>
+      <p>旧社会党→民主党→立憲民主党の支持母体。山梨県教組出身の輿石東は民主党幹事長を務めた。北海道教組の違法献金事件（2010年）、山梨県教組の選挙活動問題、日の丸・君が代問題（東京都「10.23通達」）など論争も多い。</p>
+    </div>
+  </div>
+
+  <!-- 沖教組アコーディオン -->
+  <div class="acc-toggle" onclick="toggleAcc(this)">沖教組（沖縄県教職員組合）の歴史と活動 ▸ 詳細を開く</div>
+  <div class="acc-body">
+    <div class="prose">
+      <h4>米軍統治下での結成</h4>
+      <p>1952年に前身の沖縄教職員会が結成。「祖国復帰」の最大の担い手の一つとして復帰運動を牽引。1967年の教公二法阻止闘争では大規模ストライキを展開した。</p>
+      <h4>復帰後（1972年～）</h4>
+      <p>日教組に加盟し「沖縄県教職員組合」に改称。平和教育の推進を最重要課題に位置づけ、6月23日（慰霊の日）前後の学習推進、ガマ・戦跡の活用、体験者証言の継承を組織的に推進。組織率は全国平均（18.8%）を上回る。</p>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:28px">
+    <h3>「平和教育」── 沖縄の特殊な教育環境</h3>
+    <p>沖縄の学校では「平和教育」が広く実施されている。ひめゆり学徒隊の悲劇（240名動員、136名犠牲）を伝える資料館、ガマ（自然洞窟）、平和祈念公園など県内の戦跡を活用した学習が特徴。全国から年間約2,000校が修学旅行で沖縄を訪れて平和学習を行う。保守系からは「反基地・反戦に偏った教育の政治利用」との批判もある。</p>
+
+    <h3>2007年教科書検定問題</h3>
+    <p>文科省が高校教科書から沖縄戦「集団自決」における軍の強制・命令に関する記述を削除する検定意見を付けた。5社7冊が対象。</p>
+    <h4>なぜ「軍命」の記述が重要だったのか</h4>
+    <p>多数の生存者が「軍から手榴弾を渡された」「軍の命令で自決するよう言われた」と証言している。また「援護法」の適用において、集団自決が「軍命」によるものとして遺族年金が支給されてきた経緯がある。命令書の不在は命令の不在を意味しない──口頭命令、手榴弾の配布、「捕虜になるな」の教育、スパイ視への恐怖など、構造的に自決に追い込まれた背景があった。</p>
+    <p>2007年9月29日、宜野湾海浜公園で超党派の県民大会に約11万人が結集。仲井眞知事（保守）、翁長市長（自民党）も登壇。この保革を超えた結集の経験が、2014年オール沖縄結成の直接的な布石となった。最終的に文科省は出版社の訂正申請を承認し、軍の関与を示す記述が一定程度回復した。</p>
+  </div>
+
+  <figure class="photo-fig">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Himeyuri_Students.jpg" alt="ひめゆり学徒隊">
+    <figcaption>ひめゆり学徒隊の学生たち。240名が動員され、136名が犠牲に。その記憶は平和教育の核として今も継承される。<span class="credit">（写真: パブリックドメイン）</span></figcaption>
+  </figure>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEC 08: メディア -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">section 07 — media</div>
+  <div class="section-title">沖縄メディアの特殊構造</div>
+
+  <div class="sec-header-img">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Ryukyu_Shimpo_Building_in_1960s.JPG" alt="1960年代の琉球新報社屋" style="object-position:center 30%;filter:blur(1.5px)">
+    <div class="shi-text">県紙2紙シェア98% ── 日本で最も特異なメディア環境</div>
+  </div>
+
+  <div class="prose">
+    <h3>圧倒的な県紙支配</h3>
+    <p>琉球新報（1893年創刊、約15万部）と沖縄タイムス（1948年創刊、約13.3万部）の2紙が県内シェアの約98%を占める。全国紙は合計約8,300部に過ぎない。那覇空港に届くのが朝10時過ぎという地理的要因が大きい。</p>
+  </div>
+  <div class="bar-chart">
+    <div class="bar-row"><div class="bar-label" style="display:flex;align-items:center;justify-content:flex-end;gap:4px">琉球新報</div><div class="bar-track"><div class="bar-fill bf-green" style="width:53%"></div></div><div class="bar-value">約15万部</div></div>
+    <div class="bar-row"><div class="bar-label">沖縄タイムス</div><div class="bar-track"><div class="bar-fill bf-blue" style="width:47%"></div></div><div class="bar-value">約13.3万部</div></div>
+    <div class="bar-row"><div class="bar-label">全国紙5紙計</div><div class="bar-track"><div class="bar-fill bf-gray" style="width:3%"></div></div><div class="bar-value">約8,300部</div></div>
+  </div>
+
+  <!-- 新聞社詳細 -->
+  <div class="compare-grid">
+    <div class="compare-col bg-light">
+      <div class="compare-label cl-green">琉球新報（1893年創刊）</div>
+      <div class="prose" style="font-size:12px">
+        <p><strong>設立者</strong>: 尚順（旧琉球王国の王子）、太田朝敷ら旧支配層。沖縄初の新聞。</p>
+        <p><strong>戦時統合</strong>: 1940年、政府の「一県一紙化」で沖縄新報に統合。1945年沖縄戦で廃刊。</p>
+        <p><strong>復刊</strong>: 1945年「ウルマ新報」→1951年「琉球新報」に復元改題。</p>
+        <p><strong>発行部数</strong>: 約15万部 /<strong>売上</strong>: 62億円（2024年3月期）</p>
+        <p><strong>主要株主</strong>: 従業員持株互助会7%、沖縄テレビ放送4.6%、フジMHD</p>
+        <p><strong>本社</strong>: 那覇市泉崎1-10-3</p>
+      </div>
+    </div>
+    <div class="compare-col bg-alt">
+      <div class="compare-label cl-blue">沖縄タイムス（1948年創刊）</div>
+      <div class="prose" style="font-size:12px">
+        <p><strong>設立者</strong>: 高嶺朝光、豊平良顕ら旧沖縄朝日新聞記者9名。「新聞人による新聞発行」を理念に創刊。</p>
+        <p><strong>創刊の契機</strong>: 1948年6月29日の軍票切り替えスクープが実質的創刊。</p>
+        <p><strong>朝日新聞との関係</strong>: 豊平が戦前に大阪朝日那覇通信部記者だった縁で創刊時から協力関係。</p>
+        <p><strong>発行部数</strong>: 約14.7万部 / <strong>売上</strong>: 65.6億円（2023年3月期）</p>
+        <p><strong>資本金</strong>: 1億円 / <strong>社長</strong>: 武富和彦</p>
+        <p><strong>本社</strong>: 那覇市久茂地2-2-2</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="prose">
+    <h3>「2紙が同傾向」は全国でも極めて異例</h3>
+    <p>地方紙がシェア70%超の県は他にもある（徳島80%超、富山・石川・福井70%超など）。しかしこれらは通常<strong>1紙独占</strong>であり、残りを全国紙が埋める構造だ。沖縄のように<strong>2つの地方紙がほぼ均等にシェアを分け合い、かつ両紙が同じ方向の論調を持つ</strong>ケースは日本で唯一と言ってよい。</p>
+    <p>その要因として、沖縄戦の記憶という共通基盤、基地問題への県民の広範なコンセンサス、記者の人材プールの重複（県内大学出身者が両紙に就職）が指摘される。保守系からは「2紙の偏向がオール沖縄を作った」との批判もあり、2015年に「琉球新報、沖縄タイムスを正す県民・国民の会」が設立された。</p>
+
+    <h3>百田発言事件（2015年6月）</h3>
+    <p>自民党若手勉強会で百田尚樹氏が「沖縄の2つの新聞はつぶさないといけない」と発言。両紙は共同抗議声明を発表し「表現の自由、報道の自由を否定する暴論」と反論。この事件は逆に両紙の存在意義を強めた。</p>
+
+    <h3>「土人発言」報道（2016年10月）</h3>
+    <p>高江ヘリパッド建設現場で大阪府警機動隊員が抗議市民に「この土人が！」と発言。松井大阪府知事が「出張ご苦労様」とツイートし、本土と沖縄の温度差が可視化された。</p>
+
+    <h3>メディアとオール沖縄の相互関係</h3>
+    <p>98%シェアの2紙が辺野古反対を一貫して報じ続けたことが世論形成に寄与した面がある。逆に近年の若者層が地元紙を読まずネットに移行していることが、オール沖縄の退潮と連動しているとの分析は示唆的だ。メディア環境の変化そのものが運動体の基盤を揺るがしている。</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- SEC 09: 思想・現在・知事選 -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">section 08 — ideology &amp; future</div>
+  <div class="section-title">思想的背景と2026年知事選</div>
+
+  <div class="compare-grid">
+    <div class="compare-col bg-light">
+      <div class="compare-label cl-green">なぜ保革共闘が可能だったか</div>
+      <div class="prose" style="font-size:13px"><p>国土0.6%に在日米軍の70%が集中する不条理は保革共通認識。翁長が「辺野古反対」を「県民の尊厳」として提起し、保守本流が離党したという物語が共闘を可能にした。</p></div>
+    </div>
+    <div class="compare-col bg-alt">
+      <div class="compare-label cl-blue">なぜ崩壊しつつあるか</div>
+      <div class="prose" style="font-size:13px"><p>シングルイシュー依存。翁長の死で求心力喪失。経済界離脱。辺野古代執行完了（2023年末）で争点空洞化。若年層の離反。</p></div>
+    </div>
+  </div>
+
+  <div class="prose" style="text-align:center;margin-bottom:12px"><p style="font-family:'Noto Sans JP',sans-serif;font-size:11px;letter-spacing:3px;color:var(--ink4)">2026年9月13日 投開票</p></div>
+
+  <div class="compare-grid" style="margin-bottom:16px">
+    <div class="compare-col bg-light" style="text-align:center;padding:28px 20px">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Denny_Tamaki_in_2023_%28cropped%29.jpg" alt="玉城デニー" style="width:100px;height:100px;border-radius:50%;object-fit:cover;object-position:center 22%;border:3px solid var(--green);margin-bottom:12px">
+      <div style="font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink)">玉城 デニー</div>
+      <div style="font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--green);letter-spacing:1px;margin:4px 0 10px">オール沖縄 ｜ 現職・3選出馬</div>
+      <div style="font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--ink2);text-align:left;line-height:1.7">
+        <strong>年齢</strong>: 66歳<br>
+        <strong>経歴</strong>: ラジオDJ→衆議院議員4期→知事2期<br>
+        <strong>辺野古</strong>: 阻止を継続<br>
+        <strong>政策</strong>: 子ども貧困対策、アジア経済戦略
+      </div>
+    </div>
+    <div class="compare-col bg-alt" style="text-align:center;padding:28px 20px">
+      <div style="width:100px;height:100px;border-radius:50%;background:var(--surface2);border:3px solid var(--red);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-family:'Noto Sans JP',sans-serif;font-size:32px;color:var(--ink4)">古</div>
+      <div style="font-family:'Shippori Mincho',serif;font-size:18px;font-weight:700;color:var(--ink)">古謝 玄太</div>
+      <div style="font-family:'Noto Sans JP',sans-serif;font-size:11px;color:var(--red);letter-spacing:1px;margin:4px 0 10px">自民党支援 ｜ 新人</div>
+      <div style="font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--ink2);text-align:left;line-height:1.7">
+        <strong>年齢</strong>: 42歳<br>
+        <strong>経歴</strong>: 東大薬学部→総務省→那覇市副市長<br>
+        <strong>辺野古</strong>: 容認（現実的解決策）<br>
+        <strong>政策</strong>: 経済振興、物価高対策、交通渋滞解消
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-card">
+    <div class="insight-label">構図</div>
+    <div class="insight-text">衆院選全敗、県議過半数割れ、オール沖縄系市長ゼロ、組織分裂──逆風の中、「辺野古反対の継続」vs「経済振興と現実路線」。24歳差の世代交代も争点に。</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- EPILOGUE -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <div class="section-label">epilogue</div>
+  <div class="section-title">結びに代えて</div>
+  <div class="prose">
+    <p>翁長雄志は保守の家に生まれ、自民党の中枢を歩きながら、沖縄の尊厳のために党を捨てた。玉城デニーは米軍人の父と沖縄の母の間に生まれ、父の顔も知らぬまま育ちながら、沖縄の声を世界に届ける知事になった。</p>
+    <p>「オール沖縄」は、保守の反骨と弱者の眼差しが交差した場所に生まれた。その連合体が崩壊の危機にある。しかし、沖縄が置かれた構造的不条理──国土0.6%に在日米軍の70%──は何も変わっていない。</p>
+    <p>「オール沖縄」という名が消えても、その名が指し示していた問い──<strong>沖縄の声は誰が聞くのか</strong>──は消えない。</p>
+
+    <h3 style="border-left-color:var(--gold2);margin-top:48px">編集部 後記</h3>
+    <p>オール沖縄がここまでの票を取ったのは、沖縄の人の心の叫びを代弁したからとも言える。その根底にあるのは「沖縄は弱者であり虐げられている。そのプライドを踏みにじるようなことは許さない」という、ある種の沖縄県民──ウチナーンチュというアイデンティティに対する誇りの表現でもある。</p>
+    <p>その沖縄の人のムードや空気、感情をつかんだ翁長雄志氏とは、希代の政治家であり、まさに衆の心や感情、空気を読むに長けた洞察深い人間だったとも言える。しかし、時代のテーマはスローガンや魂の叫びでは現実は変わらないというリアルな12年間が今目の前に現れ、そしてそれに対する答えを問われている。それが現在のオール沖縄である。オール沖縄が目指す未来とは。</p>
+    <p style="text-align:right;font-family:'Noto Sans JP',sans-serif;font-size:12px;color:var(--ink4);margin-top:20px">── 編集責任者：上間喜壽 ＋ アトラス編集部AIチーム</p>
+  </div>
+</div>
+
+<div class="footer">編集責任者：上間喜壽 ＋ Atlas Daily編集部AIチーム ｜ 特集 沖縄県知事選2026 第5話 ｜ 2026年3月<br>写真: Wikimedia Commons（各クレジット表記に準拠）</div>
+</div>
+
+<script>
+var PW_HASH='0f741576ac812cab54af2138b9633930a373028830bf72cd3ded6af3d7b1e2eb';
+async function sha256(s){var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('')}
+async function pwCheck(){var h=await sha256(document.getElementById('pw-input').value);if(h===PW_HASH){sessionStorage.setItem('okinawa2026_auth','1');document.getElementById('pw-overlay').style.display='none'}else{document.getElementById('pw-error').style.display='block'}return false}
+(function(){if(sessionStorage.getItem('okinawa2026_auth')==='1'){document.getElementById('pw-overlay').style.display='none'}})();
+function toggleAcc(el){el.classList.toggle('open');var body=el.nextElementSibling;body.classList.toggle('open')}
+</script>
+</body>
+</html>
