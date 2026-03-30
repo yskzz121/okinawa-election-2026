@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第1話 ラジオ ── 沖縄知事選の真の勝者は49万人 | Atlas Daily</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Shippori+Mincho:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f1829;--surface:#1a2540;--border:#2a3550;--gold:#c4a040;--gold2:#d4a843;--text:#e6edf3;--text-sub:#8b949e;--red:#b5271a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Noto Sans JP',sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
+
+.player-card{
+  background:var(--surface);border:1px solid var(--border);border-radius:16px;
+  max-width:480px;width:100%;padding:40px 32px 36px;text-align:center;
+  box-shadow:0 8px 40px rgba(0,0,0,.4);position:relative;overflow:hidden;
+}
+.player-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--red),var(--gold),var(--red));
+}
+
+.brand{font-size:10px;letter-spacing:4px;color:var(--gold);margin-bottom:16px}
+.ep-badge{display:inline-block;background:var(--gold);color:var(--bg);font-size:10px;font-weight:700;letter-spacing:2px;padding:3px 12px;border-radius:4px;margin-bottom:12px}
+.radio-title{font-family:'Shippori Mincho',serif;font-size:1.4em;font-weight:700;line-height:1.5;margin-bottom:6px}
+.radio-sub{font-size:12px;color:var(--text-sub);margin-bottom:28px}
+
+.wave{display:flex;align-items:center;justify-content:center;gap:3px;height:40px;margin-bottom:24px}
+.wave span{display:block;width:3px;border-radius:2px;background:var(--gold);opacity:.4;animation:waveAnim 1.2s ease-in-out infinite}
+.wave span:nth-child(1){height:12px;animation-delay:0s}
+.wave span:nth-child(2){height:24px;animation-delay:.1s}
+.wave span:nth-child(3){height:36px;animation-delay:.2s}
+.wave span:nth-child(4){height:28px;animation-delay:.3s}
+.wave span:nth-child(5){height:16px;animation-delay:.4s}
+.wave span:nth-child(6){height:32px;animation-delay:.15s}
+.wave span:nth-child(7){height:20px;animation-delay:.35s}
+.wave span:nth-child(8){height:38px;animation-delay:.05s}
+.wave span:nth-child(9){height:14px;animation-delay:.25s}
+.wave span:nth-child(10){height:30px;animation-delay:.45s}
+.wave span:nth-child(11){height:18px;animation-delay:.1s}
+.wave.playing span{opacity:.8}
+@keyframes waveAnim{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
+.wave.paused span{animation-play-state:paused}
+
+.transport{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:20px}
+.transport button{background:none;border:none;color:var(--text);cursor:pointer;padding:8px;border-radius:50%;transition:background .15s}
+.transport button:hover{background:rgba(255,255,255,.08)}
+.transport button svg{display:block}
+.btn-play{width:64px;height:64px;border-radius:50%;background:#1db954!important;color:#fff!important;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(29,185,84,.3)}
+.btn-play:hover{background:#1ed760!important}
+
+.progress-row{display:flex;align-items:center;gap:10px;margin-bottom:20px;font-size:11px;color:var(--text-sub)}
+.progress-row input[type=range]{flex:1;-webkit-appearance:none;height:4px;border-radius:2px;background:#2a3550;outline:none}
+.progress-row input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--gold);cursor:pointer}
+
+.speed-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:24px}
+.speed-row .label{font-size:11px;color:var(--text-sub);margin-right:4px}
+.speed-btn{font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;padding:4px 11px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--text-sub);cursor:pointer;transition:all .15s}
+.speed-btn:hover{border-color:var(--gold);color:var(--gold)}
+.speed-btn.active{background:var(--gold);color:var(--bg);border-color:var(--gold)}
+
+.links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.links a{font-size:12px;color:var(--text-sub);text-decoration:none;padding:6px 14px;border:1px solid var(--border);border-radius:4px;transition:all .15s;display:inline-flex;align-items:center;gap:5px}
+.links a:hover{border-color:var(--gold);color:var(--gold)}
+
+@media(max-width:480px){
+  .player-card{padding:28px 20px 24px;border-radius:12px}
+  .radio-title{font-size:1.2em}
+  .transport{gap:12px}
+  .btn-play{width:56px;height:56px}
+}
+</style>
+</head>
+<body>
+
+<div class="player-card">
+  <div class="brand">ATLAS DAILY RADIO</div>
+  <div class="ep-badge">第1話</div>
+  <div class="radio-title">沖縄知事選の真の勝者は<br>49万人</div>
+  <div class="radio-sub">沖縄県知事選2026 特集｜Atlas Daily編集部チーム</div>
+
+  <div class="wave paused" id="wave">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="transport">
+    <button onclick="seek(-10)" title="10秒戻る">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/><text x="12" y="15.5" text-anchor="middle" font-size="7" font-weight="700" fill="currentColor" stroke="none">10</text></svg>
+    </button>
+    <button class="btn-play" id="btnPlay" onclick="togglePlay()">
+      <svg id="iconPlay" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="6,3 20,12 6,21"/></svg>
+      <svg id="iconPause" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+    </button>
+    <button onclick="seek(10)" title="10秒進む">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.13-9.36L23 10"/><text x="12" y="15.5" text-anchor="middle" font-size="7" font-weight="700" fill="currentColor" stroke="none">10</text></svg>
+    </button>
+  </div>
+
+  <div class="progress-row">
+    <span id="timeCur">0:00</span>
+    <input type="range" id="seekBar" min="0" max="100" value="0" step="0.1" oninput="scrub(this.value)">
+    <span id="timeDur">--:--</span>
+  </div>
+
+  <div class="speed-row">
+    <span class="label">速度</span>
+    <button class="speed-btn active" onclick="setSpeed(1,this)">1x</button>
+    <button class="speed-btn" onclick="setSpeed(1.2,this)">1.2x</button>
+    <button class="speed-btn" onclick="setSpeed(1.5,this)">1.5x</button>
+    <button class="speed-btn" onclick="setSpeed(1.7,this)">1.7x</button>
+    <button class="speed-btn" onclick="setSpeed(2,this)">2x</button>
+  </div>
+
+  <div class="links">
+    <a href="../okinawa_chiji_analysis_neutral.html" target="_blank" rel="noopener">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      記事を読む
+    </a>
+    <a href="../index.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      ポータルに戻る
+    </a>
+  </div>
+</div>
+
+<audio id="audio" src="../audio/ep01_quantitative.m4a" preload="metadata"></audio>
+
+<script>
+var audio=document.getElementById('audio');
+var seekBar=document.getElementById('seekBar');
+var wave=document.getElementById('wave');
+
+audio.addEventListener('loadedmetadata',function(){
+  document.getElementById('timeDur').textContent=fmt(audio.duration);
+});
+audio.addEventListener('timeupdate',function(){
+  if(!audio.duration)return;
+  seekBar.value=(audio.currentTime/audio.duration)*100;
+  document.getElementById('timeCur').textContent=fmt(audio.currentTime);
+});
+audio.addEventListener('ended',function(){
+  document.getElementById('iconPlay').style.display='';
+  document.getElementById('iconPause').style.display='none';
+  wave.classList.add('paused');
+});
+
+function togglePlay(){
+  if(audio.paused){
+    audio.play();
+    document.getElementById('iconPlay').style.display='none';
+    document.getElementById('iconPause').style.display='';
+    wave.classList.remove('paused');
+    wave.classList.add('playing');
+  }else{
+    audio.pause();
+    document.getElementById('iconPlay').style.display='';
+    document.getElementById('iconPause').style.display='none';
+    wave.classList.add('paused');
+  }
+}
+function seek(sec){
+  audio.currentTime=Math.max(0,Math.min(audio.duration||0,audio.currentTime+sec));
+}
+function scrub(val){
+  if(audio.duration) audio.currentTime=(val/100)*audio.duration;
+}
+function setSpeed(rate,btn){
+  audio.playbackRate=rate;
+  document.querySelectorAll('.speed-btn').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+}
+function fmt(s){
+  var m=Math.floor(s/60);var ss=Math.floor(s%60);
+  return m+':'+(ss<10?'0':'')+ss;
+}
+</script>
+</body>
+</html>

@@ -111,9 +111,9 @@
   /* Report cards */
   .cards-area { padding-top: 32px; max-width: 760px; margin: 0 auto; }
   .report-card {
-    display: block; background: var(--surface); border: 1px solid var(--border);
+    background: var(--surface); border: 1px solid var(--border);
     border-radius: 4px; padding: 22px 26px; margin-bottom: 14px;
-    text-decoration: none; color: var(--text); transition: border-color .2s, transform .15s;
+    transition: border-color .2s, transform .15s;
   }
   .report-card:hover { border-color: var(--accent2); transform: translateY(-2px); }
   .report-card .tag {
@@ -123,6 +123,25 @@
   }
   .report-card .title { font-family: 'Shippori Mincho', serif; font-size: 17px; font-weight: 700; margin-bottom: 6px; }
   .report-card .desc { font-family: 'Noto Sans JP', sans-serif; font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+  .card-actions {
+    display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;
+  }
+  .card-actions a {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: 'Noto Sans JP', sans-serif; font-size: 12px; font-weight: 600;
+    text-decoration: none; padding: 7px 16px; border-radius: 4px;
+    transition: background .15s, color .15s;
+  }
+  .btn-read {
+    background: var(--accent); color: #fff; border: 1px solid var(--accent);
+  }
+  .btn-read:hover { background: #8a1e14; }
+  .btn-radio {
+    background: transparent; color: var(--accent2); border: 1px solid var(--accent2);
+  }
+  .btn-radio:hover { background: var(--accent2); color: #fff; }
+  .btn-radio svg, .btn-read svg { flex-shrink: 0; }
+
   .footer {
     text-align: center; color: var(--text-muted);
     font-family: 'Noto Sans JP', sans-serif; font-size: 11px; margin-top: 40px;
@@ -134,6 +153,8 @@
     .banner-text h1 { font-size: 1.4rem; }
     #portal { padding: 0 16px 48px; }
     .report-card { padding: 18px 20px; }
+    .card-actions { gap: 8px; }
+    .card-actions a { font-size: 11px; padding: 6px 12px; }
   }
 </style>
 </head>
@@ -163,47 +184,72 @@
 
   <!-- Cards -->
   <div class="cards-area">
-    <a class="report-card" href="okinawa_chiji_analysis_neutral.html">
+    <div class="report-card">
       <div class="tag">第1話 ── Quantitative Analysis</div>
       <div class="title">定量分析レポート</div>
       <div class="desc">直近3回（2014・2018・2022）の投票データ、年代別投票率、支持層クロス分析、2026年への示唆</div>
-    </a>
+      <div class="card-actions">
+        <a class="btn-read" href="okinawa_chiji_analysis_neutral.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>記事を読む</a>
+        <a class="btn-radio" href="radio/ep01.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M7.76 16.24a6 6 0 0 1 0-8.49"/><path d="M4.93 19.07a10 10 0 0 1 0-14.14"/></svg>ラジオで聴く</a>
+      </div>
+    </div>
 
-    <a class="report-card" href="okinawa_qualitative_analysis_neutral.html">
+    <div class="report-card">
       <div class="tag">第2話 ── Qualitative Analysis</div>
       <div class="title">定性分析レポート</div>
       <div class="desc">争点構造の変遷、候補者像の分析、両陣営の勝敗構造、オール沖縄の変質、2026年の展望</div>
-    </a>
+      <div class="card-actions">
+        <a class="btn-read" href="okinawa_qualitative_analysis_neutral.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>記事を読む</a>
+        <a class="btn-radio" href="radio/ep02.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M7.76 16.24a6 6 0 0 1 0-8.49"/><path d="M4.93 19.07a10 10 0 0 1 0-14.14"/></svg>ラジオで聴く</a>
+      </div>
+    </div>
 
-    <a class="report-card" href="okinawa_election_forecast_2026.html">
+    <div class="report-card">
       <div class="tag">第3話 ── Election Forecast</div>
       <div class="title">選挙展望レポート</div>
       <div class="desc">候補者対比、両候補SWOT、票読みシミュレーション、勝敗シナリオ分析（古謝60% vs 玉城40%）</div>
-    </a>
+      <div class="card-actions">
+        <a class="btn-read" href="okinawa_election_forecast_2026.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>記事を読む</a>
+        <a class="btn-radio" href="radio/ep03.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M7.76 16.24a6 6 0 0 1 0-8.49"/><path d="M4.93 19.07a10 10 0 0 1 0-14.14"/></svg>ラジオで聴く</a>
+      </div>
+    </div>
 
-    <a class="report-card" href="okinawa_jimin_12year_analysis.html">
+    <div class="report-card">
       <div class="tag">第4話 ── Structural Analysis</div>
       <div class="title">保守12年連敗の構造分析</div>
       <div class="desc">なぜ自民党は沖縄で勝てないのか ── 全県選挙8連敗のデータ、5つの構造的課題、振興予算の政治力学、有権者構造の変化</div>
-    </a>
+      <div class="card-actions">
+        <a class="btn-read" href="okinawa_jimin_12year_analysis.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>記事を読む</a>
+      </div>
+    </div>
 
-    <a class="report-card" href="okinawa_all_okinawa_analysis.html">
+    <div class="report-card">
       <div class="tag">第5話 ── Deep Dive</div>
       <div class="title">オール沖縄とは一体？ 翁長雄志・玉城デニー：反骨と弱者の物語</div>
       <div class="desc">1945年からの源流をビジュアルタイムラインで辿り、翁長雄志・玉城デニー二人の知事の軌跡、支持母体と組織構造、選挙データの定量分析、日教組・沖教組の役割、沖縄メディアの特殊構造まで深掘り</div>
-    </a>
+      <div class="card-actions">
+        <a class="btn-read" href="okinawa_all_okinawa_analysis.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>記事を読む</a>
+        <a class="btn-radio" href="radio/ep05.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M7.76 16.24a6 6 0 0 1 0-8.49"/><path d="M4.93 19.07a10 10 0 0 1 0-14.14"/></svg>ラジオで聴く</a>
+      </div>
+    </div>
 
-    <a class="report-card" href="okinawa_conservative_analysis.html">
+    <div class="report-card">
       <div class="tag">第6話 ── Deep Dive</div>
       <div class="title">沖縄保守とは何か？ その潮流と実態に迫る</div>
       <div class="desc">琉球民主党から自民党県連への系譜、歴代保守系知事（西銘順治・稲嶺恵一・仲井眞弘多）の選択、知事選7回分の得票データ、現在の国会議員・チーム沖縄・支持母体、2026年知事選の布陣</div>
-    </a>
+      <div class="card-actions">
+        <a class="btn-read" href="okinawa_conservative_analysis.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>記事を読む</a>
+      </div>
+    </div>
 
-    <a class="report-card" href="okinawa_governors_history.html">
+    <div class="report-card">
       <div class="tag">第7話 ── Historical Timeline</div>
       <div class="title">歴代沖縄県知事の系譜 ── 復帰から半世紀、沖縄を率いたリーダーたち</div>
       <div class="desc">琉球政府時代の行政主席から玉城デニーまで、7人の知事の軌跡を時代背景・事件・経済政策とクロス分析。知事選13回の勝敗パターン、観光客数の半世紀推移、基地事件の系譜</div>
-    </a>
+      <div class="card-actions">
+        <a class="btn-read" href="okinawa_governors_history.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>記事を読む</a>
+      </div>
+    </div>
 
     <div class="footer">編集責任者：上間喜壽 ＋ Atlas Daily編集部チーム ｜ 2026年3月</div>
   </div>
@@ -232,6 +278,8 @@ async function handleLogin() {
     document.getElementById('portal').style.display = 'block';
   }
 })();
+
+
 </script>
 </body>
 </html>
